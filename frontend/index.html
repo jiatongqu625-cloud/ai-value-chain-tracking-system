@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 产业链追踪</title>
+<style>
+  :root {
+    --bg: #f8f8f6; --surface: #fff; --border: rgba(0,0,0,0.1);
+    --text: #1a1a18; --muted: #666; --hint: #aaa;
+    --purple: #534AB7; --purple-bg: #EEEDFE; --purple-border: #AFA9EC;
+    --teal: #0F6E56;   --teal-bg: #E1F5EE;   --teal-border: #5DCAA5;
+    --blue: #185FA5;   --blue-bg: #E6F1FB;   --blue-border: #85B7EB;
+    --amber: #BA7517;  --amber-bg: #FAEEDA;  --amber-border: #EF9F27;
+    --coral: #993C1D;  --coral-bg: #FAECE7;  --coral-border: #F0997B;
+    --green: #1D9E75;  --red-text: #D85A30;
+    --radius: 8px; --radius-lg: 12px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: var(--bg); color: var(--text); font-size: 14px; }
+
+  /* ── Layout ── */
+  .topbar { background: var(--surface); border-bottom: 0.5px solid var(--border);
+    padding: 0 20px; height: 52px; display: flex; align-items: center; gap: 12px;
+    position: sticky; top: 0; z-index: 100; }
+  .logo { font-size: 15px; font-weight: 600; color: var(--text); }
+  .live { display: flex; align-items: center; gap: 5px; }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+    animation: blink 2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .live-label { font-size: 11px; color: var(--teal); font-weight: 500; }
+  .updated { font-size: 11px; color: var(--hint); margin-left: auto; }
+
+  .layout { display: grid; grid-template-columns: 200px 1fr 300px;
+    min-height: calc(100vh - 52px); }
+
+  /* ── Chain sidebar ── */
+  .chain-sidebar { border-right: 0.5px solid var(--border); padding: 16px 10px;
+    background: var(--surface); position: sticky; top: 52px;
+    height: calc(100vh - 52px); overflow-y: auto; }
+  .sidebar-label { font-size: 10px; font-weight: 600; color: var(--hint);
+    letter-spacing: .08em; text-transform: uppercase; padding: 0 6px; margin-bottom: 8px; }
+  .layer-btn { width: 100%; display: flex; align-items: center; gap: 7px;
+    padding: 8px 8px; border-radius: 6px; border: 0.5px solid transparent;
+    cursor: pointer; background: transparent; text-align: left; transition: all .15s; }
+  .layer-btn:hover { background: var(--bg); }
+  .layer-btn.active { border-width: 1.5px; }
+  .l-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .l-info { flex: 1; min-width: 0; }
+  .l-name { font-size: 12px; font-weight: 500; color: var(--text); }
+  .l-sub  { font-size: 10px; color: var(--hint); }
+  .l-count { font-size: 10px; font-weight: 600; padding: 1px 5px; border-radius: 3px; flex-shrink: 0; }
+  .conn { height: 14px; display: flex; align-items: center; padding: 0 17px; }
+  .conn-line { width: 1px; height: 100%; background: var(--border); }
+
+  /* ── Main feed ── */
+  .main { padding: 16px 20px; }
+  .feed-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+  .feed-title { font-size: 16px; font-weight: 600; color: var(--text); }
+  .feed-count { font-size: 12px; color: var(--muted); }
+  .feed-filter { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 14px; }
+  .filter-pill { font-size: 11px; padding: 4px 10px; border-radius: 99px;
+    border: 0.5px solid var(--border); color: var(--muted); cursor: pointer;
+    background: var(--surface); transition: all .13s; }
+  .filter-pill:hover { border-color: var(--text); color: var(--text); }
+  .filter-pill.active { background: var(--text); color: var(--surface); border-color: var(--text); }
+  .news-card { background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); padding: 14px 16px; margin-bottom: 10px;
+    cursor: pointer; transition: border-color .15s; }
+  .news-card:hover { border-color: rgba(0,0,0,.2); }
+  .news-card.selected { border-color: var(--purple); border-width: 1.5px; }
+  .nc-top { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+  .nc-title { font-size: 14px; font-weight: 500; line-height: 1.45; flex: 1; }
+  .nc-heat { font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 3px; flex-shrink: 0; margin-top: 1px; }
+  .nc-meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .nc-source { font-size: 11px; color: var(--hint); }
+  .nc-cat { font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 3px; }
+  .nc-layers { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+  .nc-layer-pill { font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 99px;
+    border: 0.5px solid; }
+  .empty-feed { text-align: center; padding: 60px 20px; color: var(--hint); }
+  .loading { text-align: center; padding: 60px; color: var(--hint); }
+
+  /* ── Impact panel ── */
+  .impact-panel { border-left: 0.5px solid var(--border); background: var(--surface);
+    position: sticky; top: 52px; height: calc(100vh - 52px); overflow-y: auto; }
+  .ip-empty { display: flex; flex-direction: column; align-items: center;
+    justify-content: center; height: 100%; color: var(--hint); text-align: center;
+    gap: 8px; padding: 20px; }
+  .ip-empty-icon { font-size: 32px; opacity: .3; }
+  .ip-header { padding: 14px 16px; border-bottom: 0.5px solid var(--border); }
+  .ip-news-title { font-size: 13px; font-weight: 500; line-height: 1.4; margin-bottom: 6px; }
+  .ip-layer-tabs { display: flex; gap: 4px; flex-wrap: wrap; padding: 10px 14px;
+    border-bottom: 0.5px solid var(--border); background: var(--bg); }
+  .ip-tab { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 99px;
+    border: 0.5px solid transparent; cursor: pointer; color: var(--muted); transition: all .13s; }
+  .ip-tab:hover { color: var(--text); }
+  .ip-tab.active { border-width: 1.5px; }
+  .ip-tab.none { opacity: .35; cursor: default; }
+  .ip-body { padding: 14px 16px; }
+  .ip-level-badge { display: inline-block; font-size: 11px; font-weight: 600;
+    padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; }
+  .ip-summary { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 10px; }
+  .ip-dir { display: flex; gap: 8px; align-items: flex-start;
+    padding: 8px 0; border-top: 0.5px solid var(--border); }
+  .ip-dir-label { font-size: 11px; font-weight: 600; width: 36px; flex-shrink: 0; padding-top: 1px; }
+  .ip-dir-text { font-size: 12px; color: var(--text); line-height: 1.5; }
+  .cos-label { font-size: 10px; font-weight: 600; color: var(--hint); letter-spacing:.06em;
+    text-transform: uppercase; margin: 14px 0 8px; }
+  .co-card { border: 0.5px solid var(--border); border-radius: var(--radius);
+    padding: 10px 12px; margin-bottom: 8px; }
+  .co-card.pos { border-left: 3px solid var(--green); border-radius: 0 var(--radius) var(--radius) 0; }
+  .co-card.neg { border-left: 3px solid var(--red-text); border-radius: 0 var(--radius) var(--radius) 0; }
+  .co-card.neu { border-left: 3px solid var(--hint); border-radius: 0 var(--radius) var(--radius) 0; }
+  .co-top { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; flex-wrap: wrap; }
+  .co-name { font-size: 13px; font-weight: 600; }
+  .co-role-tag { font-size: 10px; font-weight: 500; padding: 1px 6px; border-radius: 3px; }
+  .co-impact-tag { font-size: 10px; font-weight: 500; padding: 1px 6px; border-radius: 3px; margin-left: auto; }
+  .co-reason { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 4px; }
+  .co-specific { font-size: 11px; line-height: 1.45; font-weight: 500; }
+  .depth-row { display: flex; gap: 3px; align-items: center; margin-top: 6px; }
+  .depth-pip { width: 16px; height: 3px; border-radius: 2px; }
+  .depth-txt { font-size: 10px; color: var(--hint); margin-left: 3px; }
+  .no-impact { text-align: center; padding: 24px; color: var(--hint); font-size: 13px; }
+
+  /* ── Responsive ── */
+  @media(max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    .chain-sidebar, .impact-panel { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">AI 产业链追踪</div>
+  <div class="live"><div class="live-dot"></div><div class="live-label">每日自动更新</div></div>
+  <div class="updated" id="updatedAt">加载中...</div>
+</div>
+
+<div class="layout">
+  <aside class="chain-sidebar" id="chainSidebar"></aside>
+  <main class="main">
+    <div class="feed-header">
+      <div class="feed-title">今日热点</div>
+      <div class="feed-count" id="feedCount"></div>
+    </div>
+    <div class="feed-filter" id="feedFilter"></div>
+    <div id="feedList"><div class="loading">加载数据中...</div></div>
+  </main>
+  <aside class="impact-panel" id="impactPanel">
+    <div class="ip-empty">
+      <div class="ip-empty-icon">◎</div>
+      <div style="font-size:13px;font-weight:500;color:#888">点击一条热点</div>
+      <div style="font-size:12px;line-height:1.6">查看对产业链各层<br>和具体公司的影响</div>
+    </div>
+  </aside>
+</div>
+
+<script>
+const LAYERS = [
+  {id:'compute', name:'基础算力层', sub:'芯片·超算', dot:'#534AB7', bg:'#EEEDFE', bc:'#AFA9EC'},
+  {id:'data',    name:'数据与能源层', sub:'标注·向量库', dot:'#0F6E56', bg:'#E1F5EE', bc:'#5DCAA5'},
+  {id:'model',   name:'模型基础设施层', sub:'训练·推理', dot:'#185FA5', bg:'#E6F1FB', bc:'#85B7EB'},
+  {id:'tools',   name:'工具中间件层', sub:'RAG·Agent', dot:'#BA7517', bg:'#FAEEDA', bc:'#EF9F27'},
+  {id:'app',     name:'应用层', sub:'企业·消费者', dot:'#993C1D', bg:'#FAECE7', bc:'#F0997B'},
+];
+const LEVEL_MAP = {
+  high:{ bg:'#FAECE7', c:'#993C1D', t:'强烈影响'},
+  mid: { bg:'#FAEEDA', c:'#854F0B', t:'中度影响'},
+  low: { bg:'#F1EFE8', c:'#5F5E5A', t:'轻微影响'},
+  none:{ bg:'#F1EFE8', c:'#aaa',    t:'无影响'},
+};
+
+let allItems = [];
+let selectedId = null;
+let activeLayer = null;
+let activeFilter = 'all';
+
+async function loadData() {
+  try {
+    const resp = await fetch('./data/latest.json');
+    if (!resp.ok) throw new Error(resp.statusText);
+    const json = await resp.json();
+    allItems = json.items || [];
+    document.getElementById('updatedAt').textContent =
+      '更新于 ' + new Date(json.updated_at).toLocaleString('zh-CN', {month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
+  } catch(e) {
+    document.getElementById('feedList').innerHTML =
+      '<div class="empty-feed">暂无数据 — 请先运行 pipeline.py 生成 data/latest.json</div>';
+    return;
+  }
+  renderAll();
+}
+
+function getCategories() {
+  const cats = new Set(allItems.map(i => i.analysis?.category).filter(Boolean));
+  return ['all', ...cats];
+}
+
+function filteredItems() {
+  if (activeFilter === 'all') return allItems;
+  return allItems.filter(i => i.analysis?.category === activeFilter);
+}
+
+function renderAll() {
+  renderFilters();
+  renderFeed();
+  renderChain();
+}
+
+function renderFilters() {
+  const cats = getCategories();
+  document.getElementById('feedFilter').innerHTML = cats.map(c =>
+    `<div class="filter-pill${activeFilter===c?' active':''}" onclick="setFilter('${c}')">
+      ${c === 'all' ? '全部' : c}
+    </div>`
+  ).join('');
+}
+
+function setFilter(cat) {
+  activeFilter = cat;
+  selectedId = null;
+  activeLayer = null;
+  renderAll();
+  renderImpact();
+}
+
+function renderFeed() {
+  const items = filteredItems();
+  document.getElementById('feedCount').textContent = `${items.length} 条`;
+  if (!items.length) {
+    document.getElementById('feedList').innerHTML = '<div class="empty-feed">暂无数据</div>';
+    return;
+  }
+  document.getElementById('feedList').innerHTML = items.map(item => {
+    const a = item.analysis || {};
+    const affectedLayers = LAYERS.filter(l => a.layers?.[l.id]?.impact_level !== 'none' && a.layers?.[l.id]);
+    const layerPills = affectedLayers.map(l =>
+      `<span class="nc-layer-pill" style="background:${l.bg};color:${l.dot};border-color:${l.bc}">${l.name.replace('层','')}</span>`
+    ).join('');
+    return `<div class="news-card${selectedId===item.article_id?' selected':''}"
+      onclick="selectItem('${item.article_id}')">
+      <div class="nc-top">
+        <div class="nc-title">${esc(a.news_title || item.article?.title || '')}</div>
+        ${a.heat ? `<div class="nc-heat" style="background:${a.heat_bg};color:${a.heat_c}">${a.heat}</div>` : ''}
+      </div>
+      <div class="nc-meta">
+        <div class="nc-source">${esc(item.article?.source||'')} · ${fmtDate(item.date)}</div>
+        ${a.category ? `<div class="nc-cat" style="background:#EEEDFE;color:#3C3489">${a.category}</div>` : ''}
+      </div>
+      ${layerPills ? `<div class="nc-layers">${layerPills}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function renderChain() {
+  const item = allItems.find(i => i.article_id === selectedId);
+  document.getElementById('chainSidebar').innerHTML =
+    '<div class="sidebar-label">产业链</div>' +
+    LAYERS.map((l, i) => {
+      const imp = item?.analysis?.layers?.[l.id];
+      const lvl = imp?.impact_level;
+      const hasImpact = lvl && lvl !== 'none';
+      const isActive = activeLayer === l.id;
+      const coCount = (imp?.companies||[]).length;
+      return `
+        ${i > 0 ? '<div class="conn"><div class="conn-line"></div></div>' : ''}
+        <button class="layer-btn${hasImpact ? ' has-impact' : ''}${isActive ? ' active' : ''}"
+          style="${hasImpact ? `border-color:${l.bc};background:${l.bg};` : ''}${isActive ? `border-color:${l.dot};` : ''}"
+          onclick="selectLayer('${l.id}')" ${!item ? 'disabled' : ''}>
+          <div class="l-dot" style="background:${l.dot}"></div>
+          <div class="l-info">
+            <div class="l-name">${l.name}</div>
+            <div class="l-sub">${l.sub}</div>
+          </div>
+          ${coCount > 0 ? `<div class="l-count" style="background:${l.bg};color:${l.dot}">${coCount}</div>` : ''}
+        </button>`;
+    }).join('');
+}
+
+function selectItem(id) {
+  selectedId = id;
+  // 默认选第一个有影响的层
+  const item = allItems.find(i => i.article_id === id);
+  activeLayer = LAYERS.find(l => {
+    const lvl = item?.analysis?.layers?.[l.id]?.impact_level;
+    return lvl && lvl !== 'none';
+  })?.id || null;
+  renderFeed();
+  renderChain();
+  renderImpact();
+}
+
+function selectLayer(id) {
+  activeLayer = id;
+  renderChain();
+  renderImpact();
+}
+
+function renderImpact() {
+  const panel = document.getElementById('impactPanel');
+  const item = allItems.find(i => i.article_id === selectedId);
+  if (!item) {
+    panel.innerHTML = `<div class="ip-empty"><div class="ip-empty-icon">◎</div>
+      <div style="font-size:13px;font-weight:500;color:#888">点击一条热点</div>
+      <div style="font-size:12px;line-height:1.6;color:#aaa">查看对产业链各层<br>和具体公司的影响</div></div>`;
+    return;
+  }
+  const a = item.analysis || {};
+
+  const tabs = LAYERS.map(l => {
+    const lvl = a.layers?.[l.id]?.impact_level;
+    const hasImp = lvl && lvl !== 'none';
+    return `<div class="ip-tab${activeLayer===l.id?' active':''}${!hasImp?' none':''}"
+      style="${activeLayer===l.id ? `border-color:${l.dot};background:${l.bg};color:${l.dot};` : ''}"
+      onclick="${hasImp ? `selectLayer('${l.id}')` : ''}">
+      ${l.name.replace('层','').replace('基础设施','基础')}
+    </div>`;
+  }).join('');
+
+  const imp = activeLayer ? a.layers?.[activeLayer] : null;
+  const layer = LAYERS.find(l => l.id === activeLayer);
+  const lm = LEVEL_MAP[imp?.impact_level] || LEVEL_MAP.none;
+
+  let bodyHtml = '';
+  if (imp && imp.impact_level !== 'none') {
+    const cosHtml = (imp.companies || []).map(co => {
+      const tc = co.type === 'positive' ? '#1D9E75' : co.type === 'negative' ? '#D85A30' : '#888';
+      const tbg = co.type === 'positive' ? '#E1F5EE' : co.type === 'negative' ? '#FAECE7' : '#F1EFE8';
+      const cls = co.type === 'positive' ? 'pos' : co.type === 'negative' ? 'neg' : 'neu';
+      const depth = Math.min(3, Math.max(1, co.impact_depth || 1));
+      const pips = [1,2,3].map(n =>
+        `<div class="depth-pip" style="background:${n<=depth?tc:'#ddd'}"></div>`).join('');
+      return `<div class="co-card ${cls}">
+        <div class="co-top">
+          <div class="co-name">${esc(co.name)}</div>
+          <div class="co-role-tag" style="background:${tbg};color:${tc}">${esc(co.role)}</div>
+          <div class="co-impact-tag" style="background:${tbg};color:${tc}">${esc(co.impact_label)}</div>
+        </div>
+        <div class="co-reason">${esc(co.reason)}</div>
+        <div class="co-specific" style="color:${tc}">${esc(co.specific)}</div>
+        <div class="depth-row">${pips}<div class="depth-txt">影响深度 ${depth}/3</div></div>
+      </div>`;
+    }).join('');
+
+    bodyHtml = `
+      <div class="ip-level-badge" style="background:${lm.bg};color:${lm.c}">${lm.t}</div>
+      <div class="ip-summary">${esc(imp.summary)}</div>
+      ${imp.upside ? `<div class="ip-dir"><div class="ip-dir-label" style="color:#0F6E56">↑ 利好</div><div class="ip-dir-text">${esc(imp.upside)}</div></div>` : ''}
+      ${imp.downside ? `<div class="ip-dir"><div class="ip-dir-label" style="color:#D85A30">↓ 压力</div><div class="ip-dir-text">${esc(imp.downside)}</div></div>` : ''}
+      ${cosHtml ? `<div class="cos-label">受影响公司</div>${cosHtml}` : ''}`;
+  } else {
+    bodyHtml = `<div class="no-impact">此层级无直接影响</div>`;
+  }
+
+  panel.innerHTML = `
+    <div class="ip-header">
+      <div class="ip-news-title">${esc(a.news_title || item.article?.title || '')}</div>
+    </div>
+    <div class="ip-layer-tabs">${tabs}</div>
+    <div class="ip-body">${bodyHtml}</div>`;
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function fmtDate(d) {
+  if (!d) return '';
+  const [,m,day] = d.split('-');
+  return `${m}/${day}`;
+}
+
+loadData();
+</script>
+</body>
+</html>
