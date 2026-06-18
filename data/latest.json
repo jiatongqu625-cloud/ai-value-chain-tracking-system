@@ -1,0 +1,334 @@
+{
+  "updated_at": "2026-06-18T09:51:27.629339+00:00",
+  "count": 3,
+  "items": [
+    {
+      "article_id": "88272dbbef054cc3",
+      "date": "2026-06-18",
+      "fetched_at": "2026-06-18T09:35:40.822041+00:00",
+      "article": {
+        "title": "MapSatisfyBench: Benchmarking Satisfaction-Aware Map Agents through Behavior-Grounded Implicit Decision Factors",
+        "summary": "arXiv:2606.17453v2 Announce Type: new \nAbstract: Large language model agents are increasingly integrated into map services. Since map services are embedded in everyday-life scenarios rather than professional task settings, users often express their needs informally, resulting in underspecified queries with many unspoken needs, namely, implicit decision factors that are critical for user satisfacti",
+        "url": "https://arxiv.org/abs/2606.17453",
+        "source": "arXiv",
+        "published_at": "Thu, 18 Jun 2026 00:00:00 -0400"
+      },
+      "analysis": {
+        "news_title": "地图Agent满意度基准",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该研究为评估基准方法论，不涉及算力硬件需求的显著变化。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "隐式数据挖掘",
+            "summary": "研究聚焦用户非正式表达中的隐式决策因子，需构建行为标注数据集以支撑基准测试。这对地图场景下的用户行为数据采集与标注提出新需求，但规模有限。",
+            "upside": "推动地图场景用户意图与隐式偏好的专项数据集建设",
+            "downside": "隐式因子标注难度高，人工标注成本较大",
+            "companies": [
+              {
+                "name": "高德地图（阿里)",
+                "role": "地图服务数据提供方",
+                "type": "neutral",
+                "impact_label": "场景数据来源",
+                "reason": "其真实用户查询日志是构建此类隐式决策基准数据集的潜在来源",
+                "specific": "中国地图App月活超7亿，覆盖海量非正式查询场景，可为基准提供真实行为数据",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "model": {
+            "impact_level": "mid",
+            "badge": "Agent能力评估",
+            "summary": "MapSatisfyBench直接评测LLM Agent在地图服务中理解隐式需求的能力，为模型后训练对齐与推理质量提供新的评估维度。基准的建立将推动模型在日常生活场景下的用户意图理解能力优化。",
+            "upside": "为地图场景Agent提供可量化对齐目标，促进RLHF/偏好对齐改进",
+            "downside": "现有通用LLM在非正式查询理解上可能暴露明显短板",
+            "companies": [
+              {
+                "name": "OpenAI",
+                "role": "通用LLM基础模型提供方",
+                "type": "neutral",
+                "impact_label": "基准被测对象",
+                "reason": "GPT系列模型作为基线将在该基准中被评测，结果影响其在Agent能力上的市场认知",
+                "specific": "GPT-4o等模型常作为Agent基准基线，评测结果将公开可见",
+                "impact_depth": 1
+              },
+              {
+                "name": "Google DeepMind",
+                "role": "地图+LLM双重利益方",
+                "type": "positive",
+                "impact_label": "地图AI受益方",
+                "reason": "Google Maps与Gemini协同，该基准可直接指导其地图Agent满意度对齐研究",
+                "specific": "Google Maps月活用户超10亿，满意度对齐改进对其商业价值影响显著",
+                "impact_depth": 2
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "Agent评估框架",
+            "summary": "该基准本质是一套面向地图Agent的行为驱动评估工具链，填补了Prompt工程与Agent评估在日常地理服务场景的空白。它将推动专用评估框架和满意度感知Agent框架的开发。",
+            "upside": "为RAG+地图知识库、Agent框架提供新的评估锚点，促进工具层能力迭代",
+            "downside": "现有通用Agent评估框架（如AgentBench）可能需扩展才能适配隐式因子评测",
+            "companies": [
+              {
+                "name": "LangChain",
+                "role": "Agent框架提供方",
+                "type": "positive",
+                "impact_label": "框架适配需求",
+                "reason": "地图Agent场景的隐式决策评估需求将推动Agent框架增加用户满意度感知模块",
+                "specific": "LangChain GitHub stars超9万，社区可基于该基准开发地图Agent专用评估插件",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "high",
+            "badge": "地图服务体验",
+            "summary": "该研究直接针对地图服务中用户满意度的核心问题，即非正式查询下的隐式需求理解。基准落地将推动地图类应用中AI助手显著提升路线推荐、兴趣点筛选等场景的用户体验，是应用层最直接的受益方向。",
+            "upside": "地图App中AI助手可基于基准改进，提升非正式查询场景下的满意度与留存率",
+            "downside": "若评测暴露现有产品短板，可能引发用户对AI地图助手能力的质疑",
+            "companies": [
+              {
+                "name": "高德地图（阿里）",
+                "role": "地图服务应用方",
+                "type": "positive",
+                "impact_label": "AI助手优化",
+                "reason": "可借助基准评测优化其AI助手在日常导航查询中的隐式需求理解能力",
+                "specific": "高德问问等AI功能月活数千万级，满意度提升1%对应数百万用户体验改善",
+                "impact_depth": 2
+              },
+              {
+                "name": "百度地图",
+                "role": "地图服务应用方",
+                "type": "positive",
+                "impact_label": "文心地图赋能",
+                "reason": "百度地图与文心大模型深度整合，该基准可为其AI导航助手提供对齐改进依据",
+                "specific": "百度地图月活超4亿，已上线AI对话导航功能，基准对齐改进空间明确",
+                "impact_depth": 2
+              },
+              {
+                "name": "Google Maps",
+                "role": "全球最大地图应用",
+                "type": "positive",
+                "impact_label": "全球场景验证",
+                "reason": "基准方法论可被Google Maps AI团队采用，优化Gemini驱动的地图搜索满意度",
+                "specific": "Google Maps月活超20亿，隐式需求理解改进覆盖规模全球最大",
+                "impact_depth": 2
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "cad7f26e1519ce8b",
+      "date": "2026-06-18",
+      "fetched_at": "2026-06-18T09:35:40.821985+00:00",
+      "article": {
+        "title": "Skill-Constrained Model Predictive Control for Resilient Manufacturing Supply Chains",
+        "summary": "arXiv:2606.17269v1 Announce Type: new \nAbstract: In skill-constrained production-inventory systems, the qualified human capacity available tomorrow depends on training decisions made today: production requires certified workers, certifications decay unless maintained, and training consumes the same scarce worker hours that production needs now. We study a closed-loop skill-constrained model predic",
+        "url": "https://arxiv.org/abs/2606.17269",
+        "source": "arXiv",
+        "published_at": "Thu, 18 Jun 2026 00:00:00 -0400"
+      },
+      "analysis": {
+        "news_title": "技能约束MPC供应链研究",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "low",
+            "badge": "算力需求微增",
+            "summary": "MPC优化模型在制造供应链场景的求解需要一定计算资源，但规模有限。学术研究阶段对GPU集群需求极小，暂不构成显著算力驱动。",
+            "upside": "工业优化类AI模型规模化后可能带动边缘计算需求",
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "工业数据场景",
+            "summary": "技能约束生产库存系统的建模依赖工厂人员认证记录、排班数据及生产历史数据，对工业数据采集与结构化标注有潜在需求。但当前仍处于理论研究阶段，实际数据管道尚未形成。",
+            "upside": "为工业数字化数据资产建设提供新的场景需求方向",
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "mid",
+            "badge": "控制模型创新",
+            "summary": "该研究提出将技能约束嵌入模型预测控制（MPC）框架，属于闭环决策模型的新范式探索。其核心贡献在于将人力资源动态（技能衰减、培训-生产权衡）纳入可微优化模型，丰富了工业AI模型基础设施的方法库。对MLOps平台在制造场景的落地具有方法论参考价值。",
+            "upside": "MPC与强化学习/大模型结合的混合决策框架有望成为新研究热点",
+            "downside": "理论模型与真实工厂部署之间存在较大工程落地鸿沟",
+            "companies": [
+              {
+                "name": "arXiv/学术社区",
+                "role": "研究成果发布与传播平台",
+                "type": "neutral",
+                "impact_label": "知识扩散载体",
+                "reason": "该论文通过arXiv公开发布，加速工业控制与AI交叉领域的学术扩散",
+                "specific": "arXiv 2025年AI+工业控制类论文日均提交量超50篇，该方向关注度持续上升",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "Agent调度参考",
+            "summary": "技能约束MPC的决策逻辑与AI Agent的任务规划、资源调度高度同构：均需在约束条件下做序列决策。该研究框架可为制造业AI Agent工具链（如排班Agent、产能规划Copilot）提供理论支撑，推动工具中间件在工业场景的深化应用。",
+            "upside": "为工业Agent框架提供可借鉴的约束感知规划算法",
+            "downside": null,
+            "companies": [
+              {
+                "name": "Siemens Xcelerator / PTC",
+                "role": "工业软件与AI工具平台提供商",
+                "type": "positive",
+                "impact_label": "工业AI工具受益",
+                "reason": "该类MPC研究成果可集成进工业数字孪生与智能排产工具，增强其在人力技能约束场景下的优化能力",
+                "specific": "工业AI软件市场2024年规模约165亿美元，预计2028年超400亿美元，技能约束优化为新增差异化功能点",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "mid",
+            "badge": "制造供应链赋能",
+            "summary": "该研究直接面向制造业供应链韧性问题，核心应用场景包括：认证工人排班优化、培训-生产资源动态分配、供应链中断下的弹性恢复。对半导体、汽车、航空等高认证要求制造业具有明确落地价值。",
+            "upside": "可显著降低因技能错配导致的产线停工损失，提升供应链韧性量化管理水平",
+            "downside": "实际部署需与ERP/MES系统深度集成，落地周期较长",
+            "companies": [
+              {
+                "name": "SAP",
+                "role": "制造业ERP及供应链管理平台",
+                "type": "positive",
+                "impact_label": "供应链优化受益",
+                "reason": "SAP供应链模块可集成技能约束优化算法，增强人力资源与产能协同规划能力",
+                "specific": "SAP在全球制造业ERP市场占有率约24%，技能约束MPC可作为其AI增强模块的新功能方向",
+                "impact_depth": 1
+              },
+              {
+                "name": "o9 Solutions / Kinaxis",
+                "role": "AI驱动供应链计划平台",
+                "type": "positive",
+                "impact_label": "算法库扩充",
+                "reason": "专注AI供应链规划的SaaS平台可将该MPC方法论转化为产品功能，差异化竞争传统供应链软件",
+                "specific": "Kinaxis 2024财年营收约4.5亿加元，供应链AI赛道融资持续活跃，技能约束优化为新兴细分需求",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "352b029f2b99987b",
+      "date": "2026-06-18",
+      "fetched_at": "2026-06-18T09:35:40.821975+00:00",
+      "article": {
+        "title": "SkillChain-Gym: A Benchmark for Reskilling-Aware Production-Inventory Control under Disruptions",
+        "summary": "arXiv:2606.17266v1 Announce Type: new \nAbstract: Production planning increasingly has to treat workforce capability as a decision variable: certifications lapse when skills are not maintained, new products require skills the current workforce does not hold, and reskilling competes for the same worker hours needed for production. Existing operations benchmarks usually treat labor as exogenous, whil",
+        "url": "https://arxiv.org/abs/2606.17266",
+        "source": "arXiv",
+        "published_at": "Thu, 18 Jun 2026 00:00:00 -0400"
+      },
+      "analysis": {
+        "news_title": "技能链生产控制基准发布",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该研究为运筹学与强化学习基准，不涉及算力硬件层面的直接需求变化。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "仿真数据生成",
+            "summary": "该基准提供了生产-库存控制仿真环境，需要生成包含技能认证、再培训周期和供应链扰动的结构化合成数据集。数据规模有限，主要服务于学术研究场景。",
+            "upside": "推动合成运营数据集构建方法论发展，为工业仿真数据标注提供新范式",
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "mid",
+            "badge": "RL基准拓展",
+            "summary": "SkillChain-Gym作为新的强化学习基准环境，将劳动力技能动态引入生产决策建模，要求智能体在再培训与生产排期之间进行权衡优化。该基准可驱动决策型基础模型与RL算法的评测迭代。对现有运筹学RL基准（如OR-Gym）形成补充，推动MDP/POMDP建模能力提升。",
+            "upside": "为决策AI模型提供新评测维度，促进工业场景RL算法精度提升",
+            "downside": "基准规模和影响力尚待学术社区验证，短期内难以成为主流基准",
+            "companies": [
+              {
+                "name": "DeepMind",
+                "role": "决策型RL基础模型研发方",
+                "type": "neutral",
+                "impact_label": "基准参考价值",
+                "reason": "该基准可作为工业决策场景RL算法（如AlphaCode/Gemini工业版）的评测参考",
+                "specific": "现有运筹RL基准如OR-Gym已被超过200篇论文引用，新基准若进入同量级引用将影响模型研发方向",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "Agent决策框架",
+            "summary": "该基准为AI Agent在工业运营场景的任务规划能力提供了测试床，涵盖多步骤决策、资源竞争约束与扰动适应等典型Agent挑战。有助于推动工业场景下Planning Agent和工具链的评测标准化。",
+            "upside": "为工业Agent框架（如LangChain工业插件、AutoGen）提供可量化的决策规划评测场景",
+            "downside": "场景专业性强，通用Agent工具链适配成本较高",
+            "companies": [
+              {
+                "name": "LangChain",
+                "role": "AI Agent开发框架提供方",
+                "type": "neutral",
+                "impact_label": "场景适配参考",
+                "reason": "生产控制场景中的多轮决策与技能约束规划，可作为验证LangChain工业Agent能力的参考基准",
+                "specific": "LangChain已有超过10万GitHub Star，工业场景Agent为其2024年重点拓展方向",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "mid",
+            "badge": "工业调度应用",
+            "summary": "该研究直接面向制造业生产排程与人力资源管理的AI化痛点，将再培训决策纳入生产-库存优化框架，对工业AI应用（尤其是供应链管理和人力排班SaaS）具有方法论参考价值。长期有望加速智能制造中技能感知调度系统的落地。",
+            "upside": "为制造业数字化转型提供新的AI决策范式，推动供应链韧性管理产品功能升级",
+            "downside": "从基准研究到工业落地存在较长周期，短期商业转化有限",
+            "companies": [
+              {
+                "name": "SAP",
+                "role": "企业ERP与供应链管理软件供应商",
+                "type": "positive",
+                "impact_label": "方法论借鉴",
+                "reason": "SAP供应链AI模块可借鉴该基准中技能约束与生产排程联合优化的建模思路",
+                "specific": "SAP 2024年AI供应链产品线营收超50亿欧元，技能感知调度为其智能制造模块潜在功能点",
+                "impact_depth": 1
+              },
+              {
+                "name": "o9 Solutions",
+                "role": "AI驱动的供应链计划平台",
+                "type": "positive",
+                "impact_label": "场景能力延伸",
+                "reason": "该基准提出的扰动下再培训-生产权衡模型，与o9的AI供应链规划平台目标场景高度吻合",
+                "specific": "o9 Solutions估值超30亿美元，正在扩展劳动力规划与生产计划一体化功能",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
