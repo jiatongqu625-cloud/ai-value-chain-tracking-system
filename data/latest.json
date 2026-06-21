@@ -1,7 +1,389 @@
 {
-  "updated_at": "2026-06-20T10:29:49.527240+00:00",
-  "count": 19,
+  "updated_at": "2026-06-21T11:13:15.970496+00:00",
+  "count": 24,
   "items": [
+    {
+      "article_id": "34ad5975c25a1392",
+      "date": "2026-06-21",
+      "fetched_at": "2026-06-21T11:11:43.763448+00:00",
+      "article": {
+        "title": "The 100k Whys of AI",
+        "summary": "HN score: 113, comments: 65",
+        "url": "https://lcamtuf.substack.com/p/the-100000-whys-of-ai",
+        "source": "HackerNews",
+        "published_at": "2026-06-21T05:45:21+00:00"
+      },
+      "analysis": {
+        "news_title": "AI百问探讨热议",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该新闻为AI讨论性内容，不涉及算力基础设施的采购、部署或技术变革，对GPU/NPU芯片及高性能计算集群无实质影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "知识积累",
+            "summary": "100k级别的AI问答讨论帖隐含大量真实用户对AI的疑问与认知盲点，可作为高质量指令数据的来源线索。社区中涌现的真实提问有助于识别数据标注的优先方向。",
+            "upside": "社区讨论可为合成数据生成与指令微调数据集设计提供灵感，帮助识别用户真实需求分布。",
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "认知参考",
+            "summary": "HN社区113分、65条评论的热度表明该讨论具有一定影响力，其中涉及的AI能力边界问题可间接反映当前基础模型的不足之处。研究人员可从中提炼模型后训练对齐的改进方向。",
+            "upside": "讨论中暴露的AI理解盲区可为RLHF/DPO数据构造提供参考，辅助改进模型推理与解释能力。",
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "low",
+            "badge": "评估启发",
+            "summary": "大规模Why类问题集合天然适合作为AI推理评估基准，对Prompt工程与评估工具链有一定参考价值。开发者社区的讨论也可能推动新型问答评测集的构建。",
+            "upside": "100k规模的Why问题可被用于构建推理评估集，为Prompt评估框架提供真实场景测试用例。",
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "mid",
+            "badge": "用户需求洞察",
+            "summary": "该内容聚焦于用户对AI的深层疑问，直接反映消费者AI助手在解释性与因果推理方面的产品缺口。HN社区65条讨论中涉及的AI局限性认知，将影响教育类和通用助手类应用的产品迭代方向。高热度（113分）说明该话题具有跨用户群体的共鸣。",
+            "upside": "为AI教育、问答助手类产品提供真实用户痛点参考，有助于优化解释性功能与因果推理能力的产品优先级。",
+            "downside": "若AI应用无法回答深层Why类问题，可能加剧用户对产品能力的质疑，影响留存率。",
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "eef6a7162c8531c2",
+      "date": "2026-06-21",
+      "fetched_at": "2026-06-21T11:11:43.525898+00:00",
+      "article": {
+        "title": "Bootimus – A Self-Contained PXE and HTTP Boot Server",
+        "summary": "HN score: 117, comments: 38",
+        "url": "https://bootimus.com",
+        "source": "HackerNews",
+        "published_at": "2026-06-20T10:55:18+00:00"
+      },
+      "analysis": {
+        "news_title": "PXE网络启动服务器",
+        "category": "其他",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "low",
+            "badge": "运维工具",
+            "summary": "Bootimus作为自包含的PXE/HTTP启动服务器，可简化大规模GPU集群的裸机节点批量部署与重装流程。对于需要频繁重置实验环境的AI算力集群，网络启动方案可降低人工运维成本。但其本身并不直接改变芯片或硬件采购决策，影响范围有限。",
+            "upside": "简化AI算力集群裸机批量部署，降低节点初始化时间",
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该工具与数据采集、标注、向量数据库及数据中心能源管理无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "PXE启动服务器属于基础运维工具，不涉及模型训练、推理服务或MLOps平台核心流程。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "low",
+            "badge": "基础设施工具",
+            "summary": "Bootimus属于开源基础设施工具链范畴，为开发者提供轻量级自包含的网络启动能力，可集成至私有AI开发环境的自动化部署流程中。HN社区117分的关注度表明其在DevOps圈有一定认可，但距AI开发工具主流生态仍有距离。",
+            "upside": "可作为私有AI开发集群自动化运维组件，降低环境搭建复杂度",
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该工具为底层网络启动基础设施，与终端AI应用无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "9c1c6790ed7b7f6b",
+      "date": "2026-06-21",
+      "fetched_at": "2026-06-21T11:11:42.618703+00:00",
+      "article": {
+        "title": "Semiconductor Lifeline Keeps Fighter Jets in the Air",
+        "summary": "HN score: 68, comments: 20",
+        "url": "https://spectrum.ieee.org/phoenix-semiconductors-legacychips-oems",
+        "source": "HackerNews",
+        "published_at": "2026-06-16T12:31:02+00:00"
+      },
+      "analysis": {
+        "news_title": "半导体保障战机持续运转",
+        "category": "芯片",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "mid",
+            "badge": "军用芯片供应",
+            "summary": "战斗机依赖特定半导体器件维持飞行系统运转，暴露出军用/航空级芯片的长期供应链脆弱性。此类需求与民用AI芯片生态不同，侧重可靠性与长周期供货，可能推动国防半导体专项采购与库存策略调整。",
+            "upside": "军用半导体长尾供应市场需求扩大，航空级芯片翻新/再制造商获得更多订单机会",
+            "downside": "若通用芯片厂商停产旧制程产品，军用装备维护将面临断供风险",
+            "companies": [
+              {
+                "name": "BAE Systems",
+                "role": "航空电子系统集成与军用半导体采购方",
+                "type": "neutral",
+                "impact_label": "旧制程芯片保障",
+                "reason": "BAE Systems旗下有专门的半导体翻新和供应链服务部门，为老旧战机提供停产芯片的替代方案",
+                "specific": "其半导体业务每年处理数百种停产器件，服务覆盖F-16、F/A-18等机型",
+                "impact_depth": 3
+              },
+              {
+                "name": "Rochester Electronics",
+                "role": "停产半导体授权再制造商",
+                "type": "positive",
+                "impact_label": "停产芯片再造",
+                "reason": "专注于停产军用/工业芯片的授权克隆与库存供应，是此类供应链需求的核心受益方",
+                "specific": "库存超过150亿颗停产器件，合作原厂超过70家",
+                "impact_depth": 3
+              },
+              {
+                "name": "Lansdale Semiconductor",
+                "role": "军用旧制程芯片持续制造商",
+                "type": "positive",
+                "impact_label": "军用芯片持续供",
+                "reason": "专门为航空航天和国防领域持续生产旧制程芯片，军用装备维护需求直接拉动其订单",
+                "specific": "持续生产1970-1990年代设计的TTL/CMOS器件，服务美国及盟国军方",
+                "impact_depth": 2
+              }
+            ]
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "本新闻与数据采集、标注或数据中心基础设施无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "国防AI间接",
+            "summary": "军用装备半导体供应链稳定性间接影响国防AI系统的部署可行性，若嵌入式推理芯片断供，机载AI功能将受限。但本新闻主要涉及传统控制类芯片，与AI推理加速器关联较弱。",
+            "upside": "国防AI系统对可靠嵌入式芯片的需求，可能推动军用AI加速器的长周期供货标准制定",
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "本新闻与AI工具中间件层无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "国防应用保障",
+            "summary": "战机半导体供应链的稳定性是军事AI应用（如机载态势感知、自主飞行辅助）落地的硬件前提。供应链脆弱性若不解决，将制约具身智能在国防领域的规模化部署。",
+            "upside": "推动国防部门加速AI系统现代化改造，以减少对停产旧芯片的依赖",
+            "downside": "短期内旧制程芯片断供风险可能导致部分军事AI系统无法维护升级",
+            "companies": [
+              {
+                "name": "Palantir",
+                "role": "军事AI应用平台提供商",
+                "type": "neutral",
+                "impact_label": "军事AI依赖硬件",
+                "reason": "Palantir的军事AI系统最终依赖前端硬件平台的稳定运行，半导体供应链风险间接影响其系统部署的可靠性",
+                "specific": "Palantir与美国国防部合同累计超20亿美元，系统部署于多型作战平台",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "c3fb9723381a4597",
+      "date": "2026-06-21",
+      "fetched_at": "2026-06-21T11:11:39.495455+00:00",
+      "article": {
+        "title": "Slow breathing modulates brain function and risk behavior",
+        "summary": "HN score: 220, comments: 55",
+        "url": "https://www.cell.com/neuron/fulltext/S0896-6273(26)00339-9",
+        "source": "HackerNews",
+        "published_at": "2026-06-20T22:22:52+00:00"
+      },
+      "analysis": {
+        "news_title": "呼吸调节大脑与冒险行为",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该研究属于神经科学/生理学领域，与GPU/NPU芯片、HPC集群及存储互联无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该研究不涉及AI数据采集、标注或数据中心基础设施，对数据与能源层无实质影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该研究与大模型预训练、推理服务及MLOps平台无关联，对模型基础设施层无影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该研究不涉及RAG、AI Agent框架或开发者工具链，对工具中间件层无影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "健康应用参考",
+            "summary": "慢呼吸调节大脑功能的研究结论，可为冥想类、心理健康类及生物反馈类AI健康应用提供科学背书。相关发现若得到广泛传播，可能推动消费者健康AI产品在呼吸训练与情绪调节方向的功能迭代。然而该研究本身并非AI成果，产业影响极为间接。",
+            "upside": "为冥想/压力管理类AI健康应用提供新的科学依据，有助于内容可信度背书",
+            "downside": null,
+            "companies": [
+              {
+                "name": "Calm / Headspace",
+                "role": "消费者冥想与心理健康AI应用",
+                "type": "positive",
+                "impact_label": "内容背书",
+                "reason": "该研究为慢呼吸降低冒险行为提供神经科学证据，可强化此类应用呼吸练习模块的科学公信力",
+                "specific": "HN社区220分讨论热度显示科技圈关注度较高，间接提升健康类AI应用相关功能的用户接受度",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "74bfe2486c1c28ed",
+      "date": "2026-06-21",
+      "fetched_at": "2026-06-21T11:11:38.984457+00:00",
+      "article": {
+        "title": "Loupe – A iOS app that raises awareness about what native apps can see",
+        "summary": "HN score: 314, comments: 119",
+        "url": "https://github.com/mysk-research/loupe",
+        "source": "HackerNews",
+        "published_at": "2026-06-20T12:08:23+00:00"
+      },
+      "analysis": {
+        "news_title": "Loupe隐私感知iOS应用",
+        "category": "应用",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该应用为iOS隐私可视化工具，与基础算力层无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "数据透明度",
+            "summary": "Loupe通过可视化展示原生应用可访问的数据权限，提升用户对数据采集行为的感知意识。这一趋势可能推动数据采集合规要求更加严格，间接影响AI训练数据的获取方式。用户隐私意识提升后，高质量第一方数据的采集成本可能上升。",
+            "upside": "推动数据采集行为透明化，促进合规数据采集生态建立",
+            "downside": "用户隐私意识增强可能减少可用于AI训练的移动端行为数据量",
+            "companies": [
+              {
+                "name": "Apple",
+                "role": "iOS平台数据权限管理方",
+                "type": "neutral",
+                "impact_label": "权限生态受关注",
+                "reason": "Loupe建立在iOS权限体系之上，间接强化用户对Apple隐私承诺的认知与期待",
+                "specific": "HN社区获得314分、119条评论，显示开发者群体对移动端数据权限可见性有较高关注度",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "model": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该工具与模型训练、推理及MLOps平台无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "low",
+            "badge": "安全工具参考",
+            "summary": "Loupe作为隐私可视化工具，为AI安全对齐工具链和隐私审计类开发工具提供了一种产品设计参考思路。其「让不可见变可见」的交互范式可被AI权限审计SDK借鉴。但当前影响较为间接，尚未形成直接产业冲击。",
+            "upside": "为移动端AI应用权限审计工具提供设计灵感，推动隐私感知类SDK的潜在需求",
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "mid",
+            "badge": "隐私意识觉醒",
+            "summary": "Loupe直接作用于应用层，通过可视化原生应用的数据访问行为，提升普通iOS用户的隐私意识。这对采集大量用户数据的消费者AI助手类应用构成潜在压力，要求更透明的数据使用声明。同时也可能催生隐私优先型AI应用的差异化竞争机会。",
+            "upside": "隐私友好型AI应用可借此趋势形成差异化竞争优势，吸引隐私敏感用户群体",
+            "downside": "依赖广泛数据采集的消费者AI助手应用面临用户信任压力，授权率可能下降",
+            "companies": [
+              {
+                "name": "Loupe（独立开发者）",
+                "role": "隐私可视化工具开发方",
+                "type": "positive",
+                "impact_label": "开创隐私感知品类",
+                "reason": "在HN社区引发广泛讨论，验证了移动端隐私可视化工具存在真实用户需求",
+                "specific": "HN评分314分、119条评论，属于HN当日高热度项目，显示开发者与技术用户群体的强烈共鸣",
+                "impact_depth": 3
+              },
+              {
+                "name": "Meta",
+                "role": "iOS平台消费者AI应用开发商",
+                "type": "negative",
+                "impact_label": "数据采集受审视",
+                "reason": "Meta旗下应用（Instagram/Facebook）历史上因数据采集问题多次受到关注，此类工具普及后将使其数据行为更加暴露",
+                "specific": "Meta应用在iOS隐私报告中历来是相机、麦克风、联系人权限的高频请求方，Loupe类工具普及将直接可视化这一行为",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
     {
       "article_id": "074d1b033956528f",
       "date": "2026-06-20",
