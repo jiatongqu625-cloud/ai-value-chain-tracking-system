@@ -1,7 +1,561 @@
 {
-  "updated_at": "2026-06-21T11:13:15.970496+00:00",
-  "count": 24,
+  "updated_at": "2026-06-22T13:30:39.518677+00:00",
+  "count": 30,
   "items": [
+    {
+      "article_id": "3c7767c549db77de",
+      "date": "2026-06-22",
+      "fetched_at": "2026-06-22T13:29:06.850475+00:00",
+      "article": {
+        "title": "I Canceled My French Tutor and Built an LLM Tool That Does It Better",
+        "summary": "HN score: 43, comments: 13",
+        "url": "https://alshe.substack.com/p/i-canceled-my-french-tutor-and-built",
+        "source": "HackerNews",
+        "published_at": "2026-06-21T22:46:43+00:00"
+      },
+      "analysis": {
+        "news_title": "LLM工具替代法语家教",
+        "category": "应用",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该个人项目规模极小，对算力基础设施层无实质影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该工具使用现有LLM API，未涉及新的数据采集或标注需求。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "API调用增量",
+            "summary": "作者基于现有LLM（大概率为OpenAI或Anthropic API）构建语言学习工具，代表个人开发者对推理服务API的典型消费场景。此类长尾用例累积构成模型服务商的API调用基本盘。",
+            "upside": "语言学习场景对话轮次多、会话长，单用户token消耗高于平均水平，有助于API营收。",
+            "downside": null,
+            "companies": [
+              {
+                "name": "OpenAI",
+                "role": "推理服务API提供商",
+                "type": "positive",
+                "impact_label": "长尾API消费",
+                "reason": "个人开发者以API方式调用GPT系列模型构建语言学习工具，贡献持续性token消耗。",
+                "specific": "语言学习类应用平均每次会话约500-2000 tokens，高频使用场景月调用量可达数十万tokens。",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "Prompt工程实践",
+            "summary": "该项目是典型的个人LLM工具开发案例，涉及Prompt工程设计、对话流管理及语言评估逻辑，体现AI开发工具层的民主化趋势。HN社区讨论可带动同类工具的构建兴趣，验证低代码/高Prompt方式的可行性。",
+            "upside": "印证个人开发者可用简单SDK+Prompt工程替代专业服务，利好AI开发者工具生态推广。",
+            "downside": null,
+            "companies": [
+              {
+                "name": "LangChain",
+                "role": "Agent/对话流框架提供商",
+                "type": "positive",
+                "impact_label": "个人开发验证",
+                "reason": "此类个人语言工具项目是LangChain等框架的核心目标用户场景，案例传播有助于开发者生态增长。",
+                "specific": "LangChain GitHub star数超过90k，语言学习/对话类是其最热门模板场景之一。",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "mid",
+            "badge": "语言学习颠覆",
+            "summary": "该案例直接展示LLM对传统语言家教服务的替代可能，对消费者AI助手和教育垂直行业均有示范效应。HN上的传播将强化'AI可替代人工辅导'的用户认知，加速语言学习市场向AI工具迁移。",
+            "upside": "验证AI语言学习工具的可行性，利好Duolingo等AI化语言学习平台，推动用户从人工家教转向AI产品。",
+            "downside": "对传统语言家教平台（如iTalki、Preply）及个人家教市场构成需求侧压力。",
+            "companies": [
+              {
+                "name": "Duolingo",
+                "role": "AI语言学习应用",
+                "type": "positive",
+                "impact_label": "需求验证受益",
+                "reason": "用户主动替换人工家教转向LLM工具，印证AI语言学习赛道需求真实存在，Duolingo已深度整合GPT-4。",
+                "specific": "Duolingo 2024年AI付费用户超800万，此类用户行为变化直接支撑其Max订阅产品定价逻辑。",
+                "impact_depth": 2
+              },
+              {
+                "name": "iTalki",
+                "role": "在线人工家教平台",
+                "type": "negative",
+                "impact_label": "人工需求受压",
+                "reason": "用户因LLM工具效果满意而取消真人家教订阅，代表平台核心供需关系受AI替代威胁。",
+                "specific": "iTalki平台注册教师超7万名，语言学习AI替代叙事若持续传播，或影响平台课时预订增速。",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "47f4215b12d7061f",
+      "date": "2026-06-22",
+      "fetched_at": "2026-06-22T13:29:06.516131+00:00",
+      "article": {
+        "title": "The case against geometric algebra (2024)",
+        "summary": "HN score: 130, comments: 123",
+        "url": "https://alexkritchevsky.com/2024/02/28/geometric-algebra.html",
+        "source": "HackerNews",
+        "published_at": "2026-06-21T11:06:55+00:00"
+      },
+      "analysis": {
+        "news_title": "几何代数反思讨论",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该讨论属于纯数学/理论层面，对GPU/NPU芯片设计、HBM存储及计算集群无直接影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "与数据采集、标注及数据中心基础设施无关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "数学基础争议",
+            "summary": "几何代数（GA）曾被部分研究者探索用于神经网络架构设计（如等变网络、物理模拟模型）。此文引发HN社区130+热度讨论，可能影响学术界对GA在模型设计中应用价值的预期，使相关研究方向热度边际降低。目前主流Transformer架构对GA依赖极少，实际影响有限。",
+            "upside": null,
+            "downside": "若学界减少对GA在等变神经网络中的投入，部分基于GA的模型架构研究可能放缓。",
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "low",
+            "badge": "框架方向参考",
+            "summary": "少数AI开发工具和物理仿真框架（如用于机器人/3D感知的SDK）曾引入GA作为几何表示工具。该讨论提供了反对使用GA的学术论据，可能影响相关开源库的维护优先级。HN 123条评论显示开发者社区存在真实关注，但尚未形成主流影响。",
+            "upside": null,
+            "downside": "基于GA的小众开发工具库可能因学术信心下降而减少贡献者。",
+            "companies": []
+          },
+          "app": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该数学理论争论对企业效率、消费者AI助手及垂直行业应用无直接影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "7911f134273a287b",
+      "date": "2026-06-22",
+      "fetched_at": "2026-06-22T13:29:05.588981+00:00",
+      "article": {
+        "title": "You're probably using Agent Skills wrong",
+        "summary": "HN score: 41, comments: 19",
+        "url": "https://notes.ansonbiggs.com/youre-probably-using-agent-skills-wrong/",
+        "source": "HackerNews",
+        "published_at": "2026-06-22T01:02:16+00:00"
+      },
+      "analysis": {
+        "news_title": "Agent Skills误用解析",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该文章聚焦于Agent Skills的使用方式与工程实践，与底层算力基础设施无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "文章内容不涉及数据采集、标注或数据中心等数据层基础设施。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "推理调用优化",
+            "summary": "Agent Skills的正确使用方式直接影响模型推理调用路径的效率。若开发者按文章建议优化Skills调用，可降低冗余推理请求，对推理服务API层产生间接优化效果。文章属于社区实践经验分享，传播范围有限（HN score 41）。",
+            "upside": "减少不必要的模型调用次数，降低推理成本与延迟",
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "Agent设计规范",
+            "summary": "该文章直接指向AI Agent框架层的工程实践误区，对Agent Skills的设计模式、调用规范与组合方式提出批评性建议。此类内容在开发者社区（Hacker News score 41, 19条评论）形成讨论，有助于推动Agent框架最佳实践标准化。若被主流框架采纳，可影响LangChain、AutoGen等工具的Skills接口设计。",
+            "upside": "推动Agent Skills设计规范化，减少开发者踩坑成本，促进框架迭代",
+            "downside": "现有按错误模式构建的Agent工具链可能面临重构压力",
+            "companies": [
+              {
+                "name": "LangChain",
+                "role": "主流Agent框架提供商",
+                "type": "neutral",
+                "impact_label": "实践规范参考",
+                "reason": "作为最广泛使用的Agent框架，其Tools/Skills设计若与文章指出的误用模式重合，存在API设计调整压力",
+                "specific": "LangChain GitHub stars超90k，其Tools接口是Agent Skills误用最高频场景之一",
+                "impact_depth": 2
+              },
+              {
+                "name": "Microsoft AutoGen",
+                "role": "多Agent框架提供商",
+                "type": "neutral",
+                "impact_label": "框架设计审视",
+                "reason": "AutoGen的Agent技能注册机制是此类讨论的典型对象，社区讨论可能推动其文档或接口优化",
+                "specific": "AutoGen v0.4已重构Skills架构，此类社区反馈是其迭代的重要输入来源",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "开发效率提升",
+            "summary": "应用层开发者若采纳文章中的Agent Skills正确用法，可提升AI应用的可靠性与响应质量。影响面局限于已关注该讨论的开发者群体，规模有限。",
+            "upside": "减少Agent应用因Skills误用导致的幻觉、循环调用等生产问题",
+            "downside": null,
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "0ddfb42db430db57",
+      "date": "2026-06-22",
+      "fetched_at": "2026-06-22T13:29:04.520382+00:00",
+      "article": {
+        "title": "Becoming a dad changes men's brains",
+        "summary": "HN score: 7, comments: 4",
+        "url": "https://www.scientificamerican.com/article/how-becoming-a-dad-changes-mens-brains/",
+        "source": "HackerNews",
+        "published_at": "2026-06-22T12:39:43+00:00"
+      },
+      "analysis": {
+        "news_title": "父亲身份改变男性大脑",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该研究属于神经科学/社会科学领域，与AI算力基础设施无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该研究不涉及AI数据采集、标注或数据中心建设，对数据层无实质影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻与大模型预训练、推理服务或MLOps平台均无关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该研究不涉及AI工具链、Agent框架或开发者生态，对工具中间件层无影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻为神经科学基础研究，HN评分仅7分、评论4条，热度极低，对AI应用层无可见影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "8e195a9e8c2c12e2",
+      "date": "2026-06-22",
+      "fetched_at": "2026-06-22T13:29:01.907522+00:00",
+      "article": {
+        "title": "JSON-LD explained for personal websites",
+        "summary": "HN score: 240, comments: 76",
+        "url": "https://hawksley.dev/blog/json-ld-explained-for-personal-websites/",
+        "source": "HackerNews",
+        "published_at": "2026-06-21T18:51:47+00:00"
+      },
+      "analysis": {
+        "news_title": "JSON-LD个人网站应用",
+        "category": "其他",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "JSON-LD个人网站应用与基础算力层无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "结构化数据",
+            "summary": "JSON-LD是一种结构化数据标记语言，广泛用于语义化网页内容描述。个人网站采用JSON-LD标注可提升网页内容的机器可读性，有助于AI爬虫和搜索引擎更精准地采集与理解网页数据。这对AI训练数据的质量和语义标注环节有间接正向作用。",
+            "upside": "更多网页采用JSON-LD结构化标注，提升公开数据集的语义质量，降低数据清洗成本",
+            "downside": null,
+            "companies": [
+              {
+                "name": "Google",
+                "role": "搜索引擎与网页数据采集方",
+                "type": "positive",
+                "impact_label": "数据质量提升",
+                "reason": "JSON-LD普及使Google Knowledge Graph等结构化数据来源更丰富，提升爬取效率",
+                "specific": "Google是JSON-LD schema.org规范的主要推动方，目前超过40%的网页已部署某种结构化数据标记",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "语义理解",
+            "summary": "JSON-LD提供的结构化语义信息可作为大模型预训练语料的补充，帮助模型学习实体关系和知识图谱结构。但该新闻仅为技术科普，对模型层整体影响极为有限。",
+            "upside": "结构化网页数据有助于提升模型对实体、关系的语义理解能力",
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "low",
+            "badge": "RAG增强",
+            "summary": "JSON-LD结构化数据与RAG知识库构建高度相关，语义化标注的网页内容可直接用于构建更高质量的向量知识库。开发者工具链可借助JSON-LD降低网页内容解析复杂度，提升Agent在网页信息抓取场景下的准确率。",
+            "upside": "JSON-LD的普及降低RAG系统从网页抓取结构化知识的成本，提升知识库构建效率",
+            "downside": null,
+            "companies": [
+              {
+                "name": "Langchain",
+                "role": "AI Agent与RAG框架提供商",
+                "type": "positive",
+                "impact_label": "数据接入优化",
+                "reason": "JSON-LD结构化标注网页可简化LangChain WebLoader等组件的解析流程，提升知识入库质量",
+                "specific": "LangChain文档加载器支持HTML/网页解析，JSON-LD普及可直接减少非结构化文本清洗步骤",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "搜索体验优化",
+            "summary": "个人网站采用JSON-LD可提升其在AI搜索引擎（如Perplexity、SearchGPT）中的被引用率和展示质量。对消费者AI助手在回答涉及个人品牌、作者信息等场景时的准确性有间接正向影响。",
+            "upside": "个人开发者/创作者通过JSON-LD提升在AI搜索结果中的曝光度和信息准确性",
+            "downside": null,
+            "companies": [
+              {
+                "name": "Perplexity AI",
+                "role": "AI搜索应用提供商",
+                "type": "positive",
+                "impact_label": "引用质量提升",
+                "reason": "更多网页部署JSON-LD后，Perplexity等AI搜索引擎可更准确地提取作者、发布日期、内容类型等元数据",
+                "specific": "Perplexity每月处理超5亿次查询，结构化数据普及可系统性提升引用溯源准确率",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "80802a1f33ea3dcc",
+      "date": "2026-06-22",
+      "fetched_at": "2026-06-22T13:29:01.710902+00:00",
+      "article": {
+        "title": "Danish privacy activist Lars Andersen raided by police",
+        "summary": "HN score: 316, comments: 270",
+        "url": "https://twitter.com/LarsAnders1620/status/2068208864747540516#m",
+        "source": "HackerNews",
+        "published_at": "2026-06-22T04:50:26+00:00"
+      },
+      "analysis": {
+        "news_title": "丹麦隐私活动家遭警方搜查",
+        "category": "监管",
+        "heat": "变局",
+        "heat_bg": "#FBEAF0",
+        "heat_c": "#72243E",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "此事件与基础算力层无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "mid",
+            "badge": "隐私合规压力",
+            "summary": "隐私活动家遭警方搜查一事在欧洲数据保护社区引发广泛关注，可能强化公众对数据采集与处理合规性的审视。欧盟GDPR框架下，AI训练数据的合法性本已是敏感议题，此类事件可能进一步推动监管机构对数据来源与标注流程的调查力度。合成数据与隐私增强技术的需求或因此上升。",
+            "upside": "隐私增强技术（PET）、合成数据生成商迎来更多合规驱动需求",
+            "downside": "依赖欧洲用户数据进行训练的AI公司面临更高合规成本与法律风险",
+            "companies": [
+              {
+                "name": "Mistral AI",
+                "role": "欧洲本土大模型公司，依赖欧洲数据资源",
+                "type": "negative",
+                "impact_label": "数据合规风险",
+                "reason": "欧洲隐私监管氛围趋严将增加其训练数据合法性审查压力",
+                "specific": "欧盟AI法案2024年生效，GDPR罚款上限为全球营收4%，Mistral融资约1.1亿欧元",
+                "impact_depth": 1
+              },
+              {
+                "name": "Gretel.ai",
+                "role": "合成数据生成平台",
+                "type": "positive",
+                "impact_label": "合规需求受益",
+                "reason": "隐私监管压力上升推动企业转向合成数据以规避真实用户数据风险",
+                "specific": "Gretel已融资约6700万美元，合成数据市场预计2027年超10亿美元",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "间接合规扰动",
+            "summary": "此事件本身不直接影响模型预训练或推理服务，但欧洲隐私执法氛围趋严可能影响模型开发商对训练数据合法性的风险评估。长期来看，欧洲监管机构可能借助此类社会事件强化对AI数据使用的关注。",
+            "upside": null,
+            "downside": "在欧洲运营的模型API服务商需更谨慎处理用户数据留存与隐私政策",
+            "companies": [
+              {
+                "name": "OpenAI",
+                "role": "推理服务API提供商，欧洲用户基数庞大",
+                "type": "negative",
+                "impact_label": "欧洲监管风险",
+                "reason": "欧洲隐私执法环境收紧将增加其在欧业务的合规审查频率",
+                "specific": "OpenAI此前已因GDPR问题被意大利暂时封禁（2023年3月），欧洲用户占全球约20%",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "low",
+            "badge": "安全工具受益",
+            "summary": "隐私维权人士遭执法打压的新闻在技术社区（HN评分316，270条评论）引发高度关注，可能推动开发者社区对AI系统隐私保护工具链的重视。数据脱敏、差分隐私等工具需求有潜在上升空间。",
+            "upside": "隐私保护中间件、数据脱敏SDK等工具链需求或因监管压力上升而增长",
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "用户信任影响",
+            "summary": "此类新闻强化了欧洲消费者对数据隐私的敏感度，可能影响消费者AI助手及数据密集型应用的用户信任与采纳意愿。企业级AI应用在欧洲推广时将面临更多尽职调查要求。",
+            "upside": null,
+            "downside": "面向欧洲消费者的AI应用可能遭遇更高用户隐私顾虑，影响数据收集与个性化能力",
+            "companies": [
+              {
+                "name": "Meta AI",
+                "role": "消费者AI助手提供商，欧洲市场重要玩家",
+                "type": "negative",
+                "impact_label": "欧洲市场受阻",
+                "reason": "欧洲隐私监管氛围收紧将持续制约Meta AI功能在欧洲的推出进度",
+                "specific": "Meta因隐私问题已推迟欧洲AI功能发布至少两次（2024年），涉及约4亿欧洲用户",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "4d707f5acc3c2676",
+      "date": "2026-06-22",
+      "fetched_at": "2026-06-22T13:28:59.542350+00:00",
+      "article": {
+        "title": "Munich 1991: The Roots of the Current AI Boom",
+        "summary": "HN score: 130, comments: 52",
+        "url": "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html",
+        "source": "HackerNews",
+        "published_at": "2026-06-19T15:54:23+00:00"
+      },
+      "analysis": {
+        "news_title": "AI繁荣溯源慕尼黑1991",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该新闻为历史回顾性学术讨论，追溯1991年慕尼黑AI研究起点，对当前算力硬件产业链无实质影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "历史回顾类内容，不涉及数据采集、标注或数据中心基础设施的变化，对数据层无实质影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "历史叙事参考",
+            "summary": "该文章在Hacker News获得130分、52条评论，表明社区对AI技术起源的学术兴趣较高。对模型层的影响仅限于学术叙事层面，有助于研究者理解深度学习思想谱系，但不直接改变当前模型训练或推理格局。文章可能涉及早期神经网络或连接主义研究，对学术界有参考价值。",
+            "upside": "强化AI研究社区对技术脉络的认知，有助于基础研究方向的历史借鉴",
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "历史回顾性内容，对Agent框架、RAG、Prompt工程等工具中间件层无实质影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该新闻为学术历史性讨论，不涉及具体应用产品或垂直行业落地，对应用层无实质影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          }
+        }
+      }
+    },
     {
       "article_id": "34ad5975c25a1392",
       "date": "2026-06-21",
@@ -2001,106 +2555,6 @@
                 "impact_label": "算法库扩充",
                 "reason": "专注AI供应链规划的SaaS平台可将该MPC方法论转化为产品功能，差异化竞争传统供应链软件",
                 "specific": "Kinaxis 2024财年营收约4.5亿加元，供应链AI赛道融资持续活跃，技能约束优化为新兴细分需求",
-                "impact_depth": 1
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "article_id": "352b029f2b99987b",
-      "date": "2026-06-18",
-      "fetched_at": "2026-06-18T09:35:40.821975+00:00",
-      "article": {
-        "title": "SkillChain-Gym: A Benchmark for Reskilling-Aware Production-Inventory Control under Disruptions",
-        "summary": "arXiv:2606.17266v1 Announce Type: new \nAbstract: Production planning increasingly has to treat workforce capability as a decision variable: certifications lapse when skills are not maintained, new products require skills the current workforce does not hold, and reskilling competes for the same worker hours needed for production. Existing operations benchmarks usually treat labor as exogenous, whil",
-        "url": "https://arxiv.org/abs/2606.17266",
-        "source": "arXiv",
-        "published_at": "Thu, 18 Jun 2026 00:00:00 -0400"
-      },
-      "analysis": {
-        "news_title": "技能链生产控制基准发布",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无直接影响",
-            "summary": "该研究为运筹学与强化学习基准，不涉及算力硬件层面的直接需求变化。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "low",
-            "badge": "仿真数据生成",
-            "summary": "该基准提供了生产-库存控制仿真环境，需要生成包含技能认证、再培训周期和供应链扰动的结构化合成数据集。数据规模有限，主要服务于学术研究场景。",
-            "upside": "推动合成运营数据集构建方法论发展，为工业仿真数据标注提供新范式",
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "mid",
-            "badge": "RL基准拓展",
-            "summary": "SkillChain-Gym作为新的强化学习基准环境，将劳动力技能动态引入生产决策建模，要求智能体在再培训与生产排期之间进行权衡优化。该基准可驱动决策型基础模型与RL算法的评测迭代。对现有运筹学RL基准（如OR-Gym）形成补充，推动MDP/POMDP建模能力提升。",
-            "upside": "为决策AI模型提供新评测维度，促进工业场景RL算法精度提升",
-            "downside": "基准规模和影响力尚待学术社区验证，短期内难以成为主流基准",
-            "companies": [
-              {
-                "name": "DeepMind",
-                "role": "决策型RL基础模型研发方",
-                "type": "neutral",
-                "impact_label": "基准参考价值",
-                "reason": "该基准可作为工业决策场景RL算法（如AlphaCode/Gemini工业版）的评测参考",
-                "specific": "现有运筹RL基准如OR-Gym已被超过200篇论文引用，新基准若进入同量级引用将影响模型研发方向",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "mid",
-            "badge": "Agent决策框架",
-            "summary": "该基准为AI Agent在工业运营场景的任务规划能力提供了测试床，涵盖多步骤决策、资源竞争约束与扰动适应等典型Agent挑战。有助于推动工业场景下Planning Agent和工具链的评测标准化。",
-            "upside": "为工业Agent框架（如LangChain工业插件、AutoGen）提供可量化的决策规划评测场景",
-            "downside": "场景专业性强，通用Agent工具链适配成本较高",
-            "companies": [
-              {
-                "name": "LangChain",
-                "role": "AI Agent开发框架提供方",
-                "type": "neutral",
-                "impact_label": "场景适配参考",
-                "reason": "生产控制场景中的多轮决策与技能约束规划，可作为验证LangChain工业Agent能力的参考基准",
-                "specific": "LangChain已有超过10万GitHub Star，工业场景Agent为其2024年重点拓展方向",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "app": {
-            "impact_level": "mid",
-            "badge": "工业调度应用",
-            "summary": "该研究直接面向制造业生产排程与人力资源管理的AI化痛点，将再培训决策纳入生产-库存优化框架，对工业AI应用（尤其是供应链管理和人力排班SaaS）具有方法论参考价值。长期有望加速智能制造中技能感知调度系统的落地。",
-            "upside": "为制造业数字化转型提供新的AI决策范式，推动供应链韧性管理产品功能升级",
-            "downside": "从基准研究到工业落地存在较长周期，短期商业转化有限",
-            "companies": [
-              {
-                "name": "SAP",
-                "role": "企业ERP与供应链管理软件供应商",
-                "type": "positive",
-                "impact_label": "方法论借鉴",
-                "reason": "SAP供应链AI模块可借鉴该基准中技能约束与生产排程联合优化的建模思路",
-                "specific": "SAP 2024年AI供应链产品线营收超50亿欧元，技能感知调度为其智能制造模块潜在功能点",
-                "impact_depth": 1
-              },
-              {
-                "name": "o9 Solutions",
-                "role": "AI驱动的供应链计划平台",
-                "type": "positive",
-                "impact_label": "场景能力延伸",
-                "reason": "该基准提出的扰动下再培训-生产权衡模型，与o9的AI供应链规划平台目标场景高度吻合",
-                "specific": "o9 Solutions估值超30亿美元，正在扩展劳动力规划与生产计划一体化功能",
                 "impact_depth": 1
               }
             ]
