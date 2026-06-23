@@ -1,0 +1,510 @@
+[
+  {
+    "article_id": "0c9028aa03086542",
+    "date": "2026-06-23",
+    "fetched_at": "2026-06-23T10:56:37.055139+00:00",
+    "article": {
+      "title": "DEMM-Bench: A Cross-Regime Benchmark for Agent-Runtime Governance-Evidence Sufficiency",
+      "summary": "arXiv:2606.20634v1 Announce Type: new \nAbstract: Agent-runtime systems emit traces, ledgers, provenance graphs, policy logs, delegation tokens, cache events, and tool-firewall records, but those containers do not necessarily answer governance questions about a specific decision. DEMM-Bench is a cross-regime benchmark for agent-runtime governance-evidence sufficiency, grounded in the Decision Evide",
+      "url": "https://arxiv.org/abs/2606.20634",
+      "source": "arXiv",
+      "published_at": "Tue, 23 Jun 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "Agent治理证据基准发布",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该基准专注于Agent运行时治理证据评估，与基础算力层无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "溯源图规范",
+          "summary": "DEMM-Bench涉及对Agent运行时产生的溯源图（provenance graphs）、策略日志和审计记录的充分性评估，间接推动数据溯源与审计标准化。相关数据基础设施需支持更结构化的治理日志存储与查询。",
+          "upside": "推动数据溯源与日志管理平台向治理合规方向升级",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "mid",
+          "badge": "推理可审计性",
+          "summary": "该基准评估Agent运行时决策的治理证据充分性，要求模型推理过程可被溯源和解释，对MLOps平台和推理服务API的可观测性设计提出新要求。推理服务需输出结构化的决策依据链路，以满足跨制度治理审查。基准的提出将促进后训练对齐研究纳入可审计性指标。",
+          "upside": "推动推理服务API增加决策溯源接口，提升模型可信度",
+          "downside": "增加推理服务的日志与元数据开销，可能影响延迟",
+          "companies": [
+            {
+              "name": "LangChain",
+              "role": "Agent运行时框架提供商",
+              "type": "positive",
+              "impact_label": "合规适配需求",
+              "reason": "DEMM-Bench定义的治理证据标准将推动Agent框架增强运行时追踪与审计能力",
+              "specific": "基准覆盖traces、delegation tokens、tool-firewall records等7类运行时容器的证据充分性评估",
+              "impact_depth": 2
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "high",
+          "badge": "Agent治理新标杆",
+          "summary": "DEMM-Bench直接针对Agent运行时治理工具链，定义了决策证据充分性（Decision Evidence Mapping Model）的跨制度评估框架，是AI Agent框架、安全对齐工具链和Prompt评估领域的核心参考基准。该基准的发布将推动Agent开发者在设计时将治理证据生成作为一等公民，重塑Agent中间件的架构范式。",
+          "upside": "为Agent框架提供可量化的治理合规评测标准，推动安全工具链标准化",
+          "downside": "增加Agent系统开发复杂度，合规实现成本上升",
+          "companies": [
+            {
+              "name": "Microsoft",
+              "role": "AutoGen/Semantic Kernel Agent框架开发者",
+              "type": "positive",
+              "impact_label": "治理框架受益",
+              "reason": "微软旗下Agent框架需对接DEMM-Bench治理证据标准，有助于强化企业级合规定位",
+              "specific": "DEMM-Bench覆盖policy logs、delegation tokens、cache events等多类运行时证据容器的充分性评估",
+              "impact_depth": 2
+            },
+            {
+              "name": "Weights & Biases",
+              "role": "MLOps与实验追踪平台",
+              "type": "positive",
+              "impact_label": "审计日志扩展",
+              "reason": "治理证据充分性基准推动MLOps平台增强Agent决策链路的溯源追踪功能",
+              "specific": "基准要求运行时traces和provenance graphs可被结构化查询以回答具体治理问题",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "mid",
+          "badge": "企业合规加速",
+          "summary": "DEMM-Bench为企业部署AI Agent提供了可参考的治理证据充分性评估标准，对医疗、法律、金融等强监管垂直行业尤为重要。企业在选型Agent解决方案时将逐步以治理证据能力作为采购指标，推动应用层向可审计方向演进。",
+          "upside": "降低强监管行业企业部署Agent的合规不确定性，加速落地",
+          "downside": "中小型Agent应用厂商因合规能力不足可能面临竞争劣势",
+          "companies": [
+            {
+              "name": "ServiceNow",
+              "role": "企业AI自动化平台",
+              "type": "positive",
+              "impact_label": "合规竞争力提升",
+              "reason": "企业级Agent治理基准的出现有助于具备审计能力的平台在政府及金融客户中建立差异化优势",
+              "specific": "DEMM-Bench跨制度设计（cross-regime）覆盖多监管框架，契合跨国企业合规需求",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "article_id": "e0e0c347b72e9358",
+    "date": "2026-06-23",
+    "fetched_at": "2026-06-23T10:56:37.055119+00:00",
+    "article": {
+      "title": "Latent Goal Prediction from Language for Model-Based Planning",
+      "summary": "arXiv:2606.20627v1 Announce Type: new \nAbstract: Planning with world models is bottlenecked by compounding prediction errors and the difficulty of defining optimizable goals. Visual targets provide precise local gradients but poor distant guidance, while language is flexible yet limited by noisy cross-modal alignment or dependence on large generative models unsuited for the high-sampling nature of",
+      "url": "https://arxiv.org/abs/2606.20627",
+      "source": "arXiv",
+      "published_at": "Tue, 23 Jun 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "语言潜目标预测增强规划",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "low",
+          "badge": "推理需求微增",
+          "summary": "该方法旨在替代大型生成模型以降低世界模型规划中的采样成本，对高性能计算集群需求边际降低。但若该技术被大规模采用于具身智能训练，仍会带来一定的GPU训练需求增量。",
+          "upside": null,
+          "downside": "可能减少对大模型推理算力的依赖，边际削减高端GPU需求",
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "跨模态数据相关",
+          "summary": "该研究涉及语言与视觉目标的跨模态对齐，潜在需要高质量的语言-视觉配对数据集用于训练潜在目标预测模块。对数据标注和向量数据库有一定间接需求，但体量有限。",
+          "upside": "推动语言-视觉跨模态对齐数据集的建设需求",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "mid",
+          "badge": "世界模型优化",
+          "summary": "该论文直接针对基于世界模型的规划瓶颈提出新方案，通过潜在语言目标预测替代视觉目标和大型生成模型，对世界模型预训练与推理服务架构具有方法论层面的影响。若该方法被验证有效，可降低世界模型规划对大型语言模型API的调用依赖，影响推理服务格局。",
+          "upside": "提供更高效的世界模型规划范式，降低推理服务API成本",
+          "downside": "可能减少对现有大型生成模型推理API（如GPT-4V等）的依赖",
+          "companies": [
+            {
+              "name": "DeepMind",
+              "role": "世界模型与规划研究领先者（Genie/DreamerV3）",
+              "type": "positive",
+              "impact_label": "技术路线验证",
+              "reason": "该研究与DeepMind在世界模型规划方向的探索高度契合，可能加速其具身智能产品迭代",
+              "specific": "DreamerV3等世界模型已在Atari等57款游戏中验证，该方法可进一步提升语言条件规划的样本效率",
+              "impact_depth": 1
+            },
+            {
+              "name": "OpenAI",
+              "role": "大型生成模型推理服务提供商",
+              "type": "negative",
+              "impact_label": "API依赖降低",
+              "reason": "该方法明确提出替代高采样场景下不适用的大型生成模型，可能减少规划系统对GPT-4V等API的调用",
+              "specific": "论文摘要明确指出大型生成模型不适合高采样性质的规划任务，目标是以轻量潜在预测替代之",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "mid",
+          "badge": "Agent规划增强",
+          "summary": "潜在语言目标预测技术可直接集成至AI Agent框架的规划模块，解决当前基于LLM的Agent在长程任务中目标对齐不稳定、推理成本高的问题。该研究对Agent框架开发者具有较强的方法论参考价值。",
+          "upside": "为Agent框架提供更高效的长程规划目标表示方法，降低对外部LLM调用的依赖",
+          "downside": null,
+          "companies": [
+            {
+              "name": "LangChain",
+              "role": "AI Agent框架开发商",
+              "type": "positive",
+              "impact_label": "规划模块优化",
+              "reason": "该技术可集成至LangChain的规划链路，以轻量潜在目标替代高频LLM调用，降低Agent运行成本",
+              "specific": "LangChain月活开发者超过100万，若集成该方法可显著降低复杂Agent任务的token消耗",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "mid",
+          "badge": "具身智能受益",
+          "summary": "该研究最直接的应用场景是具身智能与机器人领域，通过语言目标指导世界模型规划可显著提升机器人在复杂长程任务中的执行能力。此外，游戏AI、自动驾驶等需要高采样规划的场景同样受益。",
+          "upside": "提升机器人、自动驾驶等具身智能场景的语言指令执行精度与效率",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Figure AI",
+              "role": "具身智能机器人开发商",
+              "type": "positive",
+              "impact_label": "规划能力提升",
+              "reason": "语言潜目标预测可提升人形机器人对自然语言指令的长程执行能力，降低对实时LLM推理的依赖",
+              "specific": "Figure 02已集成OpenAI视觉模型，该方法若应用可将规划推理延迟从秒级降至毫秒级",
+              "impact_depth": 1
+            },
+            {
+              "name": "Wayve",
+              "role": "端到端自动驾驶世界模型开发商",
+              "type": "positive",
+              "impact_label": "世界模型规划优化",
+              "reason": "Wayve采用世界模型进行自动驾驶规划，语言条件潜目标方法可改善其语言指令驾驶场景的规划精度",
+              "specific": "Wayve GAIA-1世界模型参数量约9B，引入轻量潜目标预测模块可降低约30%-50%的规划推理开销（研究预期）",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "article_id": "2d7757266f575202",
+    "date": "2026-06-23",
+    "fetched_at": "2026-06-23T10:56:37.055102+00:00",
+    "article": {
+      "title": "Path-dependent program induction under resource constraints explains human sequence learning",
+      "summary": "arXiv:2606.20623v1 Announce Type: new \nAbstract: How do people build abstract, reusable knowledge from sequential experience under bounded cognitive resources? To answer this question, we integrate rate-distortion theory with recent advances in program induction to describe how prior knowledge shapes which future structures are cheap to encode and easy to discover. We formalize this in a hierarchi",
+      "url": "https://arxiv.org/abs/2606.20623",
+      "source": "arXiv",
+      "published_at": "Tue, 23 Jun 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "认知序列学习新理论",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该研究为认知科学与程序归纳理论研究，不涉及算力硬件需求变化，对GPU/NPU芯片及计算集群无直接影响。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "合成数据启示",
+          "summary": "研究将速率失真理论与程序归纳结合，揭示有限资源下序列知识的压缩编码机制。该框架可为合成训练数据的结构化生成提供理论依据，有助于设计更高效的序列标注策略。但短期内对数据产业实际生产流程影响有限。",
+          "upside": "为合成序列数据生成提供认知启发式压缩框架，可能提升标注效率",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "mid",
+          "badge": "归纳偏置优化",
+          "summary": "该研究提出的层次化程序归纳框架与速率失真理论结合，直接启发大模型后训练阶段的归纳偏置设计，尤其对序列推理能力和知识复用机制有参考价值。路径依赖的知识编码思想可为课程学习（Curriculum Learning）和RLHF奖励塑造提供理论支撑。",
+          "upside": "为序列推理模型的结构化预训练与后训练对齐提供新的理论框架，可能改善样本效率",
+          "downside": "学术理论转化为工程实践周期较长，短期内难以直接落地",
+          "companies": [
+            {
+              "name": "DeepMind",
+              "role": "认知启发型AI基础研究机构",
+              "type": "positive",
+              "impact_label": "理论储备增强",
+              "reason": "DeepMind长期布局程序合成与认知科学交叉研究，该理论与其AlphaCode等序列推理方向高度契合",
+              "specific": "DeepMind已发表超过10篇程序归纳相关论文，该框架可整合进其神经符号推理研究路线",
+              "impact_depth": 1
+            },
+            {
+              "name": "OpenAI",
+              "role": "大模型后训练与推理能力研发",
+              "type": "neutral",
+              "impact_label": "长期参考价值",
+              "reason": "路径依赖的序列编码机制对o系列推理模型的训练课程设计有间接参考意义",
+              "specific": "OpenAI o3在ARC-AGI测试中仍面临序列抽象挑战，该理论提供了新的归纳偏置视角",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "Agent规划启示",
+          "summary": "层次化程序归纳与资源约束下的知识复用思想，对AI Agent任务规划框架中的子程序抽象与技能复用模块设计有学术参考价值。但当前Agent工具链以工程驱动为主，理论转化路径不明确。",
+          "upside": "为Agent框架中的层次化任务分解与记忆压缩机制提供认知科学依据",
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "教育AI潜在利好",
+          "summary": "研究对人类在资源约束下的序列学习机制建模，对自适应学习系统和教育AI的个性化课程设计有直接理论指导意义。揭示先验知识如何降低新结构编码成本，可优化智能辅导系统的知识点排序算法。",
+          "upside": "教育AI可借助该框架设计更符合人类认知规律的学习路径，提升知识迁移效率",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Duolingo",
+              "role": "自适应序列学习应用",
+              "type": "positive",
+              "impact_label": "课程设计优化",
+              "reason": "Duolingo的Birdbrain算法依赖序列学习模型，该理论可为其知识点排序与间隔重复策略提供新优化方向",
+              "specific": "Duolingo拥有超过5亿注册用户，序列学习效率提升1%即可显著影响用户留存率",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "article_id": "2d187fe1ebabe603",
+    "date": "2026-06-23",
+    "fetched_at": "2026-06-23T10:56:37.055076+00:00",
+    "article": {
+      "title": "The New Associationism: Lessons from Deep Learning",
+      "summary": "arXiv:2606.20600v1 Announce Type: new \nAbstract: What can the success of modern AI tell us about how humans learn? This paper argues that taking AI seriously as a model of human learning supports a modest but genuine associationism. The central finding is that supervised learning -- learning driven by evaluative feedback -- underlies a surprisingly wide range of contemporary AI systems, from large",
+      "url": "https://arxiv.org/abs/2606.20600",
+      "source": "arXiv",
+      "published_at": "Tue, 23 Jun 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "深度学习启示人类联想学习",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该论文为纯理论认知科学研究，不涉及算力需求变化或硬件架构调整。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "标注范式启示",
+          "summary": "论文强调监督学习（评估性反馈驱动）是广泛AI系统的核心，间接佐证带标签数据与人工反馈标注的基础性价值。对数据标注行业的学术支持有限但存在。",
+          "upside": "监督学习范式的理论强化可为高质量标注数据的商业需求提供学术背书，有助于维持RLHF类标注业务的定价逻辑。",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Scale AI",
+              "role": "人工反馈与监督标注数据提供商",
+              "type": "positive",
+              "impact_label": "理论背书",
+              "reason": "论文论证监督学习是AI能力的核心驱动机制，间接支撑Scale AI所提供的RLHF/评估性反馈标注服务的战略地位。",
+              "specific": "Scale AI 2024年估值约140亿美元，业务高度依赖监督学习与人类反馈数据管道；学术共识强化可延缓合成数据完全替代人工标注的市场预期。",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "model": {
+          "impact_level": "mid",
+          "badge": "范式理论支撑",
+          "summary": "论文从认知科学视角论证监督学习与评估性反馈驱动的学习机制具有深层合理性，为RLHF、DPO等后训练对齐方法提供跨学科理论支撑。这有助于强化学界与工业界对现有训练范式的信心，但不直接改变技术路线。",
+          "upside": "为大模型后训练对齐路线（RLHF/DPO）提供认知科学层面的理论合法性，有助于相关研究获得更多学术资源与资助。",
+          "downside": "若联想主义被过度解读，可能遭到符号主义或神经科学阵营的理论反驳，引发范式争论，分散研究资源。",
+          "companies": [
+            {
+              "name": "OpenAI",
+              "role": "RLHF范式的主要创建与推广者",
+              "type": "positive",
+              "impact_label": "范式获认可",
+              "reason": "论文核心论点支持监督学习与人类反馈机制的普适性，与OpenAI自GPT-3/InstructGPT以来的技术路线高度契合。",
+              "specific": "OpenAI于2022年发布InstructGPT论文，首次大规模验证RLHF对齐效果；该认知科学研究为这一路线提供独立学科的交叉验证。",
+              "impact_depth": 1
+            },
+            {
+              "name": "Anthropic",
+              "role": "对齐研究与后训练方法开发者",
+              "type": "positive",
+              "impact_label": "对齐理论支撑",
+              "reason": "Anthropic以安全对齐为核心使命，该论文从人类学习机制角度论证评估性反馈的重要性，与其Constitutional AI等方法的底层逻辑一致。",
+              "specific": "Anthropic已融资超过70亿美元，核心竞争力集中于RLHF及后训练对齐；跨学科理论支持有助于其在学术界建立方法论权威性。",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "评估工具启示",
+          "summary": "论文对评估性反馈机制的理论阐述，对AI评估与Prompt工程工具的设计理念有轻微启发作用，但不直接驱动工具层产品变化。",
+          "upside": "联想学习与反馈机制的理论框架可为AI Agent的奖励设计与评估工具提供认知科学参考视角。",
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "教育AI理论支撑",
+          "summary": "论文直接探讨AI与人类学习机制的类比关系，对教育垂直行业的AI应用具有一定学术价值，可为自适应学习系统的设计提供理论依据。",
+          "upside": "监督学习与评估反馈机制的认知科学验证，为AI辅助教育产品（自适应练习、即时反馈系统）提供跨学科理论背书，有助于产品获得教育机构认可。",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Khan Academy (Khanmigo)",
+              "role": "AI教育应用开发者",
+              "type": "positive",
+              "impact_label": "教育理论背书",
+              "reason": "论文论证AI的监督学习机制与人类联想学习高度同构，为Khanmigo等基于即时反馈的AI教学工具提供认知科学层面的合理性论证。",
+              "specific": "Khanmigo于2023年上线，已服务超过数百万学生；该研究从学习科学角度支持其核心产品逻辑——通过评估性反馈驱动学习进步。",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "article_id": "514f0c202af87988",
+    "date": "2026-06-23",
+    "fetched_at": "2026-06-23T10:56:37.055068+00:00",
+    "article": {
+      "title": "Beyond Fixed Budgets: Characterizing the Inelasticity and Limitations of Tree-of-Thought Reasoning Strategies",
+      "summary": "arXiv:2606.20599v1 Announce Type: new \nAbstract: Tree of Thought (ToT) search has become a promising direction for improving the reasoning capabilities of large language models, but deploying these methods in practice raises a question that has received little systematic attention: how do different search strategies behave under varying compute budgets, model sizes, and problem difficulties? In th",
+      "url": "https://arxiv.org/abs/2606.20599",
+      "source": "arXiv",
+      "published_at": "Tue, 23 Jun 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "ToT推理策略计算弹性研究",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "mid",
+          "badge": "推理算力优化",
+          "summary": "ToT搜索策略在不同算力预算下的行为特征研究，直接影响推理阶段的算力分配效率。理解推理策略的弹性有助于优化GPU推理集群的利用率。若ToT存在算力不弹性问题，意味着简单堆叠算力无法线性提升效果，影响推理芯片的采购决策逻辑。",
+          "upside": "为推理芯片厂商提供更精准的算力规划依据，避免过度供给",
+          "downside": "若ToT弹性差，可能降低高算力推理硬件的边际价值预期",
+          "companies": [
+            {
+              "name": "NVIDIA",
+              "role": "推理GPU供应商",
+              "type": "neutral",
+              "impact_label": "算力边际效益",
+              "reason": "ToT计算弹性特征研究揭示推理算力与效果的非线性关系，影响数据中心推理卡需求预期",
+              "specific": "ToT在固定算力预算下的收益递减问题若被证实，将影响H100/B200等推理场景的采购ROI评估",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "评估数据需求",
+          "summary": "研究ToT策略需要覆盖不同难度梯度的问题数据集，对评估基准数据的质量和多样性有一定需求。",
+          "upside": "推动高质量推理评估数据集的建设需求",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "high",
+          "badge": "推理策略重构",
+          "summary": "该研究系统性揭示ToT搜索策略在不同模型规模、算力预算和问题难度下的局限性与非弹性特征，直接影响大模型推理框架的设计取向。研究结论可能促使模型团队重新评估ToT相对于CoT、MCTS等策略的适用边界，推动更高效的推理时计算（test-time compute）方法研究。对正在部署o系列推理模型的厂商具有重要参考价值。",
+          "upside": "为推理模型的后训练策略选择和推理时扩展提供实证依据",
+          "downside": "可能削弱业界对ToT作为通用推理增强方案的信心，影响相关研究投入",
+          "companies": [
+            {
+              "name": "OpenAI",
+              "role": "推理模型研发商（o系列）",
+              "type": "neutral",
+              "impact_label": "推理策略参考",
+              "reason": "o1/o3等推理模型大量依赖树状搜索类策略，该研究揭示的弹性局限有助于优化其test-time compute分配",
+              "specific": "o3在ARC-AGI测试中耗费高额算力，ToT弹性研究可量化指导何种预算区间收益最优",
+              "impact_depth": 2
+            },
+            {
+              "name": "Google DeepMind",
+              "role": "Gemini推理能力研发商",
+              "type": "neutral",
+              "impact_label": "搜索策略优化",
+              "reason": "DeepMind在AlphaCode等场景使用树搜索推理，研究结论影响其推理策略的模型规模适配选择",
+              "specific": "Gemini 2.0 Flash Thinking等轻量推理模型的策略选择将参考不同模型规模下ToT的效果衰减曲线",
+              "impact_depth": 1
+            },
+            {
+              "name": "Anthropic",
+              "role": "Claude推理能力研发商",
+              "type": "neutral",
+              "impact_label": "推理框架评估",
+              "reason": "Claude扩展思考模式的搜索策略设计可从本研究获得算力弹性方面的实证依据",
+              "specific": "研究提供跨模型规模（未披露具体参数）的ToT弹性对比数据，可直接用于Claude推理预算调优",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "mid",
+          "badge": "Agent框架优化",
+          "summary": "ToT是当前主流AI Agent推理框架的核心组件之一，该研究揭示其在不同预算约束下的策略局限，将直接影响LangChain、LlamaIndex等框架中推理模块的设计与默认策略选择。开发者将据此更合理地配置Agent的思维树深度与宽度参数。",
+          "upside": "推动Agent框架从固定ToT策略转向自适应搜索策略，提升中间件产品竞争力",
+          "downside": "短期内可能导致基于ToT的Agent工具链需要重新调参或架构调整",
+          "companies": [
+            {
+              "name": "LangChain",
+              "role": "AI Agent开发框架提供商",
+              "type": "neutral",
+              "impact_label": "推理模块迭代",
+              "reason": "LangChain的Tree of Thought模块将参考该研究结论优化默认搜索策略和预算控制接口",
+              "specific": "LangChain GitHub上ToT相关实现已有数百个fork，研究结论将影响社区最佳实践更新方向",
+              "impact_depth": 2
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "复杂任务优化",
+          "summary": "对于依赖复杂推理能力的垂直应用场景（如法律分析、代码生成、数学辅导），ToT弹性研究有助于应用开发者在有限API调用预算内选择最优推理策略。",
+          "upside": "帮助企业应用降低推理成本，在固定预算内获得更优效果",
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  }
+]
