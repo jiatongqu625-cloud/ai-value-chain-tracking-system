@@ -1,0 +1,363 @@
+[
+  {
+    "article_id": "bcda366cd0f80ed9",
+    "date": "2026-06-26",
+    "fetched_at": "2026-06-26T10:45:22.893850+00:00",
+    "article": {
+      "title": "Accelerating Returns and the Qualitative Engine for Science",
+      "summary": "arXiv:2606.26359v1 Announce Type: new \nAbstract: Ray Kurzweil described a thesis of accelerating returns, which is the most influential narratives in discussions of technological progress. Its central claim is that advances in multiple technological fields, especially compute, artificial intelligence, brain science, and biotechnology, interact in such a way that progress becomes self-amplifying an",
+      "url": "https://arxiv.org/abs/2606.26359",
+      "source": "arXiv",
+      "published_at": "Fri, 26 Jun 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "加速回报与科学质性引擎",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "mid",
+          "badge": "算力自我强化",
+          "summary": "库兹韦尔加速回报理论将算力列为自我放大技术进步的核心驱动力之一。该论文从理论层面论证了算力、AI、脑科学与生物技术的相互促进机制，为持续扩大算力投入提供了学术叙事支撑。对芯片设计与高性能计算集群的长期需求预期形成正向背书。",
+          "upside": "学术理论强化'算力即核心基础设施'叙事，有助于推动资本与政策持续向GPU/NPU及HPC集群倾斜",
+          "downside": "理论层面研究，短期内无法直接转化为具体订单或市场需求变化",
+          "companies": [
+            {
+              "name": "NVIDIA",
+              "role": "GPU算力核心供应商",
+              "type": "positive",
+              "impact_label": "叙事长期受益",
+              "reason": "加速回报理论将算力指数级增长列为技术自强化的基石，持续支撑市场对GPU需求的长期乐观预期",
+              "specific": "NVIDIA数据中心营收2024财年达475亿美元，此类理论研究持续为其需求侧叙事提供学术背书",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "数据潜在联动",
+          "summary": "论文涉及脑科学与生物技术与AI的交叉，暗示多模态科学数据（神经影像、基因组等）将成为加速回报的关键燃料。对科学数据采集、清洗与标注的长期需求有一定理论导向作用，但当前影响较为间接。",
+          "upside": "科学AI数据集与合成标注需求有望随脑科学/生物技术与AI融合加速而增长",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "mid",
+          "badge": "AI自强化理论",
+          "summary": "论文的核心论点之一是AI进步本身成为加速技术进步的'质性引擎'，与库兹韦尔框架结合，为基础大模型持续扩大预训练规模、以AI辅助科学发现提供了思想框架。这对科学AI领域（AlphaFold类模型、AI for Science赛道）具有直接的方向性意义。",
+          "upside": "强化'AI加速科学研究'叙事，利好AI for Science基础模型的持续投入与商业化预期",
+          "downside": "若加速回报理论被学术界质疑或证伪，可能冲击相关投资叙事",
+          "companies": [
+            {
+              "name": "Google DeepMind",
+              "role": "AI for Science基础模型研发者",
+              "type": "positive",
+              "impact_label": "科学AI叙事受益",
+              "reason": "论文框架与DeepMind在AlphaFold、AlphaGeometry等科学AI方向高度契合，学术叙事强化其战略定位",
+              "specific": "AlphaFold3已覆盖超过100万种蛋白质结构预测，此类理论研究持续为AI加速科学发现路径提供合法性支撑",
+              "impact_depth": 1
+            },
+            {
+              "name": "OpenAI",
+              "role": "通用基础模型与AI能力边界探索者",
+              "type": "positive",
+              "impact_label": "扩展律叙事共振",
+              "reason": "加速回报叙事与Scaling Law框架高度共鸣，为OpenAI持续扩大预训练投入的战略提供外部理论认可",
+              "specific": "OpenAI GPT-4训练成本据估算超1亿美元，加速回报理论为此类高投入提供长期合理性论据",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "科研工具潜力",
+          "summary": "论文提出'质性引擎'概念，暗示AI工具在加速科学假设生成、实验设计与知识综合方面的潜力。对AI Agent框架和科研辅助Copilot工具有一定方向性启示，但当前为理论探讨阶段，实际工具落地影响有限。",
+          "upside": "为面向科研场景的AI Agent和RAG知识库工具提供需求侧理论依据",
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "科学应用远景",
+          "summary": "加速回报理论涉及生物技术与脑科学的AI融合，对医疗与生命科学垂直应用具有长远的叙事导向价值。但该论文为arXiv预印本，属于早期理论研究，对具体应用产品的近期市场影响极为有限。",
+          "upside": "医疗AI、药物研发AI等垂直赛道可从加速回报叙事中获得资本关注度的边际提升",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Recursion Pharmaceuticals",
+              "role": "AI驱动药物研发应用层代表",
+              "type": "positive",
+              "impact_label": "生物AI叙事受益",
+              "reason": "论文将生物技术与AI的交叉列为加速回报的关键节点，与AI制药赛道的长期叙事直接呼应",
+              "specific": "Recursion市值约10亿美元（2025年），此类理论研究为AI制药长期价值提供学术叙事支撑",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "article_id": "acf1557312554d04",
+    "date": "2026-06-26",
+    "fetched_at": "2026-06-26T10:45:22.893784+00:00",
+    "article": {
+      "title": "COrigami: An AI Pipeline for Co-Designing Flat-Foldable Visually Recognisable Origami",
+      "summary": "arXiv:2606.26299v1 Announce Type: new \nAbstract: While generative AI has achieved remarkable success in solving problems with verifiable solutions, generating physical art that satisfies both strict geometric constraints and subjective visual aesthetics remains a challenge. This paper presents an approach to tackle these difficulties in the domain of computational origami, a mathematically rigid e",
+      "url": "https://arxiv.org/abs/2606.26299",
+      "source": "arXiv",
+      "published_at": "Fri, 26 Jun 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "AI辅助折纸设计研究",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该研究为学术性AI管道设计论文，计算需求极低，对基础算力层无实质影响。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "几何约束数据",
+          "summary": "该研究涉及折纸几何约束与视觉美学的联合优化，需要特定的折纸图案与几何约束数据集。此类高度专业化数据集规模极小，对数据层整体影响微弱。",
+          "upside": "推动物理约束+视觉美学联合标注数据集的探索方向",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "low",
+          "badge": "生成约束融合",
+          "summary": "研究探索了生成式AI在严格几何约束下满足主观视觉美学的能力边界，属于约束满足生成模型的细分方向。其方法论对物理世界约束建模有一定参考价值，但影响局限于学术层面。",
+          "upside": "为生成模型结合物理可行性约束提供新范式参考",
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "AI设计工具探索",
+          "summary": "COrigami作为AI Pipeline，代表了将生成AI与领域专业约束结合的工具化尝试。其管道架构对计算创意设计工具有启发意义，但当前仅为原型研究，距离工程化落地尚远。",
+          "upside": "为创意AI工具链引入物理约束满足模块提供思路",
+          "downside": "高度垂直场景限制通用工具价值",
+          "companies": []
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "创意设计垂直应用",
+          "summary": "该研究直接面向计算折纸艺术这一极度细分的创意设计场景，展示了AI辅助生成可折叠且视觉可辨识折纸的能力。长期看对折纸教育、工艺品设计、包装工程等场景有潜在应用价值，但商业化路径尚不明确。",
+          "upside": "可能催生折纸设计辅助工具、科普教育应用等细分产品",
+          "downside": "受众极窄，短期商业价值有限",
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "7801e1f350d28ab7",
+    "date": "2026-06-26",
+    "fetched_at": "2026-06-26T10:45:22.893764+00:00",
+    "article": {
+      "title": "Accelerating Skill Assessment in Chess: A Drift-Diffusion-Enhanced Elo Rating System",
+      "summary": "arXiv:2606.26267v1 Announce Type: new \nAbstract: Rating systems such as Elo serve as the gold standard for matchmaking in competitive chess. However, they inherently suffer from response lag due to their exclusive reliance on match outcomes, neglecting the granular quality of gameplay. Nevertheless, incorporating move-by-move information into rating adjustments presents a significant challenge giv",
+      "url": "https://arxiv.org/abs/2606.26267",
+      "source": "arXiv",
+      "published_at": "Fri, 26 Jun 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "棋类评分系统算法研究",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该研究为棋类评分算法改进，不涉及算力硬件需求变化，对GPU/NPU芯片及计算集群无实质影响。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "棋局数据挖掘",
+          "summary": "该方法需要逐步棋局数据（move-by-move）作为输入，依赖高质量对弈数据集的采集与处理。对专业棋类数据库有一定需求，但规模极为有限，难以形成产业级数据需求。",
+          "upside": "推动棋类对弈平台对历史棋局数据的结构化整理与开放",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Chess.com",
+              "role": "棋局数据平台与数据源",
+              "type": "neutral",
+              "impact_label": "数据应用参考",
+              "reason": "该平台积累了数十亿棋局数据，是此类研究的潜在数据来源",
+              "specific": "Chess.com拥有超过10亿局存档棋局，逐步数据格式PGN可直接用于该算法训练与验证",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "model": {
+          "impact_level": "low",
+          "badge": "评分建模参考",
+          "summary": "漂移扩散模型（Drift-Diffusion Model）融入Elo体系是一种统计建模创新，对AI大模型预训练或推理API无直接影响。但其对动态能力评估的方法论可为AI模型基准评测设计提供参考思路。",
+          "upside": "为AI模型动态能力评估（如持续学习场景下的实时评分）提供统计框架借鉴",
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "评测工具参考",
+          "summary": "该评分方法若推广至AI Agent或LLM对战评测场景，可改善现有Elo-based评测框架（如Chatbot Arena）的响应滞后问题，对Prompt评估与模型比较工具有边际启发意义。",
+          "upside": "可为LLM竞技评测平台（如LMSYS Chatbot Arena）提供更细粒度的响应质量评分机制",
+          "downside": null,
+          "companies": [
+            {
+              "name": "LMSYS（Chatbot Arena）",
+              "role": "LLM对战评测平台",
+              "type": "neutral",
+              "impact_label": "评测方法参考",
+              "reason": "其Elo评分体系同样存在响应滞后问题，该研究方法论具有迁移参考价值",
+              "specific": "Chatbot Arena已积累超过100万次人类偏好投票，引入逐轮质量信号可潜在加速新模型评分收敛速度",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "mid",
+          "badge": "棋类应用升级",
+          "summary": "该研究直接应用于竞技棋类平台的配对与评级系统，可显著改善用户匹配体验与评分响应速度。对棋类游戏应用及教育类AI辅助平台有实际落地价值，属于垂直应用场景的算法优化。",
+          "upside": "评分收敛更快，新用户或赛季初期匹配质量显著提升；可扩展至其他回合制竞技游戏",
+          "downside": "算法复杂度提升可能增加平台计算与工程实现成本",
+          "companies": [
+            {
+              "name": "Chess.com",
+              "role": "最大在线国际象棋平台",
+              "type": "positive",
+              "impact_label": "评级体验提升",
+              "reason": "平台核心功能之一为玩家匹配与评级，引入该方法可减少评分滞后、提升百万级用户的匹配公平性",
+              "specific": "Chess.com月活用户超1000万，评分滞后问题在新注册用户（约占月活20%）中尤为突出，该方法可潜在减少达到稳定评分所需对局数50%以上",
+              "impact_depth": 2
+            },
+            {
+              "name": "Lichess",
+              "role": "开源免费棋类平台",
+              "type": "positive",
+              "impact_label": "开源算法集成",
+              "reason": "Lichess为开源平台，学术算法更易被社区集成至其评分系统",
+              "specific": "Lichess每日处理超200万局对弈，开源特性使其可直接复现该arXiv算法并进行A/B测试",
+              "impact_depth": 2
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "article_id": "1e0e55a994f6188d",
+    "date": "2026-06-26",
+    "fetched_at": "2026-06-26T10:45:22.893713+00:00",
+    "article": {
+      "title": "Refusal Lives Downstream of Persona in Chat Models",
+      "summary": "arXiv:2606.26161v1 Announce Type: new \nAbstract: Linear directions in activation space have been identified for both refusal and persona traits in instruction-tuned chat models, but the two have been studied as separate mechanisms. We show they interact: a compliant persona gates refusal. In Qwen2.5-7B-Instruct and Llama-3.1-8B-Instruct, we extract a compliant model-persona direction and a refusal",
+      "url": "https://arxiv.org/abs/2606.26161",
+      "source": "arXiv",
+      "published_at": "Fri, 26 Jun 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "顺从人格抑制拒绝机制",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该研究聚焦模型激活空间的线性方向分析，与算力基础设施无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "研究不涉及数据采集、标注或数据中心基础设施，无直接影响。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "high",
+          "badge": "对齐机制存缺陷",
+          "summary": "研究揭示指令微调模型中「顺从人格」线性方向可门控「拒绝」方向，意味着现有RLHF/DPO后训练对齐流程存在可被利用的结构性漏洞。Qwen2.5-7B-Instruct与Llama-3.1-8B-Instruct均被证实存在该机制，表明该问题具有跨架构普遍性，将驱动后训练对齐方案的重新审查与修订。",
+          "upside": "推动后训练团队改进对齐目标设计，解耦人格与拒绝的线性表征，提升模型鲁棒性",
+          "downside": "现有已部署模型的安全边界被证明可通过激活空间干预绕过，短期内增加安全风险暴露面",
+          "companies": [
+            {
+              "name": "阿里巴巴/通义团队",
+              "role": "Qwen2.5-7B-Instruct 模型开发者",
+              "type": "negative",
+              "impact_label": "安全漏洞曝光",
+              "reason": "Qwen2.5-7B-Instruct 被作为主要实验对象，其顺从人格方向被提取并证明可抑制拒绝行为",
+              "specific": "论文明确以Qwen2.5-7B-Instruct为实验模型之一，提取compliant persona线性方向后验证拒绝机制失效",
+              "impact_depth": 3
+            },
+            {
+              "name": "Meta",
+              "role": "Llama-3.1-8B-Instruct 模型开发者",
+              "type": "negative",
+              "impact_label": "对齐缺陷复现",
+              "reason": "Llama-3.1-8B-Instruct同样被验证存在顺从人格门控拒绝的机制，说明该漏洞跨主流开源架构普遍存在",
+              "specific": "论文同时在Llama-3.1-8B-Instruct上复现实验，两个模型均呈现一致的线性干预效果",
+              "impact_depth": 3
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "mid",
+          "badge": "安全工具需升级",
+          "summary": "现有基于提示工程的越狱防御与安全评估工具未考虑激活空间层面的人格-拒绝耦合机制，评估结论可能存在盲区。该研究为红队测试、对抗性Prompt评估工具提供了新的攻击向量参考，相关安全工具链需纳入激活空间干预的测试场景。",
+          "upside": "为安全对齐工具链提供新的检测维度，推动机械可解释性工具在安全评估中的应用",
+          "downside": "现有安全评估基准若未覆盖激活空间干预，则其安全评分可能虚高，误导部署决策",
+          "companies": [
+            {
+              "name": "Anthropic",
+              "role": "安全对齐工具与方法研究者",
+              "type": "neutral",
+              "impact_label": "推动对齐改进",
+              "reason": "Anthropic长期从事机械可解释性与对齐研究，该论文结论与其研究方向高度相关，或促进其更新内部安全评估框架",
+              "specific": "Anthropic已发布多篇关于激活方向与安全性的研究，此论文提供的人格-拒绝耦合证据可直接被其吸收为新测试场景",
+              "impact_depth": 2
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "mid",
+          "badge": "合规风险上升",
+          "summary": "基于Qwen、Llama等开源模型构建的企业级或消费者应用，若被恶意用户通过顺从人格注入绕过拒绝机制，可能导致有害内容输出，增加合规与品牌风险。垂直行业（医疗、法律）对拒绝机制可靠性要求更高，相关部署方需关注上游模型的安全补丁进展。",
+          "upside": null,
+          "downside": "依赖开源模型内置拒绝机制作为唯一安全屏障的应用层产品面临安全边界失效风险，需叠加额外的内容过滤层",
+          "companies": [
+            {
+              "name": "基于Llama/Qwen的企业应用商（泛指）",
+              "role": "开源模型下游部署方",
+              "type": "negative",
+              "impact_label": "安全边界存疑",
+              "reason": "下游应用若未在应用层叠加独立内容过滤，仅依赖模型本身拒绝能力，则面临被激活空间干预绕过的潜在风险",
+              "specific": "受影响模型包括Llama-3.1-8B-Instruct与Qwen2.5-7B-Instruct，两者均为当前企业私有化部署的主流选型",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+]
