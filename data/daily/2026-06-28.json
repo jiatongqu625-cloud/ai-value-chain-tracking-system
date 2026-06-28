@@ -1,0 +1,527 @@
+[
+  {
+    "article_id": "f1370c608d72b783",
+    "date": "2026-06-28",
+    "fetched_at": "2026-06-28T10:22:21.450380+00:00",
+    "article": {
+      "title": "Ancient Tablets Show Markets Worked 4k Years Before Economists Explained Them",
+      "summary": "HN score: 55, comments: 50",
+      "url": "https://thedailyeconomy.org/article/ancient-clay-tablets-show-markets-worked-4000-years-before-economists-explained-them/",
+      "source": "HackerNews",
+      "published_at": "2026-06-23T17:40:01+00:00"
+    },
+    "analysis": {
+      "news_title": "古代泥板印证市场规律",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此新闻为历史考古话题，与基础算力层无关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "古代泥板文字属于历史文献研究范畴，与AI数据采集、标注及数据中心基础设施无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻不涉及大模型预训练、对齐或推理服务，与模型基础设施层无关。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此考古历史话题不涉及RAG、Agent框架或开发工具等AI中间件层。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻为经济史/考古学内容，HN评分55分属小众讨论，与AI应用层各垂直行业无实质关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "49ec6ffc39dd7dc7",
+    "date": "2026-06-28",
+    "fetched_at": "2026-06-28T10:22:21.242318+00:00",
+    "article": {
+      "title": "Wan Streamer v0.1: End-to-End Real-Time Interactive Foundation Models",
+      "summary": "HN score: 10, comments: 0",
+      "url": "https://wan-streamer.com/",
+      "source": "HackerNews",
+      "published_at": "2026-06-27T23:18:43+00:00"
+    },
+    "analysis": {
+      "news_title": "万象实时交互基础模型",
+      "category": "模型",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "mid",
+          "badge": "实时推理需求",
+          "summary": "端到端实时交互模型对推理延迟要求极高，需要低延迟GPU集群与高带宽存储互联支持。流式生成场景下对HBM带宽和NVLink吞吐提出更高要求。",
+          "upside": "实时流式推理场景增加高端GPU需求，推动低延迟推理硬件采购",
+          "downside": null,
+          "companies": [
+            {
+              "name": "NVIDIA",
+              "role": "GPU及NVLink互联提供商",
+              "type": "positive",
+              "impact_label": "推理硬件受益",
+              "reason": "实时交互模型对推理吞吐和延迟要求苛刻，依赖高端H100/H200 GPU",
+              "specific": "实时视频生成推理延迟需控制在33ms/帧以内，对GPU显存带宽需求超3TB/s",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "流式数据处理",
+          "summary": "实时交互基础模型训练需要大量时序连续的视频与交互数据，对数据采集和标注管线有一定新增需求，但当前v0.1版本影响尚小。",
+          "upside": "带动对时序视频数据集及流式标注工具的需求",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "high",
+          "badge": "实时基础模型",
+          "summary": "Wan Streamer v0.1提出端到端实时交互基础模型范式，将流式生成与交互控制统一到单一模型框架，对现有帧级推理和diffusion架构形成方法论挑战。推理服务API和MLOps平台需适配流式输出协议。",
+          "upside": "开辟实时可控视频生成新方向，推动基础模型架构创新",
+          "downside": "现有非流式视频生成模型（如标准Wan2.1）在交互场景竞争力下降",
+          "companies": [
+            {
+              "name": "阿里巴巴/通义团队",
+              "role": "Wan系列模型原始开发者",
+              "type": "positive",
+              "impact_label": "技术积累延伸",
+              "reason": "Wan Streamer基于Wan基础模型扩展，增强阿里在视频生成领域的技术护城河",
+              "specific": "v0.1版本支持端到端实时流式交互，目标延迟为单流帧级实时输出",
+              "impact_depth": 3
+            },
+            {
+              "name": "Runway / Pika",
+              "role": "视频生成模型竞品",
+              "type": "negative",
+              "impact_label": "交互能力承压",
+              "reason": "现有商业视频生成平台缺乏端到端实时交互能力，技术差距被放大",
+              "specific": "Runway Gen-3等产品均为非实时批处理生成，无法支持帧级交互控制",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "mid",
+          "badge": "流式Agent框架",
+          "summary": "实时交互基础模型要求Agent框架具备流式感知与低延迟响应能力，现有RAG和Prompt工程工具需适配连续帧上下文输入输出。将催生新的流式推理SDK和评估工具需求。",
+          "upside": "推动流式多模态Agent框架和实时评估工具链的开发",
+          "downside": null,
+          "companies": [
+            {
+              "name": "LangChain / LlamaIndex",
+              "role": "Agent与RAG框架提供商",
+              "type": "neutral",
+              "impact_label": "需适配流式IO",
+              "reason": "现有框架对连续视频流上下文的原生支持不足，需扩展流式多模态接口",
+              "specific": "LangChain当前流式支持主要面向文本token级别，视频帧级流式接口尚未标准化",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "mid",
+          "badge": "交互视频应用",
+          "summary": "端到端实时交互基础模型为游戏、虚拟直播、具身智能仿真等应用场景提供核心能力支撑，使AI驱动的实时场景生成与用户交互成为可能。当前v0.1处于早期研究阶段，商业落地需时。",
+          "upside": "游戏NPC实时渲染、虚拟主播、机器人仿真环境等场景有望受益",
+          "downside": "技术成熟度尚低（v0.1），距离规模化商业部署仍有较大距离",
+          "companies": [
+            {
+              "name": "游戏/XR行业（通用）",
+              "role": "实时交互视频生成应用方",
+              "type": "positive",
+              "impact_label": "场景生成潜力",
+              "reason": "实时可控视频生成可支持游戏动态场景和XR沉浸内容的AI化生成",
+              "specific": "目标场景包括30fps以上实时交互视频生成，对应游戏和虚拟制片等市场规模超200亿美元",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "article_id": "3ab9fd165f83f8a1",
+    "date": "2026-06-28",
+    "fetched_at": "2026-06-28T10:22:21.097446+00:00",
+    "article": {
+      "title": "Task Failed Successfully: Saturating NIC and Disk Bandwidth",
+      "summary": "HN score: 45, comments: 15",
+      "url": "https://blog.mrcroxx.com/posts/task-failed-successfully-saturating-nic-and-disk-bandwidth/",
+      "source": "HackerNews",
+      "published_at": "2026-06-23T14:28:20+00:00"
+    },
+    "analysis": {
+      "news_title": "NIC与磁盘带宽饱和测试",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "low",
+          "badge": "存储互联优化",
+          "summary": "该研究探讨如何同时饱和网卡（NIC）与磁盘带宽，属于底层存储与互联性能调优领域。对高性能计算集群中的数据吞吐瓶颈识别有参考意义，但属于技术社区分享性质，影响面有限。HN评分45分、评论15条，关注度较低，尚未形成产业级影响。",
+          "upside": "为AI训练集群的存储-网络协同调优提供实验参考，有助于减少I/O瓶颈",
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "数据吞吐参考",
+          "summary": "大规模数据采集与清洗管道对磁盘与网络带宽需求极高，该研究的带宽饱和测试结果可为数据中心I/O管道设计提供参考基准。但目前仅是技术博客级分享，无直接商业或产品落地信息。",
+          "upside": "为数据预处理流水线的带宽规划提供可参考的实测数据",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "与模型预训练、后训练对齐及推理服务无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "与AI Agent框架、RAG、Prompt工程等工具中间件无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该底层性能测试与应用层产品无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "3610e59034a164c9",
+    "date": "2026-06-28",
+    "fetched_at": "2026-06-28T10:22:19.510103+00:00",
+    "article": {
+      "title": "Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work",
+      "summary": "HN score: 108, comments: 71",
+      "url": "https://github.com/kageroumado/adrafinil",
+      "source": "HackerNews",
+      "published_at": "2026-06-27T20:34:53+00:00"
+    },
+    "analysis": {
+      "news_title": "Mac防休眠Agent工具",
+      "category": "应用",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该工具仅影响本地Mac端电源管理逻辑，与GPU/NPU芯片设计、HBM存储或高性能计算集群无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "工具功能聚焦于防止Mac休眠，与数据采集、标注、向量数据库或数据中心能耗管理无关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "low",
+          "badge": "本地推理辅助",
+          "summary": "Adrafinil通过检测Agent任务是否仍在运行来动态控制Mac睡眠状态，间接为本地模型推理任务（如Ollama等本地LLM服务）提供持续运行保障。对云端推理API无影响，仅作用于开发者本地工作流。",
+          "upside": "本地模型长时推理任务不再因屏幕合盖中断，提升开发者调试效率。",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Ollama",
+              "role": "本地模型推理运行时",
+              "type": "positive",
+              "impact_label": "本地推理稳定性",
+              "reason": "Adrafinil可配合Ollama等本地推理工具，防止Mac合盖导致模型推理任务中断。",
+              "specific": "HN讨论中有71条评论涉及与本地LLM工具链集成场景，社区关注度评分108。",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "mid",
+          "badge": "Agent运行保障",
+          "summary": "Adrafinil直接服务于AI Agent工具层，通过macOS电源管理API（IOKit/caffeinate机制）监听Agent进程活跃状态，仅在Agent工作期间阻止休眠，任务结束后自动恢复省电模式。这是一个专为AI Agent工作流设计的开发者效率工具。",
+          "upside": "填补了macOS平台AI Agent长时任务运行时的电源管理空白，改善开发者本地Agent调试体验。",
+          "downside": "功能较单一，仅限macOS平台，适用范围有限。",
+          "companies": [
+            {
+              "name": "Adrafinil（开源项目）",
+              "role": "macOS Agent电源管理工具",
+              "type": "positive",
+              "impact_label": "填补工具空白",
+              "reason": "专门解决AI Agent任务执行期间Mac合盖休眠导致任务中断的痛点问题。",
+              "specific": "HN上线后获得108分、71条评论，属于小众工具类中等热度，说明该痛点在开发者群体中真实存在。",
+              "impact_depth": 3
+            },
+            {
+              "name": "Anthropic",
+              "role": "Claude Agent框架提供方",
+              "type": "neutral",
+              "impact_label": "间接受益",
+              "reason": "使用Claude API构建本地Agent的开发者可受益于此工具，长时任务（如computer use）不再被休眠打断。",
+              "specific": "Claude computer use场景需要持续运行数分钟至数十分钟，是该工具最典型的使用场景之一。",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "开发者效率提升",
+          "summary": "对于在Mac本地运行AI自动化任务（如代码生成、文件批处理、网页爬取Agent）的个人开发者和小型团队，该工具减少了任务意外中断的概率，提升了本地AI应用的可靠性。对企业级部署无显著影响。",
+          "upside": "降低个人开发者使用本地AI Agent的操作摩擦，有助于AI应用在Mac用户群体中的渗透。",
+          "downside": "仅覆盖macOS端本地场景，对云端AI应用、企业SaaS及移动端无任何影响。",
+          "companies": [
+            {
+              "name": "Apple",
+              "role": "macOS平台提供方",
+              "type": "neutral",
+              "impact_label": "平台生态完善",
+              "reason": "第三方工具补足了macOS在AI Agent工作流场景下电源策略的不足，间接增强Mac作为AI开发平台的吸引力。",
+              "specific": "Apple Silicon Mac（M系列）已成为本地LLM运行的主流平台之一，此类工具有助于巩固其开发者生态。",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "article_id": "178be00908532a38",
+    "date": "2026-06-28",
+    "fetched_at": "2026-06-28T10:22:19.164770+00:00",
+    "article": {
+      "title": "What Ozempic does to the gut-brain axis",
+      "summary": "HN score: 160, comments: 372",
+      "url": "https://www.psychologytoday.com/au/blog/mood-by-microbe/202606/what-ozempic-does-to-the-gut-brain-axis",
+      "source": "HackerNews",
+      "published_at": "2026-06-27T21:34:06+00:00"
+    },
+    "analysis": {
+      "news_title": "Ozempic对肠脑轴的影响",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻属于生物医学研究领域，与AI算力基础设施无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻与数据采集、标注及数据中心等AI数据层基础设施无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻不涉及大模型预训练、推理服务或MLOps平台等模型基础设施。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻与AI Agent、RAG、Prompt工程等工具中间件层无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "医疗间接相关",
+          "summary": "Ozempic（司美格鲁肽）对肠脑轴机制的研究在HackerNews引发372条讨论，反映公众对AI辅助药物作用机理解析的兴趣。该研究本身属于生物医学领域，但可能间接推动AI在药物发现与神经科学数据分析方向的应用需求。目前尚无直接AI产业链联动事件。",
+          "upside": "GLP-1类药物机制研究热度上升，或带动AI制药/生物信息学平台在肠脑轴领域的分析需求增长",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Novo Nordisk",
+              "role": "Ozempic原研药厂商",
+              "type": "neutral",
+              "impact_label": "研究热度受益",
+              "reason": "肠脑轴机制研究的广泛讨论可能推动其与AI制药公司在药物作用机理解析上的合作",
+              "specific": "Ozempic全球2023年销售额约达213亿美元，相关AI辅助研究需求随科学热度上升",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "article_id": "2e66f5b026cebd06",
+    "date": "2026-06-28",
+    "fetched_at": "2026-06-28T10:22:17.650477+00:00",
+    "article": {
+      "title": "Reducing tick density along recreational trails in Ottawa, Canada",
+      "summary": "HN score: 201, comments: 110",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1877959X26000476",
+      "source": "HackerNews",
+      "published_at": "2026-06-24T18:42:12+00:00"
+    },
+    "analysis": {
+      "news_title": "渥太华蜱虫密度研究",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻与蜱虫防治相关，与AI基础算力层无任何关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻内容为户外生态研究，与AI数据采集、标注或数据中心基础设施无关。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻不涉及任何大模型训练、推理或MLOps相关内容。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻与AI工具中间件、Agent框架或开发工具无任何关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻为加拿大渥太华户外小径蜱虫密度减少的生态研究，不属于AI应用领域范畴。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "5d9f2b82c9bdbe15",
+    "date": "2026-06-28",
+    "fetched_at": "2026-06-28T10:22:16.949075+00:00",
+    "article": {
+      "title": "From Hallmark to neon signs: A look at Jim Parkinson's career in letter art",
+      "summary": "HN score: 4, comments: 0",
+      "url": "https://typographica.org/on-typography/jim-parkinson-1941-2025/",
+      "source": "HackerNews",
+      "published_at": "2026-06-26T17:32:35+00:00"
+    },
+    "analysis": {
+      "news_title": "字体艺术家生涯回顾",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻与AI算力基础设施无关，不涉及GPU/NPU芯片、HPC集群或存储互联等领域。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻为字体艺术家个人职业回顾，不涉及数据采集、标注或数据中心等AI数据层业务。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻与大模型预训练、推理服务API或MLOps平台无任何关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻不涉及RAG框架、AI Agent、Prompt工程或开发者工具链等中间件领域。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻为传统平面设计领域的人物报道，HN评分仅4分且无评论，对AI应用层无实质影响。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  }
+]

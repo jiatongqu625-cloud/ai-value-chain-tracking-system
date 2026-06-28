@@ -1,7 +1,532 @@
 {
-  "updated_at": "2026-06-27T09:59:59.309851+00:00",
+  "updated_at": "2026-06-28T10:23:52.626277+00:00",
   "count": 30,
   "items": [
+    {
+      "article_id": "f1370c608d72b783",
+      "date": "2026-06-28",
+      "fetched_at": "2026-06-28T10:22:21.450380+00:00",
+      "article": {
+        "title": "Ancient Tablets Show Markets Worked 4k Years Before Economists Explained Them",
+        "summary": "HN score: 55, comments: 50",
+        "url": "https://thedailyeconomy.org/article/ancient-clay-tablets-show-markets-worked-4000-years-before-economists-explained-them/",
+        "source": "HackerNews",
+        "published_at": "2026-06-23T17:40:01+00:00"
+      },
+      "analysis": {
+        "news_title": "古代泥板印证市场规律",
+        "category": "其他",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "此新闻为历史考古话题，与基础算力层无关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "古代泥板文字属于历史文献研究范畴，与AI数据采集、标注及数据中心基础设施无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻不涉及大模型预训练、对齐或推理服务，与模型基础设施层无关。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "此考古历史话题不涉及RAG、Agent框架或开发工具等AI中间件层。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻为经济史/考古学内容，HN评分55分属小众讨论，与AI应用层各垂直行业无实质关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "49ec6ffc39dd7dc7",
+      "date": "2026-06-28",
+      "fetched_at": "2026-06-28T10:22:21.242318+00:00",
+      "article": {
+        "title": "Wan Streamer v0.1: End-to-End Real-Time Interactive Foundation Models",
+        "summary": "HN score: 10, comments: 0",
+        "url": "https://wan-streamer.com/",
+        "source": "HackerNews",
+        "published_at": "2026-06-27T23:18:43+00:00"
+      },
+      "analysis": {
+        "news_title": "万象实时交互基础模型",
+        "category": "模型",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "mid",
+            "badge": "实时推理需求",
+            "summary": "端到端实时交互模型对推理延迟要求极高，需要低延迟GPU集群与高带宽存储互联支持。流式生成场景下对HBM带宽和NVLink吞吐提出更高要求。",
+            "upside": "实时流式推理场景增加高端GPU需求，推动低延迟推理硬件采购",
+            "downside": null,
+            "companies": [
+              {
+                "name": "NVIDIA",
+                "role": "GPU及NVLink互联提供商",
+                "type": "positive",
+                "impact_label": "推理硬件受益",
+                "reason": "实时交互模型对推理吞吐和延迟要求苛刻，依赖高端H100/H200 GPU",
+                "specific": "实时视频生成推理延迟需控制在33ms/帧以内，对GPU显存带宽需求超3TB/s",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "流式数据处理",
+            "summary": "实时交互基础模型训练需要大量时序连续的视频与交互数据，对数据采集和标注管线有一定新增需求，但当前v0.1版本影响尚小。",
+            "upside": "带动对时序视频数据集及流式标注工具的需求",
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "high",
+            "badge": "实时基础模型",
+            "summary": "Wan Streamer v0.1提出端到端实时交互基础模型范式，将流式生成与交互控制统一到单一模型框架，对现有帧级推理和diffusion架构形成方法论挑战。推理服务API和MLOps平台需适配流式输出协议。",
+            "upside": "开辟实时可控视频生成新方向，推动基础模型架构创新",
+            "downside": "现有非流式视频生成模型（如标准Wan2.1）在交互场景竞争力下降",
+            "companies": [
+              {
+                "name": "阿里巴巴/通义团队",
+                "role": "Wan系列模型原始开发者",
+                "type": "positive",
+                "impact_label": "技术积累延伸",
+                "reason": "Wan Streamer基于Wan基础模型扩展，增强阿里在视频生成领域的技术护城河",
+                "specific": "v0.1版本支持端到端实时流式交互，目标延迟为单流帧级实时输出",
+                "impact_depth": 3
+              },
+              {
+                "name": "Runway / Pika",
+                "role": "视频生成模型竞品",
+                "type": "negative",
+                "impact_label": "交互能力承压",
+                "reason": "现有商业视频生成平台缺乏端到端实时交互能力，技术差距被放大",
+                "specific": "Runway Gen-3等产品均为非实时批处理生成，无法支持帧级交互控制",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "流式Agent框架",
+            "summary": "实时交互基础模型要求Agent框架具备流式感知与低延迟响应能力，现有RAG和Prompt工程工具需适配连续帧上下文输入输出。将催生新的流式推理SDK和评估工具需求。",
+            "upside": "推动流式多模态Agent框架和实时评估工具链的开发",
+            "downside": null,
+            "companies": [
+              {
+                "name": "LangChain / LlamaIndex",
+                "role": "Agent与RAG框架提供商",
+                "type": "neutral",
+                "impact_label": "需适配流式IO",
+                "reason": "现有框架对连续视频流上下文的原生支持不足，需扩展流式多模态接口",
+                "specific": "LangChain当前流式支持主要面向文本token级别，视频帧级流式接口尚未标准化",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "mid",
+            "badge": "交互视频应用",
+            "summary": "端到端实时交互基础模型为游戏、虚拟直播、具身智能仿真等应用场景提供核心能力支撑，使AI驱动的实时场景生成与用户交互成为可能。当前v0.1处于早期研究阶段，商业落地需时。",
+            "upside": "游戏NPC实时渲染、虚拟主播、机器人仿真环境等场景有望受益",
+            "downside": "技术成熟度尚低（v0.1），距离规模化商业部署仍有较大距离",
+            "companies": [
+              {
+                "name": "游戏/XR行业（通用）",
+                "role": "实时交互视频生成应用方",
+                "type": "positive",
+                "impact_label": "场景生成潜力",
+                "reason": "实时可控视频生成可支持游戏动态场景和XR沉浸内容的AI化生成",
+                "specific": "目标场景包括30fps以上实时交互视频生成，对应游戏和虚拟制片等市场规模超200亿美元",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "3ab9fd165f83f8a1",
+      "date": "2026-06-28",
+      "fetched_at": "2026-06-28T10:22:21.097446+00:00",
+      "article": {
+        "title": "Task Failed Successfully: Saturating NIC and Disk Bandwidth",
+        "summary": "HN score: 45, comments: 15",
+        "url": "https://blog.mrcroxx.com/posts/task-failed-successfully-saturating-nic-and-disk-bandwidth/",
+        "source": "HackerNews",
+        "published_at": "2026-06-23T14:28:20+00:00"
+      },
+      "analysis": {
+        "news_title": "NIC与磁盘带宽饱和测试",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "low",
+            "badge": "存储互联优化",
+            "summary": "该研究探讨如何同时饱和网卡（NIC）与磁盘带宽，属于底层存储与互联性能调优领域。对高性能计算集群中的数据吞吐瓶颈识别有参考意义，但属于技术社区分享性质，影响面有限。HN评分45分、评论15条，关注度较低，尚未形成产业级影响。",
+            "upside": "为AI训练集群的存储-网络协同调优提供实验参考，有助于减少I/O瓶颈",
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "数据吞吐参考",
+            "summary": "大规模数据采集与清洗管道对磁盘与网络带宽需求极高，该研究的带宽饱和测试结果可为数据中心I/O管道设计提供参考基准。但目前仅是技术博客级分享，无直接商业或产品落地信息。",
+            "upside": "为数据预处理流水线的带宽规划提供可参考的实测数据",
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "与模型预训练、后训练对齐及推理服务无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "与AI Agent框架、RAG、Prompt工程等工具中间件无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该底层性能测试与应用层产品无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "3610e59034a164c9",
+      "date": "2026-06-28",
+      "fetched_at": "2026-06-28T10:22:19.510103+00:00",
+      "article": {
+        "title": "Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work",
+        "summary": "HN score: 108, comments: 71",
+        "url": "https://github.com/kageroumado/adrafinil",
+        "source": "HackerNews",
+        "published_at": "2026-06-27T20:34:53+00:00"
+      },
+      "analysis": {
+        "news_title": "Mac防休眠Agent工具",
+        "category": "应用",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该工具仅影响本地Mac端电源管理逻辑，与GPU/NPU芯片设计、HBM存储或高性能计算集群无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "工具功能聚焦于防止Mac休眠，与数据采集、标注、向量数据库或数据中心能耗管理无关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "本地推理辅助",
+            "summary": "Adrafinil通过检测Agent任务是否仍在运行来动态控制Mac睡眠状态，间接为本地模型推理任务（如Ollama等本地LLM服务）提供持续运行保障。对云端推理API无影响，仅作用于开发者本地工作流。",
+            "upside": "本地模型长时推理任务不再因屏幕合盖中断，提升开发者调试效率。",
+            "downside": null,
+            "companies": [
+              {
+                "name": "Ollama",
+                "role": "本地模型推理运行时",
+                "type": "positive",
+                "impact_label": "本地推理稳定性",
+                "reason": "Adrafinil可配合Ollama等本地推理工具，防止Mac合盖导致模型推理任务中断。",
+                "specific": "HN讨论中有71条评论涉及与本地LLM工具链集成场景，社区关注度评分108。",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "Agent运行保障",
+            "summary": "Adrafinil直接服务于AI Agent工具层，通过macOS电源管理API（IOKit/caffeinate机制）监听Agent进程活跃状态，仅在Agent工作期间阻止休眠，任务结束后自动恢复省电模式。这是一个专为AI Agent工作流设计的开发者效率工具。",
+            "upside": "填补了macOS平台AI Agent长时任务运行时的电源管理空白，改善开发者本地Agent调试体验。",
+            "downside": "功能较单一，仅限macOS平台，适用范围有限。",
+            "companies": [
+              {
+                "name": "Adrafinil（开源项目）",
+                "role": "macOS Agent电源管理工具",
+                "type": "positive",
+                "impact_label": "填补工具空白",
+                "reason": "专门解决AI Agent任务执行期间Mac合盖休眠导致任务中断的痛点问题。",
+                "specific": "HN上线后获得108分、71条评论，属于小众工具类中等热度，说明该痛点在开发者群体中真实存在。",
+                "impact_depth": 3
+              },
+              {
+                "name": "Anthropic",
+                "role": "Claude Agent框架提供方",
+                "type": "neutral",
+                "impact_label": "间接受益",
+                "reason": "使用Claude API构建本地Agent的开发者可受益于此工具，长时任务（如computer use）不再被休眠打断。",
+                "specific": "Claude computer use场景需要持续运行数分钟至数十分钟，是该工具最典型的使用场景之一。",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "开发者效率提升",
+            "summary": "对于在Mac本地运行AI自动化任务（如代码生成、文件批处理、网页爬取Agent）的个人开发者和小型团队，该工具减少了任务意外中断的概率，提升了本地AI应用的可靠性。对企业级部署无显著影响。",
+            "upside": "降低个人开发者使用本地AI Agent的操作摩擦，有助于AI应用在Mac用户群体中的渗透。",
+            "downside": "仅覆盖macOS端本地场景，对云端AI应用、企业SaaS及移动端无任何影响。",
+            "companies": [
+              {
+                "name": "Apple",
+                "role": "macOS平台提供方",
+                "type": "neutral",
+                "impact_label": "平台生态完善",
+                "reason": "第三方工具补足了macOS在AI Agent工作流场景下电源策略的不足，间接增强Mac作为AI开发平台的吸引力。",
+                "specific": "Apple Silicon Mac（M系列）已成为本地LLM运行的主流平台之一，此类工具有助于巩固其开发者生态。",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "178be00908532a38",
+      "date": "2026-06-28",
+      "fetched_at": "2026-06-28T10:22:19.164770+00:00",
+      "article": {
+        "title": "What Ozempic does to the gut-brain axis",
+        "summary": "HN score: 160, comments: 372",
+        "url": "https://www.psychologytoday.com/au/blog/mood-by-microbe/202606/what-ozempic-does-to-the-gut-brain-axis",
+        "source": "HackerNews",
+        "published_at": "2026-06-27T21:34:06+00:00"
+      },
+      "analysis": {
+        "news_title": "Ozempic对肠脑轴的影响",
+        "category": "其他",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻属于生物医学研究领域，与AI算力基础设施无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻与数据采集、标注及数据中心等AI数据层基础设施无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻不涉及大模型预训练、推理服务或MLOps平台等模型基础设施。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻与AI Agent、RAG、Prompt工程等工具中间件层无直接关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "医疗间接相关",
+            "summary": "Ozempic（司美格鲁肽）对肠脑轴机制的研究在HackerNews引发372条讨论，反映公众对AI辅助药物作用机理解析的兴趣。该研究本身属于生物医学领域，但可能间接推动AI在药物发现与神经科学数据分析方向的应用需求。目前尚无直接AI产业链联动事件。",
+            "upside": "GLP-1类药物机制研究热度上升，或带动AI制药/生物信息学平台在肠脑轴领域的分析需求增长",
+            "downside": null,
+            "companies": [
+              {
+                "name": "Novo Nordisk",
+                "role": "Ozempic原研药厂商",
+                "type": "neutral",
+                "impact_label": "研究热度受益",
+                "reason": "肠脑轴机制研究的广泛讨论可能推动其与AI制药公司在药物作用机理解析上的合作",
+                "specific": "Ozempic全球2023年销售额约达213亿美元，相关AI辅助研究需求随科学热度上升",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "2e66f5b026cebd06",
+      "date": "2026-06-28",
+      "fetched_at": "2026-06-28T10:22:17.650477+00:00",
+      "article": {
+        "title": "Reducing tick density along recreational trails in Ottawa, Canada",
+        "summary": "HN score: 201, comments: 110",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1877959X26000476",
+        "source": "HackerNews",
+        "published_at": "2026-06-24T18:42:12+00:00"
+      },
+      "analysis": {
+        "news_title": "渥太华蜱虫密度研究",
+        "category": "其他",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻与蜱虫防治相关，与AI基础算力层无任何关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻内容为户外生态研究，与AI数据采集、标注或数据中心基础设施无关。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻不涉及任何大模型训练、推理或MLOps相关内容。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻与AI工具中间件、Agent框架或开发工具无任何关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻为加拿大渥太华户外小径蜱虫密度减少的生态研究，不属于AI应用领域范畴。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "5d9f2b82c9bdbe15",
+      "date": "2026-06-28",
+      "fetched_at": "2026-06-28T10:22:16.949075+00:00",
+      "article": {
+        "title": "From Hallmark to neon signs: A look at Jim Parkinson's career in letter art",
+        "summary": "HN score: 4, comments: 0",
+        "url": "https://typographica.org/on-typography/jim-parkinson-1941-2025/",
+        "source": "HackerNews",
+        "published_at": "2026-06-26T17:32:35+00:00"
+      },
+      "analysis": {
+        "news_title": "字体艺术家生涯回顾",
+        "category": "其他",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻与AI算力基础设施无关，不涉及GPU/NPU芯片、HPC集群或存储互联等领域。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻为字体艺术家个人职业回顾，不涉及数据采集、标注或数据中心等AI数据层业务。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻与大模型预训练、推理服务API或MLOps平台无任何关联。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻不涉及RAG框架、AI Agent、Prompt工程或开发者工具链等中间件领域。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "none",
+            "badge": "无影响",
+            "summary": "该新闻为传统平面设计领域的人物报道，HN评分仅4分且无评论，对AI应用层无实质影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          }
+        }
+      }
+    },
     {
       "article_id": "6e53b49e154d3b2f",
       "date": "2026-06-27",
@@ -2222,607 +2747,6 @@
                 "impact_depth": 1
               }
             ]
-          }
-        }
-      }
-    },
-    {
-      "article_id": "2d7757266f575202",
-      "date": "2026-06-23",
-      "fetched_at": "2026-06-23T10:56:37.055102+00:00",
-      "article": {
-        "title": "Path-dependent program induction under resource constraints explains human sequence learning",
-        "summary": "arXiv:2606.20623v1 Announce Type: new \nAbstract: How do people build abstract, reusable knowledge from sequential experience under bounded cognitive resources? To answer this question, we integrate rate-distortion theory with recent advances in program induction to describe how prior knowledge shapes which future structures are cheap to encode and easy to discover. We formalize this in a hierarchi",
-        "url": "https://arxiv.org/abs/2606.20623",
-        "source": "arXiv",
-        "published_at": "Tue, 23 Jun 2026 00:00:00 -0400"
-      },
-      "analysis": {
-        "news_title": "认知序列学习新理论",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无直接影响",
-            "summary": "该研究为认知科学与程序归纳理论研究，不涉及算力硬件需求变化，对GPU/NPU芯片及计算集群无直接影响。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "low",
-            "badge": "合成数据启示",
-            "summary": "研究将速率失真理论与程序归纳结合，揭示有限资源下序列知识的压缩编码机制。该框架可为合成训练数据的结构化生成提供理论依据，有助于设计更高效的序列标注策略。但短期内对数据产业实际生产流程影响有限。",
-            "upside": "为合成序列数据生成提供认知启发式压缩框架，可能提升标注效率",
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "mid",
-            "badge": "归纳偏置优化",
-            "summary": "该研究提出的层次化程序归纳框架与速率失真理论结合，直接启发大模型后训练阶段的归纳偏置设计，尤其对序列推理能力和知识复用机制有参考价值。路径依赖的知识编码思想可为课程学习（Curriculum Learning）和RLHF奖励塑造提供理论支撑。",
-            "upside": "为序列推理模型的结构化预训练与后训练对齐提供新的理论框架，可能改善样本效率",
-            "downside": "学术理论转化为工程实践周期较长，短期内难以直接落地",
-            "companies": [
-              {
-                "name": "DeepMind",
-                "role": "认知启发型AI基础研究机构",
-                "type": "positive",
-                "impact_label": "理论储备增强",
-                "reason": "DeepMind长期布局程序合成与认知科学交叉研究，该理论与其AlphaCode等序列推理方向高度契合",
-                "specific": "DeepMind已发表超过10篇程序归纳相关论文，该框架可整合进其神经符号推理研究路线",
-                "impact_depth": 1
-              },
-              {
-                "name": "OpenAI",
-                "role": "大模型后训练与推理能力研发",
-                "type": "neutral",
-                "impact_label": "长期参考价值",
-                "reason": "路径依赖的序列编码机制对o系列推理模型的训练课程设计有间接参考意义",
-                "specific": "OpenAI o3在ARC-AGI测试中仍面临序列抽象挑战，该理论提供了新的归纳偏置视角",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "low",
-            "badge": "Agent规划启示",
-            "summary": "层次化程序归纳与资源约束下的知识复用思想，对AI Agent任务规划框架中的子程序抽象与技能复用模块设计有学术参考价值。但当前Agent工具链以工程驱动为主，理论转化路径不明确。",
-            "upside": "为Agent框架中的层次化任务分解与记忆压缩机制提供认知科学依据",
-            "downside": null,
-            "companies": []
-          },
-          "app": {
-            "impact_level": "low",
-            "badge": "教育AI潜在利好",
-            "summary": "研究对人类在资源约束下的序列学习机制建模，对自适应学习系统和教育AI的个性化课程设计有直接理论指导意义。揭示先验知识如何降低新结构编码成本，可优化智能辅导系统的知识点排序算法。",
-            "upside": "教育AI可借助该框架设计更符合人类认知规律的学习路径，提升知识迁移效率",
-            "downside": null,
-            "companies": [
-              {
-                "name": "Duolingo",
-                "role": "自适应序列学习应用",
-                "type": "positive",
-                "impact_label": "课程设计优化",
-                "reason": "Duolingo的Birdbrain算法依赖序列学习模型，该理论可为其知识点排序与间隔重复策略提供新优化方向",
-                "specific": "Duolingo拥有超过5亿注册用户，序列学习效率提升1%即可显著影响用户留存率",
-                "impact_depth": 1
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "article_id": "2d187fe1ebabe603",
-      "date": "2026-06-23",
-      "fetched_at": "2026-06-23T10:56:37.055076+00:00",
-      "article": {
-        "title": "The New Associationism: Lessons from Deep Learning",
-        "summary": "arXiv:2606.20600v1 Announce Type: new \nAbstract: What can the success of modern AI tell us about how humans learn? This paper argues that taking AI seriously as a model of human learning supports a modest but genuine associationism. The central finding is that supervised learning -- learning driven by evaluative feedback -- underlies a surprisingly wide range of contemporary AI systems, from large",
-        "url": "https://arxiv.org/abs/2606.20600",
-        "source": "arXiv",
-        "published_at": "Tue, 23 Jun 2026 00:00:00 -0400"
-      },
-      "analysis": {
-        "news_title": "深度学习启示人类联想学习",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无直接影响",
-            "summary": "该论文为纯理论认知科学研究，不涉及算力需求变化或硬件架构调整。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "low",
-            "badge": "标注范式启示",
-            "summary": "论文强调监督学习（评估性反馈驱动）是广泛AI系统的核心，间接佐证带标签数据与人工反馈标注的基础性价值。对数据标注行业的学术支持有限但存在。",
-            "upside": "监督学习范式的理论强化可为高质量标注数据的商业需求提供学术背书，有助于维持RLHF类标注业务的定价逻辑。",
-            "downside": null,
-            "companies": [
-              {
-                "name": "Scale AI",
-                "role": "人工反馈与监督标注数据提供商",
-                "type": "positive",
-                "impact_label": "理论背书",
-                "reason": "论文论证监督学习是AI能力的核心驱动机制，间接支撑Scale AI所提供的RLHF/评估性反馈标注服务的战略地位。",
-                "specific": "Scale AI 2024年估值约140亿美元，业务高度依赖监督学习与人类反馈数据管道；学术共识强化可延缓合成数据完全替代人工标注的市场预期。",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "model": {
-            "impact_level": "mid",
-            "badge": "范式理论支撑",
-            "summary": "论文从认知科学视角论证监督学习与评估性反馈驱动的学习机制具有深层合理性，为RLHF、DPO等后训练对齐方法提供跨学科理论支撑。这有助于强化学界与工业界对现有训练范式的信心，但不直接改变技术路线。",
-            "upside": "为大模型后训练对齐路线（RLHF/DPO）提供认知科学层面的理论合法性，有助于相关研究获得更多学术资源与资助。",
-            "downside": "若联想主义被过度解读，可能遭到符号主义或神经科学阵营的理论反驳，引发范式争论，分散研究资源。",
-            "companies": [
-              {
-                "name": "OpenAI",
-                "role": "RLHF范式的主要创建与推广者",
-                "type": "positive",
-                "impact_label": "范式获认可",
-                "reason": "论文核心论点支持监督学习与人类反馈机制的普适性，与OpenAI自GPT-3/InstructGPT以来的技术路线高度契合。",
-                "specific": "OpenAI于2022年发布InstructGPT论文，首次大规模验证RLHF对齐效果；该认知科学研究为这一路线提供独立学科的交叉验证。",
-                "impact_depth": 1
-              },
-              {
-                "name": "Anthropic",
-                "role": "对齐研究与后训练方法开发者",
-                "type": "positive",
-                "impact_label": "对齐理论支撑",
-                "reason": "Anthropic以安全对齐为核心使命，该论文从人类学习机制角度论证评估性反馈的重要性，与其Constitutional AI等方法的底层逻辑一致。",
-                "specific": "Anthropic已融资超过70亿美元，核心竞争力集中于RLHF及后训练对齐；跨学科理论支持有助于其在学术界建立方法论权威性。",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "low",
-            "badge": "评估工具启示",
-            "summary": "论文对评估性反馈机制的理论阐述，对AI评估与Prompt工程工具的设计理念有轻微启发作用，但不直接驱动工具层产品变化。",
-            "upside": "联想学习与反馈机制的理论框架可为AI Agent的奖励设计与评估工具提供认知科学参考视角。",
-            "downside": null,
-            "companies": []
-          },
-          "app": {
-            "impact_level": "low",
-            "badge": "教育AI理论支撑",
-            "summary": "论文直接探讨AI与人类学习机制的类比关系，对教育垂直行业的AI应用具有一定学术价值，可为自适应学习系统的设计提供理论依据。",
-            "upside": "监督学习与评估反馈机制的认知科学验证，为AI辅助教育产品（自适应练习、即时反馈系统）提供跨学科理论背书，有助于产品获得教育机构认可。",
-            "downside": null,
-            "companies": [
-              {
-                "name": "Khan Academy (Khanmigo)",
-                "role": "AI教育应用开发者",
-                "type": "positive",
-                "impact_label": "教育理论背书",
-                "reason": "论文论证AI的监督学习机制与人类联想学习高度同构，为Khanmigo等基于即时反馈的AI教学工具提供认知科学层面的合理性论证。",
-                "specific": "Khanmigo于2023年上线，已服务超过数百万学生；该研究从学习科学角度支持其核心产品逻辑——通过评估性反馈驱动学习进步。",
-                "impact_depth": 1
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "article_id": "514f0c202af87988",
-      "date": "2026-06-23",
-      "fetched_at": "2026-06-23T10:56:37.055068+00:00",
-      "article": {
-        "title": "Beyond Fixed Budgets: Characterizing the Inelasticity and Limitations of Tree-of-Thought Reasoning Strategies",
-        "summary": "arXiv:2606.20599v1 Announce Type: new \nAbstract: Tree of Thought (ToT) search has become a promising direction for improving the reasoning capabilities of large language models, but deploying these methods in practice raises a question that has received little systematic attention: how do different search strategies behave under varying compute budgets, model sizes, and problem difficulties? In th",
-        "url": "https://arxiv.org/abs/2606.20599",
-        "source": "arXiv",
-        "published_at": "Tue, 23 Jun 2026 00:00:00 -0400"
-      },
-      "analysis": {
-        "news_title": "ToT推理策略计算弹性研究",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "mid",
-            "badge": "推理算力优化",
-            "summary": "ToT搜索策略在不同算力预算下的行为特征研究，直接影响推理阶段的算力分配效率。理解推理策略的弹性有助于优化GPU推理集群的利用率。若ToT存在算力不弹性问题，意味着简单堆叠算力无法线性提升效果，影响推理芯片的采购决策逻辑。",
-            "upside": "为推理芯片厂商提供更精准的算力规划依据，避免过度供给",
-            "downside": "若ToT弹性差，可能降低高算力推理硬件的边际价值预期",
-            "companies": [
-              {
-                "name": "NVIDIA",
-                "role": "推理GPU供应商",
-                "type": "neutral",
-                "impact_label": "算力边际效益",
-                "reason": "ToT计算弹性特征研究揭示推理算力与效果的非线性关系，影响数据中心推理卡需求预期",
-                "specific": "ToT在固定算力预算下的收益递减问题若被证实，将影响H100/B200等推理场景的采购ROI评估",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "data": {
-            "impact_level": "low",
-            "badge": "评估数据需求",
-            "summary": "研究ToT策略需要覆盖不同难度梯度的问题数据集，对评估基准数据的质量和多样性有一定需求。",
-            "upside": "推动高质量推理评估数据集的建设需求",
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "high",
-            "badge": "推理策略重构",
-            "summary": "该研究系统性揭示ToT搜索策略在不同模型规模、算力预算和问题难度下的局限性与非弹性特征，直接影响大模型推理框架的设计取向。研究结论可能促使模型团队重新评估ToT相对于CoT、MCTS等策略的适用边界，推动更高效的推理时计算（test-time compute）方法研究。对正在部署o系列推理模型的厂商具有重要参考价值。",
-            "upside": "为推理模型的后训练策略选择和推理时扩展提供实证依据",
-            "downside": "可能削弱业界对ToT作为通用推理增强方案的信心，影响相关研究投入",
-            "companies": [
-              {
-                "name": "OpenAI",
-                "role": "推理模型研发商（o系列）",
-                "type": "neutral",
-                "impact_label": "推理策略参考",
-                "reason": "o1/o3等推理模型大量依赖树状搜索类策略，该研究揭示的弹性局限有助于优化其test-time compute分配",
-                "specific": "o3在ARC-AGI测试中耗费高额算力，ToT弹性研究可量化指导何种预算区间收益最优",
-                "impact_depth": 2
-              },
-              {
-                "name": "Google DeepMind",
-                "role": "Gemini推理能力研发商",
-                "type": "neutral",
-                "impact_label": "搜索策略优化",
-                "reason": "DeepMind在AlphaCode等场景使用树搜索推理，研究结论影响其推理策略的模型规模适配选择",
-                "specific": "Gemini 2.0 Flash Thinking等轻量推理模型的策略选择将参考不同模型规模下ToT的效果衰减曲线",
-                "impact_depth": 1
-              },
-              {
-                "name": "Anthropic",
-                "role": "Claude推理能力研发商",
-                "type": "neutral",
-                "impact_label": "推理框架评估",
-                "reason": "Claude扩展思考模式的搜索策略设计可从本研究获得算力弹性方面的实证依据",
-                "specific": "研究提供跨模型规模（未披露具体参数）的ToT弹性对比数据，可直接用于Claude推理预算调优",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "mid",
-            "badge": "Agent框架优化",
-            "summary": "ToT是当前主流AI Agent推理框架的核心组件之一，该研究揭示其在不同预算约束下的策略局限，将直接影响LangChain、LlamaIndex等框架中推理模块的设计与默认策略选择。开发者将据此更合理地配置Agent的思维树深度与宽度参数。",
-            "upside": "推动Agent框架从固定ToT策略转向自适应搜索策略，提升中间件产品竞争力",
-            "downside": "短期内可能导致基于ToT的Agent工具链需要重新调参或架构调整",
-            "companies": [
-              {
-                "name": "LangChain",
-                "role": "AI Agent开发框架提供商",
-                "type": "neutral",
-                "impact_label": "推理模块迭代",
-                "reason": "LangChain的Tree of Thought模块将参考该研究结论优化默认搜索策略和预算控制接口",
-                "specific": "LangChain GitHub上ToT相关实现已有数百个fork，研究结论将影响社区最佳实践更新方向",
-                "impact_depth": 2
-              }
-            ]
-          },
-          "app": {
-            "impact_level": "low",
-            "badge": "复杂任务优化",
-            "summary": "对于依赖复杂推理能力的垂直应用场景（如法律分析、代码生成、数学辅导），ToT弹性研究有助于应用开发者在有限API调用预算内选择最优推理策略。",
-            "upside": "帮助企业应用降低推理成本，在固定预算内获得更优效果",
-            "downside": null,
-            "companies": []
-          }
-        }
-      }
-    },
-    {
-      "article_id": "3c7767c549db77de",
-      "date": "2026-06-22",
-      "fetched_at": "2026-06-22T13:29:06.850475+00:00",
-      "article": {
-        "title": "I Canceled My French Tutor and Built an LLM Tool That Does It Better",
-        "summary": "HN score: 43, comments: 13",
-        "url": "https://alshe.substack.com/p/i-canceled-my-french-tutor-and-built",
-        "source": "HackerNews",
-        "published_at": "2026-06-21T22:46:43+00:00"
-      },
-      "analysis": {
-        "news_title": "LLM工具替代法语家教",
-        "category": "应用",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该个人项目规模极小，对算力基础设施层无实质影响。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该工具使用现有LLM API，未涉及新的数据采集或标注需求。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "low",
-            "badge": "API调用增量",
-            "summary": "作者基于现有LLM（大概率为OpenAI或Anthropic API）构建语言学习工具，代表个人开发者对推理服务API的典型消费场景。此类长尾用例累积构成模型服务商的API调用基本盘。",
-            "upside": "语言学习场景对话轮次多、会话长，单用户token消耗高于平均水平，有助于API营收。",
-            "downside": null,
-            "companies": [
-              {
-                "name": "OpenAI",
-                "role": "推理服务API提供商",
-                "type": "positive",
-                "impact_label": "长尾API消费",
-                "reason": "个人开发者以API方式调用GPT系列模型构建语言学习工具，贡献持续性token消耗。",
-                "specific": "语言学习类应用平均每次会话约500-2000 tokens，高频使用场景月调用量可达数十万tokens。",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "mid",
-            "badge": "Prompt工程实践",
-            "summary": "该项目是典型的个人LLM工具开发案例，涉及Prompt工程设计、对话流管理及语言评估逻辑，体现AI开发工具层的民主化趋势。HN社区讨论可带动同类工具的构建兴趣，验证低代码/高Prompt方式的可行性。",
-            "upside": "印证个人开发者可用简单SDK+Prompt工程替代专业服务，利好AI开发者工具生态推广。",
-            "downside": null,
-            "companies": [
-              {
-                "name": "LangChain",
-                "role": "Agent/对话流框架提供商",
-                "type": "positive",
-                "impact_label": "个人开发验证",
-                "reason": "此类个人语言工具项目是LangChain等框架的核心目标用户场景，案例传播有助于开发者生态增长。",
-                "specific": "LangChain GitHub star数超过90k，语言学习/对话类是其最热门模板场景之一。",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "app": {
-            "impact_level": "mid",
-            "badge": "语言学习颠覆",
-            "summary": "该案例直接展示LLM对传统语言家教服务的替代可能，对消费者AI助手和教育垂直行业均有示范效应。HN上的传播将强化'AI可替代人工辅导'的用户认知，加速语言学习市场向AI工具迁移。",
-            "upside": "验证AI语言学习工具的可行性，利好Duolingo等AI化语言学习平台，推动用户从人工家教转向AI产品。",
-            "downside": "对传统语言家教平台（如iTalki、Preply）及个人家教市场构成需求侧压力。",
-            "companies": [
-              {
-                "name": "Duolingo",
-                "role": "AI语言学习应用",
-                "type": "positive",
-                "impact_label": "需求验证受益",
-                "reason": "用户主动替换人工家教转向LLM工具，印证AI语言学习赛道需求真实存在，Duolingo已深度整合GPT-4。",
-                "specific": "Duolingo 2024年AI付费用户超800万，此类用户行为变化直接支撑其Max订阅产品定价逻辑。",
-                "impact_depth": 2
-              },
-              {
-                "name": "iTalki",
-                "role": "在线人工家教平台",
-                "type": "negative",
-                "impact_label": "人工需求受压",
-                "reason": "用户因LLM工具效果满意而取消真人家教订阅，代表平台核心供需关系受AI替代威胁。",
-                "specific": "iTalki平台注册教师超7万名，语言学习AI替代叙事若持续传播，或影响平台课时预订增速。",
-                "impact_depth": 1
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "article_id": "47f4215b12d7061f",
-      "date": "2026-06-22",
-      "fetched_at": "2026-06-22T13:29:06.516131+00:00",
-      "article": {
-        "title": "The case against geometric algebra (2024)",
-        "summary": "HN score: 130, comments: 123",
-        "url": "https://alexkritchevsky.com/2024/02/28/geometric-algebra.html",
-        "source": "HackerNews",
-        "published_at": "2026-06-21T11:06:55+00:00"
-      },
-      "analysis": {
-        "news_title": "几何代数反思讨论",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该讨论属于纯数学/理论层面，对GPU/NPU芯片设计、HBM存储及计算集群无直接影响。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "与数据采集、标注及数据中心基础设施无关联。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "low",
-            "badge": "数学基础争议",
-            "summary": "几何代数（GA）曾被部分研究者探索用于神经网络架构设计（如等变网络、物理模拟模型）。此文引发HN社区130+热度讨论，可能影响学术界对GA在模型设计中应用价值的预期，使相关研究方向热度边际降低。目前主流Transformer架构对GA依赖极少，实际影响有限。",
-            "upside": null,
-            "downside": "若学界减少对GA在等变神经网络中的投入，部分基于GA的模型架构研究可能放缓。",
-            "companies": []
-          },
-          "tools": {
-            "impact_level": "low",
-            "badge": "框架方向参考",
-            "summary": "少数AI开发工具和物理仿真框架（如用于机器人/3D感知的SDK）曾引入GA作为几何表示工具。该讨论提供了反对使用GA的学术论据，可能影响相关开源库的维护优先级。HN 123条评论显示开发者社区存在真实关注，但尚未形成主流影响。",
-            "upside": null,
-            "downside": "基于GA的小众开发工具库可能因学术信心下降而减少贡献者。",
-            "companies": []
-          },
-          "app": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该数学理论争论对企业效率、消费者AI助手及垂直行业应用无直接影响。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          }
-        }
-      }
-    },
-    {
-      "article_id": "7911f134273a287b",
-      "date": "2026-06-22",
-      "fetched_at": "2026-06-22T13:29:05.588981+00:00",
-      "article": {
-        "title": "You're probably using Agent Skills wrong",
-        "summary": "HN score: 41, comments: 19",
-        "url": "https://notes.ansonbiggs.com/youre-probably-using-agent-skills-wrong/",
-        "source": "HackerNews",
-        "published_at": "2026-06-22T01:02:16+00:00"
-      },
-      "analysis": {
-        "news_title": "Agent Skills误用解析",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该文章聚焦于Agent Skills的使用方式与工程实践，与底层算力基础设施无直接关联。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "文章内容不涉及数据采集、标注或数据中心等数据层基础设施。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "low",
-            "badge": "推理调用优化",
-            "summary": "Agent Skills的正确使用方式直接影响模型推理调用路径的效率。若开发者按文章建议优化Skills调用，可降低冗余推理请求，对推理服务API层产生间接优化效果。文章属于社区实践经验分享，传播范围有限（HN score 41）。",
-            "upside": "减少不必要的模型调用次数，降低推理成本与延迟",
-            "downside": null,
-            "companies": []
-          },
-          "tools": {
-            "impact_level": "mid",
-            "badge": "Agent设计规范",
-            "summary": "该文章直接指向AI Agent框架层的工程实践误区，对Agent Skills的设计模式、调用规范与组合方式提出批评性建议。此类内容在开发者社区（Hacker News score 41, 19条评论）形成讨论，有助于推动Agent框架最佳实践标准化。若被主流框架采纳，可影响LangChain、AutoGen等工具的Skills接口设计。",
-            "upside": "推动Agent Skills设计规范化，减少开发者踩坑成本，促进框架迭代",
-            "downside": "现有按错误模式构建的Agent工具链可能面临重构压力",
-            "companies": [
-              {
-                "name": "LangChain",
-                "role": "主流Agent框架提供商",
-                "type": "neutral",
-                "impact_label": "实践规范参考",
-                "reason": "作为最广泛使用的Agent框架，其Tools/Skills设计若与文章指出的误用模式重合，存在API设计调整压力",
-                "specific": "LangChain GitHub stars超90k，其Tools接口是Agent Skills误用最高频场景之一",
-                "impact_depth": 2
-              },
-              {
-                "name": "Microsoft AutoGen",
-                "role": "多Agent框架提供商",
-                "type": "neutral",
-                "impact_label": "框架设计审视",
-                "reason": "AutoGen的Agent技能注册机制是此类讨论的典型对象，社区讨论可能推动其文档或接口优化",
-                "specific": "AutoGen v0.4已重构Skills架构，此类社区反馈是其迭代的重要输入来源",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "app": {
-            "impact_level": "low",
-            "badge": "开发效率提升",
-            "summary": "应用层开发者若采纳文章中的Agent Skills正确用法，可提升AI应用的可靠性与响应质量。影响面局限于已关注该讨论的开发者群体，规模有限。",
-            "upside": "减少Agent应用因Skills误用导致的幻觉、循环调用等生产问题",
-            "downside": null,
-            "companies": []
-          }
-        }
-      }
-    },
-    {
-      "article_id": "0ddfb42db430db57",
-      "date": "2026-06-22",
-      "fetched_at": "2026-06-22T13:29:04.520382+00:00",
-      "article": {
-        "title": "Becoming a dad changes men's brains",
-        "summary": "HN score: 7, comments: 4",
-        "url": "https://www.scientificamerican.com/article/how-becoming-a-dad-changes-mens-brains/",
-        "source": "HackerNews",
-        "published_at": "2026-06-22T12:39:43+00:00"
-      },
-      "analysis": {
-        "news_title": "父亲身份改变男性大脑",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该研究属于神经科学/社会科学领域，与AI算力基础设施无直接关联。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该研究不涉及AI数据采集、标注或数据中心建设，对数据层无实质影响。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该新闻与大模型预训练、推理服务或MLOps平台均无关联。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "tools": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该研究不涉及AI工具链、Agent框架或开发者生态，对工具中间件层无影响。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "app": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该新闻为神经科学基础研究，HN评分仅7分、评论4条，热度极低，对AI应用层无可见影响。",
-            "upside": null,
-            "downside": null,
-            "companies": []
           }
         }
       }
