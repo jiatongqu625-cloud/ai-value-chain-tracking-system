@@ -1,0 +1,619 @@
+[
+  {
+    "article_id": "ea0432d348dc435c",
+    "date": "2026-07-06",
+    "fetched_at": "2026-07-06T11:57:21.477111+00:00",
+    "article": {
+      "title": "Show HN: Osint tool that finds exposed files on domains",
+      "summary": "HN score: 41, comments: 15",
+      "url": "https://search.cerast-intelligence.com/",
+      "source": "HackerNews",
+      "published_at": "2026-07-05T20:24:37+00:00"
+    },
+    "analysis": {
+      "news_title": "OSINT暴露文件扫描工具",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该工具为轻量级OSINT安全扫描工具，不涉及GPU/NPU芯片、HPC集群或存储互联基础设施。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "数据泄露风险",
+          "summary": "该工具可自动扫描域名下暴露的敏感文件，直接关联数据安全与隐私治理议题。企业若存在配置错误的存储桶或目录，可能导致训练数据、标注数据集或向量数据库配置文件外泄。AI公司大量依赖云存储管理原始数据与标注结果，此类工具的普及提升了数据暴露风险面。",
+          "upside": "推动企业加强数据存储安全配置，减少因误配置导致的训练数据泄露",
+          "downside": "恶意使用者可批量扫描AI公司域名，窃取未公开数据集、标注文件或数据库凭证",
+          "companies": [
+            {
+              "name": "Scale AI",
+              "role": "大规模数据标注与管理平台",
+              "type": "negative",
+              "impact_label": "标注数据风险",
+              "reason": "作为主要数据标注服务商，其平台存储大量客户原始数据与标注结果，若域名配置不当存在文件暴露风险",
+              "specific": "Scale AI管理数亿条标注数据，任何配置错误暴露的文件索引均可能导致客户数据隐私违规",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "model": {
+          "impact_level": "low",
+          "badge": "模型文件泄露",
+          "summary": "模型分发Hub或推理API服务若存在目录遍历漏洞，该工具可探测到未授权的模型权重文件、配置文件或API密钥。这对托管私有微调模型的MLOps平台构成潜在威胁。",
+          "upside": null,
+          "downside": "私有微调模型权重或推理服务配置文件可能通过此类工具被发现并下载，损害模型知识产权",
+          "companies": [
+            {
+              "name": "Hugging Face",
+              "role": "模型分发Hub与托管平台",
+              "type": "neutral",
+              "impact_label": "Hub安全审视",
+              "reason": "作为最大模型托管平台，其域名下存在大量文件索引，该工具可能扫描到本应私有的模型或数据集文件",
+              "specific": "Hugging Face托管超过75万个模型仓库，私有仓库权限配置错误案例曾多次被安全研究者披露",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "mid",
+          "badge": "安全工具链补位",
+          "summary": "该工具本身属于安全工具中间件范畴，填补了AI开发工具链在外部攻击面侦察方面的空白。其出现将推动AI安全对齐工具链厂商将OSINT侦察能力纳入红队测试与资产暴露管理产品中。Prompt注入与数据投毒攻击往往以暴露文件为起点，该工具提升了攻防两端的工程能力。",
+          "upside": "安全工具链厂商可将此类OSINT能力集成进攻击面管理产品，形成新的商业化方向",
+          "downside": "低门槛的暴露文件扫描工具使攻击者侦察成本降低，增加AI开发工具的整体安全压力",
+          "companies": [
+            {
+              "name": "Snyk",
+              "role": "开发者安全工具平台",
+              "type": "positive",
+              "impact_label": "安全需求催化",
+              "reason": "此类OSINT工具的流行证明开发者对代码与配置文件暴露风险的关注度上升，利好提供资产暴露扫描的安全工具厂商",
+              "specific": "Snyk 2024年报告显示配置错误是云安全事件首因，占比达32%，OSINT工具普及将推动相关扫描产品需求增长",
+              "impact_depth": 2
+            },
+            {
+              "name": "Wiz",
+              "role": "云安全与攻击面管理平台",
+              "type": "positive",
+              "impact_label": "攻击面管理需求",
+              "reason": "该工具揭示的域名文件暴露问题与Wiz的外部攻击面管理（EASM）产品方向高度契合，可能催化企业采购需求",
+              "specific": "Wiz于2024年以320亿美元估值被Google收购，其EASM产品线直接受益于此类安全意识提升事件",
+              "impact_depth": 2
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "企业合规压力",
+          "summary": "对于在自有域名上部署AI应用的企业客户，该工具的公开传播意味着其暴露的配置文件、日志或API端点更容易被扫描发现，增加企业AI应用的合规与数据安全治理压力。",
+          "upside": "促使企业应用开发者主动进行安全自查，提升整体AI应用部署安全基线",
+          "downside": "中小企业AI应用因安全资源不足，更易成为此类工具的目标，面临数据泄露与声誉损失风险",
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "d148dec2e623441e",
+    "date": "2026-07-06",
+    "fetched_at": "2026-07-06T11:57:21.279798+00:00",
+    "article": {
+      "title": "South Korea's hottest new bachelors are chip workers",
+      "summary": "HN score: 4, comments: 0",
+      "url": "https://www.technologyreview.com/2026/07/06/1140000/south-korea-bachelors-samsung-skhynix-chip-workers/",
+      "source": "HackerNews",
+      "published_at": "2026-07-06T11:02:08+00:00"
+    },
+    "analysis": {
+      "news_title": "韩国芯片工人成择偶热门",
+      "category": "芯片",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "low",
+          "badge": "人才吸引力",
+          "summary": "韩国芯片行业就业吸引力上升，反映半导体产业社会地位提升。这有助于三星、SK海力士等企业吸引本土顶尖工程人才，间接支撑高端芯片（HBM/DRAM）的研发与制造能力。但属于社会文化现象，对产能或技术路线的直接影响有限。",
+          "upside": "半导体行业形象改善，有助于长期人才储备与留存",
+          "downside": null,
+          "companies": [
+            {
+              "name": "SK海力士",
+              "role": "HBM/DRAM主要制造商",
+              "type": "positive",
+              "impact_label": "人才吸引受益",
+              "reason": "芯片工人社会地位提升有助于吸引高学历工程师加入，支撑HBM3E等先进制程研发",
+              "specific": "SK海力士HBM市场份额约50%，人才竞争力提升有助于维持技术领先",
+              "impact_depth": 1
+            },
+            {
+              "name": "三星电子",
+              "role": "芯片设计与制造（代工+存储）",
+              "type": "positive",
+              "impact_label": "形象溢价受益",
+              "reason": "半导体行业社会吸引力增强，有助于三星在本土招募顶尖半导体工艺人才",
+              "specific": "三星半导体部门拥有约10万名员工，人才吸引力改善对工艺良率提升具有长期价值",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此新闻与数据与能源层无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此新闻与模型基础设施层无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此新闻与工具中间件层无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此新闻与应用层无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "eff6557e52c2b1d7",
+    "date": "2026-07-06",
+    "fetched_at": "2026-07-06T11:57:20.943358+00:00",
+    "article": {
+      "title": "Solar rail could become common in Europe after successful trial in Switzerland",
+      "summary": "HN score: 88, comments: 99",
+      "url": "https://www.euronews.com/2026/07/05/italy-could-be-the-next-country-to-build-a-solar-railway-after-switzerlands-successful-tri",
+      "source": "HackerNews",
+      "published_at": "2026-07-05T14:49:42+00:00"
+    },
+    "analysis": {
+      "news_title": "瑞士太阳能铁路试验",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "太阳能铁路试验与AI算力基础设施无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻属于清洁能源交通领域，与AI数据采集、标注及数据中心能源供给无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "太阳能铁路技术与大模型训练、推理及MLOps平台无关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻与AI工具中间件层无任何关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻属于可再生能源与交通基础设施领域，不涉及AI应用层任何细分方向。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "a6e9c58998f554fc",
+    "date": "2026-07-06",
+    "fetched_at": "2026-07-06T11:57:20.309161+00:00",
+    "article": {
+      "title": "Show HN: Visualize Model Spikiness in 3D",
+      "summary": "HN score: 15, comments: 2",
+      "url": "https://www.modelmap.tech/",
+      "source": "HackerNews",
+      "published_at": "2026-07-02T19:57:43+00:00"
+    },
+    "analysis": {
+      "news_title": "3D可视化模型尖峰",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该工具为轻量级可视化项目，不涉及算力基础设施需求变化。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该项目不涉及数据采集、标注或存储基础设施。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "low",
+          "badge": "模型可解释",
+          "summary": "该工具通过3D可视化呈现模型权重或激活值的'尖峰性'（Spikiness），有助于研究人员理解模型内部稀疏结构与激活分布。目前HN评分仅15分、2条评论，关注度极低，短期内影响有限。",
+          "upside": "为模型分析人员提供直观的权重分布诊断视角，有助于发现过拟合或异常激活模式",
+          "downside": "项目影响力极小，尚未获得社区广泛验证",
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "可视化工具",
+          "summary": "该项目属于模型诊断与分析工具范畴，与Prompt评估、模型解释性工具链存在交叉。作为独立开源工具，目前社区热度极低（HN score=15），尚不构成对现有工具链的实质冲击。",
+          "upside": "填补3D维度模型激活可视化的工具空白，可作为MLOps调试的辅助手段",
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该工具面向研究者而非终端应用开发者，对应用层无直接影响。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "8b3c73b2bab39c68",
+    "date": "2026-07-06",
+    "fetched_at": "2026-07-06T11:57:18.579875+00:00",
+    "article": {
+      "title": "Delta flight hit by firework while landing at Midway Airport on Fourth of July",
+      "summary": "HN score: 136, comments: 248",
+      "url": "https://www.nbcchicago.com/news/local/delta-flight-hit-by-firework-while-landing-at-midway-airport-on-fourth-of-july/3957451/",
+      "source": "HackerNews",
+      "published_at": "2026-07-05T19:22:51+00:00"
+    },
+    "analysis": {
+      "news_title": "烟花击中达美航班",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此事件为航空安全事故，与AI算力基础设施无关。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此事件与数据采集、标注或数据中心运营无关。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此事件与大模型训练、推理服务或MLOps平台无关。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此事件与AI工具中间件、Agent框架或开发工具无关。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "此事件为传统航空安全事故，与AI应用层无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "b0c769dc1179b874",
+    "date": "2026-07-06",
+    "fetched_at": "2026-07-06T11:57:18.046158+00:00",
+    "article": {
+      "title": "Mr. Baby Paint and accidentally discovering a new cellular automata",
+      "summary": "HN score: 190, comments: 39",
+      "url": "https://tekstien-marginaalien-keskus.aalto.fi/residenssi/heikki/blog/004-december-2/",
+      "source": "HackerNews",
+      "published_at": "2026-07-03T03:13:53+00:00"
+    },
+    "analysis": {
+      "news_title": "新细胞自动机意外发现",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该研究属于个人实验性探索，与GPU/NPU芯片、HPC集群或存储互联无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "细胞自动机发现属于算法规则探索，不涉及数据采集、标注或数据中心基础设施。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "low",
+          "badge": "潜在启发",
+          "summary": "细胞自动机作为复杂系统模型，历史上曾启发神经网络架构设计（如Neural CA）。此次偶然发现的新规则可能为生成模型或自组织网络提供理论参考，但当前影响极为有限。学术层面HN获190分，显示研究社区有一定关注度。",
+          "upside": "新型细胞自动机规则或可启发自组织神经网络、生成模型结构探索",
+          "downside": "纯偶然性发现，缺乏系统性理论支撑，难以快速工程化落地",
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "创意工具参考",
+          "summary": "该发现源于名为'Mr. Baby Paint'的创意编程/可视化实验，对Prompt工程评估、AI生成艺术工具有潜在的边缘启发价值。细胞自动机规则可被集成进程序化生成内容（PCG）工具链，但当前影响尚处萌芽阶段。",
+          "upside": "新规则可丰富程序化生成内容工具的视觉多样性",
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "创意应用潜力",
+          "summary": "细胞自动机在游戏、生成艺术、教育可视化等消费者应用中有直接使用场景。新规则的发现可为独立开发者和创意应用提供新的视觉/交互素材，HN社区190分热度表明创意开发者群体存在兴趣，但商业转化路径较长。",
+          "upside": "可应用于生成艺术、游戏关卡程序化生成、教育STEM可视化工具",
+          "downside": "发现者为个人开发者，无商业化计划，社区复现与二次开发存在不确定性",
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "ad4ac4e9f5073bc2",
+    "date": "2026-07-06",
+    "fetched_at": "2026-07-06T11:57:17.564284+00:00",
+    "article": {
+      "title": "C programmers commit fresh crimes against readability",
+      "summary": "HN score: 5, comments: 0",
+      "url": "https://www.theregister.com/offbeat/2026/07/05/c-programmers-commit-fresh-crimes-against-readability/5265981",
+      "source": "HackerNews",
+      "published_at": "2026-07-06T11:44:39+00:00"
+    },
+    "analysis": {
+      "news_title": "C语言可读性争议",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻仅涉及C语言编程风格讨论，与基础算力层无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻与数据采集、标注及能源层无任何关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻与大模型预训练、推理服务等模型基础设施层无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻讨论C语言编码风格，与AI工具中间件层无实质影响。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻属于编程社区讨论，HN评分仅5分、0评论，对AI应用层无任何影响。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "a0f1abb59a7b4128",
+    "date": "2026-07-06",
+    "fetched_at": "2026-07-06T11:57:16.742001+00:00",
+    "article": {
+      "title": "Show HN: Paint the Earth on a live, interactive globe (collaborative art.)",
+      "summary": "HN score: 6, comments: 2",
+      "url": "https://earth.tattoo",
+      "source": "HackerNews",
+      "published_at": "2026-07-06T10:28:32+00:00"
+    },
+    "analysis": {
+      "news_title": "协作绘制地球互动艺术",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该项目为协作绘画艺术项目，与AI算力基础设施无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该项目不涉及AI数据采集、标注或向量数据库等数据层基础设施。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该项目为纯交互艺术应用，不涉及大模型训练、推理或MLOps平台。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该项目不使用RAG、Agent框架或AI开发工具链等中间件。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "创意应用",
+          "summary": "该项目是一个实时协作地球绘画艺术应用，属于消费者创意互动产品范畴，但与AI技术无实质关联。HN评分仅6分、2条评论，社区关注度极低，商业影响可忽略不计。",
+          "upside": "探索实时协作互动体验，可为未来AI辅助创意工具提供交互设计参考。",
+          "downside": "与AI产业链无实质交集，对应用层AI企业无可量化影响。",
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "774097965f54c870",
+    "date": "2026-07-06",
+    "fetched_at": "2026-07-06T11:57:14.075430+00:00",
+    "article": {
+      "title": "Real-time map of Great Britain's rail network",
+      "summary": "HN score: 142, comments: 56",
+      "url": "https://www.map.signalbox.io",
+      "source": "HackerNews",
+      "published_at": "2026-07-06T09:38:36+00:00"
+    },
+    "analysis": {
+      "news_title": "英国铁路实时地图",
+      "category": "其他",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该新闻为铁路可视化项目，与AI算力基础设施无直接关联。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "交通数据",
+          "summary": "实时铁路网络地图需持续采集列车位置、时刻表及延误等结构化数据流，具备一定的数据工程参考价值。此类公开交通数据集可作为时序预测模型的训练语料。",
+          "upside": "英国国家铁路开放API数据可供AI研究者用于时序预测与异常检测模型训练",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Network Rail / National Rail",
+              "role": "实时列车数据源提供方",
+              "type": "neutral",
+              "impact_label": "数据开放",
+              "reason": "其公开的Darwin/STOMP数据feed是该地图的核心数据来源，间接推动交通AI数据集建设",
+              "specific": "National Rail每天处理约2万列次列车运行数据，Darwin数据feed延迟约2秒",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "model": {
+          "impact_level": "none",
+          "badge": "无影响",
+          "summary": "该项目为前端可视化工程，未涉及大模型训练或推理服务。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "可视化工具",
+          "summary": "该项目展示了实时地理空间数据可视化的工程实践，对地图类AI开发工具（如地理空间Agent、位置感知Copilot）有一定参考意义。",
+          "upside": "实时地理可视化技术栈（WebSocket+SVG/Canvas）可被AI开发工具集成为地理空间感知组件",
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "交通应用",
+          "summary": "该实时地图属于交通信息类消费应用，HN社区142分显示有一定关注度，但与AI应用层无直接关联。未来若接入预测延误、智能调度等AI功能则可升级为AI应用。",
+          "upside": "可演进为AI驱动的列车延误预测与出行建议应用，英国铁路年客运量约17亿人次市场潜力较大",
+          "downside": null,
+          "companies": []
+        }
+      }
+    }
+  }
+]
