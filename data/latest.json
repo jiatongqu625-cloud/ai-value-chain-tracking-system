@@ -1,7 +1,196 @@
 {
-  "updated_at": "2026-07-06T11:58:54.967334+00:00",
+  "updated_at": "2026-07-07T10:50:44.310983+00:00",
   "count": 30,
   "items": [
+    {
+      "article_id": "892898817e9a6285",
+      "date": "2026-07-07",
+      "fetched_at": "2026-07-07T10:48:33.448742+00:00",
+      "article": {
+        "title": "A Sliding-Window-Based Reinforcement Learning for Dynamic Assembly Flow Shop Scheduling with Multi-Product Delivery",
+        "summary": "arXiv:2607.02941v1 Announce Type: new \nAbstract: Multi-product kitting delivery imposes significant challenges for real-time scheduling in hybrid manufacturing systems that integrate processing and assembly, as dynamic order arrivals simultaneously alter supply dependencies and the set of feasible job-machine assignments. This paper proposes a sliding-window-based reinforcement learning (SWRL) fra",
+        "url": "https://arxiv.org/abs/2607.02941",
+        "source": "arXiv",
+        "published_at": "Tue, 07 Jul 2026 00:00:00 -0400"
+      },
+      "analysis": {
+        "news_title": "滑动窗口RL优化装配调度",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "low",
+            "badge": "训练算力微需",
+            "summary": "该研究涉及强化学习模型训练，对算力有轻微需求，但属于轻量级调度优化场景，不依赖大规模GPU集群。整体对算力层影响极为有限。",
+            "upside": "边缘计算与工业控制器算力需求或小幅增长",
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "仿真数据驱动",
+            "summary": "该框架依赖制造系统仿真环境生成训练数据，属于合成数据路线，对真实数据采集需求极低。动态订单序列的仿真生成是其数据核心。",
+            "upside": "工业仿真数据平台需求微增",
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "mid",
+            "badge": "RL调度新方法",
+            "summary": "论文提出基于滑动窗口的强化学习框架（SWRL），用于解决动态装配流水车间调度问题，属于面向工业场景的专用小模型研究。该方法通过限制决策窗口大小降低状态空间复杂度，为工业RL模型提供了新的训练范式参考。对通用大模型影响有限，但对工业垂直领域小模型研究具有方法论价值。",
+            "upside": "为工业调度领域提供可落地的轻量RL模型框架",
+            "downside": "研究停留于仿真验证阶段，实际部署效果待检验",
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "low",
+            "badge": "调度框架参考",
+            "summary": "SWRL框架可为工业AI Agent开发提供调度决策模块的参考实现，尤其适合多产品、动态订单场景下的任务分配Agent设计。但目前尚为学术论文阶段，工具化落地路径不明确。",
+            "upside": "或推动工业调度Agent框架的学术转化",
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "mid",
+            "badge": "智能制造赋能",
+            "summary": "该研究直接面向混合制造系统中的实时调度问题，对智能制造、柔性生产线、多品种小批量制造等工业场景具有潜在应用价值。动态订单到达与多产品配套交付是制造业核心痛点，SWRL若落地可提升产线利用率与交期满足率。",
+            "upside": "提升混合制造系统实时响应能力，降低延误率",
+            "downside": "从仿真到真实产线部署存在较大工程鸿沟",
+            "companies": [
+              {
+                "name": "西门子",
+                "role": "工业自动化与数字孪生平台提供商",
+                "type": "neutral",
+                "impact_label": "技术储备参考",
+                "reason": "该类RL调度研究可为西门子等工业软件厂商的MES/APS产品提供算法优化思路",
+                "specific": "西门子Opcenter APS覆盖全球超5000家制造企业，调度优化是核心模块之一",
+                "impact_depth": 1
+              },
+              {
+                "name": "Rockwell Automation",
+                "role": "工业控制与制造执行系统提供商",
+                "type": "neutral",
+                "impact_label": "算法生态参考",
+                "reason": "动态装配调度RL方法与其FactoryTalk平台的实时调度需求高度契合",
+                "specific": "Rockwell 2024财年工业软件收入约9亿美元，智能调度为重点投入方向",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "article_id": "7187164f48497237",
+      "date": "2026-07-07",
+      "fetched_at": "2026-07-07T10:48:33.448690+00:00",
+      "article": {
+        "title": "Object-Centric Environment Modeling for Agentic Tasks",
+        "summary": "arXiv:2607.02846v1 Announce Type: new \nAbstract: Large language model (LLM) agents can improve through accumulated experience, but free-form textual memories become difficult to maintain, validate, and reuse as interactions grow. Recent symbolic approaches learn executable skills or programmatic world models, yet often store local procedures or assume simplified dynamics. We propose Object-Centric",
+        "url": "https://arxiv.org/abs/2607.02846",
+        "source": "arXiv",
+        "published_at": "Tue, 07 Jul 2026 00:00:00 -0400"
+      },
+      "analysis": {
+        "news_title": "LLM智能体对象中心建模",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该研究聚焦于智能体记忆与世界模型的符号化表示方法，不涉及底层算力架构或硬件需求的变化。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "结构化记忆",
+            "summary": "对象中心建模将自由文本记忆转化为结构化符号表示，降低了对大规模非结构化训练数据的依赖。该方法可减少智能体交互数据的标注成本，但短期内对数据产业链影响有限。",
+            "upside": "结构化对象状态表示可降低人工标注复杂度，提升数据复用率",
+            "downside": "可能削减对大规模自由文本记忆训练数据的采购需求",
+            "companies": []
+          },
+          "model": {
+            "impact_level": "mid",
+            "badge": "智能体记忆优化",
+            "summary": "该研究提出以对象为中心的可执行世界模型替代自由文本记忆，直接优化LLM智能体的后训练与推理阶段记忆管理机制。其符号化方法可提升智能体在复杂任务中的经验积累效率，对基础模型的智能体能力演进具有方向性参考价值。",
+            "upside": "为大模型后训练对齐提供更可验证的记忆结构，有望提升多步推理任务准确率",
+            "downside": "符号化建模对动态复杂环境的泛化能力尚待验证，落地周期较长",
+            "companies": [
+              {
+                "name": "OpenAI",
+                "role": "主流LLM智能体提供商",
+                "type": "neutral",
+                "impact_label": "技术路径参考",
+                "reason": "该研究为OpenAI Agents SDK的记忆模块设计提供学术参考，但短期不影响现有产品架构",
+                "specific": "OpenAI于2025年发布Agents SDK，现有记忆模块仍以向量检索为主，对象中心方法尚处论文阶段",
+                "impact_depth": 1
+              },
+              {
+                "name": "Google DeepMind",
+                "role": "智能体与世界模型研究机构",
+                "type": "neutral",
+                "impact_label": "学术竞争参照",
+                "reason": "DeepMind在符号化世界模型领域有持续投入，该arXiv论文构成直接学术竞争参照",
+                "specific": "DeepMind已发布Genie、SIMA等具身智能体世界模型，对象中心建模与其研究路线存在交叉",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "Agent框架升级",
+            "summary": "对象中心环境建模为AI Agent框架的记忆管理模块提供新的设计范式，可替代当前主流的向量数据库+自由文本检索方案。该方法使智能体能够维护可验证、可复用的对象状态，对LangChain、AutoGen等框架的记忆组件演进具有直接启示。",
+            "upside": "结构化对象状态表示可显著提升Agent跨会话任务的一致性与可调试性",
+            "downside": "需要框架层进行较大改造以支持符号化对象模型，迁移成本较高",
+            "companies": [
+              {
+                "name": "LangChain",
+                "role": "主流AI Agent开发框架",
+                "type": "positive",
+                "impact_label": "记忆模块迭代",
+                "reason": "该研究为LangChain Memory模块提供对象中心化改造的学术依据，可提升长对话任务中的状态管理能力",
+                "specific": "LangChain现有Memory组件以ConversationBufferMemory等自由文本方式为主，论文提出的方法可直接对应其改进方向",
+                "impact_depth": 1
+              },
+              {
+                "name": "Microsoft",
+                "role": "AutoGen框架与Copilot开发商",
+                "type": "positive",
+                "impact_label": "智能体能力增强",
+                "reason": "AutoGen多智能体框架可借鉴对象中心建模提升跨Agent状态共享与任务分解能力",
+                "specific": "微软AutoGen v0.4已支持结构化消息传递，对象中心世界模型可作为其环境感知层的增强模块",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "长期任务受益",
+            "summary": "对象中心建模对需要长期经验积累和复杂环境交互的应用场景具有潜在价值，如具身智能、工业自动化和多步骤企业流程自动化。但该研究目前处于arXiv论文阶段，距离大规模应用落地仍需较长工程转化周期。",
+            "upside": "具身智能与机器人领域可受益于更可靠的环境状态追踪与任务规划能力",
+            "downside": "当前研究成熟度不足以支撑商业化部署，应用层短期影响极为有限",
+            "companies": [
+              {
+                "name": "Figure AI",
+                "role": "具身智能机器人公司",
+                "type": "neutral",
+                "impact_label": "潜在技术储备",
+                "reason": "对象中心环境建模与具身智能体对物理世界状态追踪的需求高度契合，可作为其世界模型的长期技术储备",
+                "specific": "Figure 02机器人已集成OpenAI大模型，对象中心建模可改善其在非结构化环境中的任务持续性，具体落地时间线未知",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
     {
       "article_id": "ea0432d348dc435c",
       "date": "2026-07-06",
@@ -2160,242 +2349,6 @@
             "summary": "该研究属于基础对齐研究，短期内不直接影响应用层产品。但若SOLiD技术成熟并被主流模型采用，将从根本上降低AI助手和企业应用中模型输出欺骗性内容的风险，长期利好高可信度要求的垂直行业应用。",
             "upside": "医疗、法律等高风险垂直行业将受益于更可靠的模型诚实性保证",
             "downside": null,
-            "companies": []
-          }
-        }
-      }
-    },
-    {
-      "article_id": "052ef0fd306390d6",
-      "date": "2026-07-03",
-      "fetched_at": "2026-07-03T10:28:21.158861+00:00",
-      "article": {
-        "title": "Janus: a Playground for User-Involved Agentic Permission Management",
-        "summary": "arXiv:2607.01510v1 Announce Type: new \nAbstract: AI agents that autonomously execute tool calls on a user's behalf raise pressing questions about permission management: what role could users play, and what role should they play? Despite many proposed approaches, the user's role in agentic permission management remains under explored. We introduce Janus, a playground system for implementing and eva",
-        "url": "https://arxiv.org/abs/2607.01510",
-        "source": "arXiv",
-        "published_at": "Fri, 03 Jul 2026 00:00:00 -0400"
-      },
-      "analysis": {
-        "news_title": "Janus智能体权限管理研究",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无直接影响",
-            "summary": "该研究聚焦于权限管理机制设计，与算力基础设施无直接关联。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "low",
-            "badge": "权限数据采集",
-            "summary": "Janus系统通过Playground方式收集用户与智能体交互时的权限决策行为数据，为后续对齐研究提供行为语料。该类数据集有助于构建更真实的用户意图标注基准。",
-            "upside": "为权限偏好标注提供新范式，有望产出高质量人机交互对齐数据集",
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "mid",
-            "badge": "对齐安全增强",
-            "summary": "研究直接作用于AI Agent的后训练对齐方向，探索用户参与式权限管理如何嵌入智能体决策流程。其结论可为RLHF/DPO等对齐方法中引入权限偏好信号提供理论依据。Janus框架若被大模型推理服务采纳，将影响工具调用权限的默认策略设计。",
-            "upside": "推动Agent后训练阶段纳入用户权限偏好，提升模型可信度与合规性",
-            "downside": "增加对齐训练复杂度，可能延长模型迭代周期",
-            "companies": [
-              {
-                "name": "OpenAI",
-                "role": "主流Agent推理服务提供商",
-                "type": "neutral",
-                "impact_label": "权限策略参考",
-                "reason": "Janus的研究结论可能影响GPT-4o等模型工具调用权限的默认设计规范",
-                "specific": "OpenAI Assistants API当前已支持逾20类工具调用，权限粒度管理是其安全路线图重点议题",
-                "impact_depth": 1
-              },
-              {
-                "name": "Anthropic",
-                "role": "安全对齐研究与Claude模型开发",
-                "type": "positive",
-                "impact_label": "对齐研究协同",
-                "reason": "Janus与Anthropic宪法AI路线在用户参与式安全管控方向高度契合，可作为外部学术验证",
-                "specific": "Anthropic已在Claude 3系列中引入tool_use权限层，Janus框架可为其下一版本权限粒度优化提供实证参考",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "high",
-            "badge": "Agent权限框架",
-            "summary": "Janus直接作用于AI Agent框架层，提出用户参与式权限管理的Playground系统，为现有Agent框架补充了权限评估与实验基础设施。这将推动LangChain、AutoGen等框架在工具调用前引入细粒度用户授权机制，并催生权限安全工具链新品类。",
-            "upside": "为Agent框架提供标准化权限实验接口，有望形成行业权限管理基准测试集",
-            "downside": "若强制引入用户交互权限确认流程，可能降低Agent自动化执行效率",
-            "companies": [
-              {
-                "name": "LangChain",
-                "role": "主流Agent开发框架提供商",
-                "type": "positive",
-                "impact_label": "权限模块集成",
-                "reason": "Janus框架理念可推动LangChain在Tool节点增加权限拦截层与用户确认Hook",
-                "specific": "LangChain月活开发者超过100万，若权限管理模块成为标配，影响范围极广",
-                "impact_depth": 2
-              },
-              {
-                "name": "Microsoft AutoGen",
-                "role": "多智能体编排框架",
-                "type": "positive",
-                "impact_label": "多Agent权限协调",
-                "reason": "AutoGen的多Agent场景下权限委托链复杂，Janus的权限管理模型可为其提供用户介入节点设计参考",
-                "specific": "AutoGen已在GitHub获超3万star，企业版落地正面临权限审计合规需求",
-                "impact_depth": 2
-              },
-              {
-                "name": "Prompt Security",
-                "role": "Agent安全与Prompt注入防护",
-                "type": "positive",
-                "impact_label": "安全工具链延伸",
-                "reason": "Janus将权限管理纳入安全评估体系，与Prompt Security的防护边界扩展方向一致",
-                "specific": "Prompt Security已于2024年完成1800万美元A轮，正将产品从Prompt注入防护扩展至Agent行为监控",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "app": {
-            "impact_level": "mid",
-            "badge": "企业合规增益",
-            "summary": "用户参与式权限管理研究对企业自动化应用落地具有实际价值，尤其在涉及敏感操作（如邮件发送、文件读写、API调用）的场景中，Janus提供的评估框架可帮助企业AI应用通过合规审查。医疗、法律等高监管行业受益尤为显著。",
-            "upside": "降低企业AI应用因权限越界引发的合规风险，加速高监管行业落地",
-            "downside": "增加用户交互摩擦，对追求全自动化的消费级助手场景形成一定阻力",
-            "companies": [
-              {
-                "name": "Salesforce",
-                "role": "企业级AI自动化应用厂商",
-                "type": "positive",
-                "impact_label": "Agentforce合规",
-                "reason": "Salesforce Agentforce需在CRM数据操作中实现细粒度权限管控，Janus框架提供学术背书",
-                "specific": "Salesforce于2024年推出Agentforce，已有超过1000家企业客户部署，权限合规是主要采购顾虑之一",
-                "impact_depth": 1
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "article_id": "7ea4a1bdb9040997",
-      "date": "2026-07-03",
-      "fetched_at": "2026-07-03T10:28:21.158805+00:00",
-      "article": {
-        "title": "The Wiola Architecture for Efficient Small Language Models",
-        "summary": "arXiv:2607.01394v1 Announce Type: new \nAbstract: We present Wiola, a fully original Small Language Model (SLM) architecture built from first principles, sharing no structural lineage with any existing model family including GPT, LLaMA, Mistral, or Falcon. Wiola introduces five independently novel components: (i) Spiral Rotary Positional Encoding (SRPE), which embeds token positions on a three-dime",
-        "url": "https://arxiv.org/abs/2607.01394",
-        "source": "arXiv",
-        "published_at": "Fri, 03 Jul 2026 00:00:00 -0400"
-      },
-      "analysis": {
-        "news_title": "Wiola全新SLM架构发布",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "mid",
-            "badge": "推理效率提升",
-            "summary": "Wiola作为全新SLM架构，若其设计显著降低参数量与计算复杂度，将减少对高端GPU算力的依赖，边缘芯片与移动端NPU需求可能受益。新型位置编码（SRPE）等组件可能对现有算子库优化提出新需求，芯片厂商需跟进适配。",
-            "upside": "边缘/端侧芯片需求增长，低功耗NPU场景扩大",
-            "downside": "高端GPU算力需求短期内不受影响，学术成果转化存在不确定性",
-            "companies": [
-              {
-                "name": "高通",
-                "role": "移动端/边缘NPU芯片设计",
-                "type": "positive",
-                "impact_label": "端侧部署受益",
-                "reason": "SLM架构更适合端侧部署，利好骁龙NPU系列芯片的AI推理市场",
-                "specific": "SLM通常参数量低于10B，可在骁龙8系等移动芯片上本地运行",
-                "impact_depth": 1
-              },
-              {
-                "name": "ARM",
-                "role": "边缘AI芯片IP授权",
-                "type": "positive",
-                "impact_label": "轻量模型适配",
-                "reason": "高效SLM降低硬件门槛，扩大ARM架构设备上AI推理的应用场景",
-                "specific": "ARM Cortex-X系列已支持INT4量化推理，轻量SLM可进一步降低内存带宽需求",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "data": {
-            "impact_level": "low",
-            "badge": "训练数据需求小",
-            "summary": "SLM架构对训练数据规模要求相对较低，对数据采集与标注行业冲击有限，但若Wiola性能优异，可能推动更多针对小模型的高质量精标注数据集构建需求。",
-            "upside": "精标注小数据集需求可能小幅增加",
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "mid",
-            "badge": "架构路线竞争",
-            "summary": "Wiola提出与GPT/LLaMA/Mistral/Falcon完全不同的结构谱系，五项独立创新组件（含SRPE等）对现有主流模型架构形成差异化挑战。若实验结果验证性能优越，将推动学术界与工业界重新评估SLM设计范式，MLOps平台也需适配新型算子。",
-            "upside": "为SLM领域提供新的架构参考，推动模型效率研究进步",
-            "downside": "现有基于LLaMA/Mistral生态的模型分发与微调工具链兼容性受挑战",
-            "companies": [
-              {
-                "name": "Meta AI",
-                "role": "LLaMA系列模型开发者",
-                "type": "neutral",
-                "impact_label": "架构路线竞争",
-                "reason": "Wiola明确声明与LLaMA无结构关联，构成潜在的开源SLM架构竞争",
-                "specific": "LLaMA 3系列最小版本为1B参数，Wiola定位同为SLM市场，存在直接竞争",
-                "impact_depth": 1
-              },
-              {
-                "name": "Mistral AI",
-                "role": "高效小模型开发者",
-                "type": "neutral",
-                "impact_label": "SLM竞争加剧",
-                "reason": "Wiola明确与Mistral无结构关联，提供差异化竞争路线，冲击其SLM市场地位",
-                "specific": "Mistral 7B/3B是当前主流高效SLM基准，Wiola若性能可比将形成替代压力",
-                "impact_depth": 1
-              },
-              {
-                "name": "Hugging Face",
-                "role": "模型分发Hub与MLOps平台",
-                "type": "neutral",
-                "impact_label": "新架构适配",
-                "reason": "Wiola的全新架构需要Transformers库新增适配支持，增加平台维护成本",
-                "specific": "Hugging Face Transformers已支持100+模型架构，新增Wiola需开发新的modeling文件",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "low",
-            "badge": "框架适配需求",
-            "summary": "全新SLM架构可能对现有推理框架（如llama.cpp、vLLM）的算子支持提出新要求，开发者工具链需跟进适配SRPE等新型组件，短期内影响有限。",
-            "upside": "为AI Agent等工具层提供更轻量的本地推理模型选项",
-            "downside": "现有基于LLaMA架构优化的量化/推理工具无法直接复用",
-            "companies": [
-              {
-                "name": "llama.cpp（开源社区）",
-                "role": "本地轻量推理框架",
-                "type": "neutral",
-                "impact_label": "新架构适配成本",
-                "reason": "llama.cpp深度绑定LLaMA架构，支持Wiola需重构部分核心算子",
-                "specific": "llama.cpp目前支持约50种模型架构，新架构适配通常需要数周社区工作量",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "app": {
-            "impact_level": "low",
-            "badge": "端侧应用潜力",
-            "summary": "若Wiola架构在效率与性能上取得实质性突破，长期来看将为消费者端侧AI助手、IoT设备及低算力场景的垂直行业应用提供更优质的本地化模型选项，但当前仍处于论文阶段，商业落地尚需验证。",
-            "upside": "端侧AI助手、离线垂直行业应用（医疗隐私场景等）可受益",
-            "downside": "学术论文到产品落地周期较长，短期内应用层影响极为有限",
             "companies": []
           }
         }
