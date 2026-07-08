@@ -1,0 +1,192 @@
+[
+  {
+    "article_id": "6d5d7f7ec402dcad",
+    "date": "2026-07-08",
+    "fetched_at": "2026-07-08T10:09:23.573521+00:00",
+    "article": {
+      "title": "TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training",
+      "summary": "arXiv:2607.05804v1 Announce Type: new \nAbstract: On-policy distillation (OPD) trains a student policy by matching a stronger teacher on the student's own trajectories, offering a promising framework for language agent training. However, its application to long-horizon agentic tasks remains insufficiently explored. We identify two key inefficiencies in vanilla agent OPD: (1) full-horizon rollouts o",
+      "url": "https://arxiv.org/abs/2607.05804",
+      "source": "arXiv",
+      "published_at": "Wed, 08 Jul 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "TurnOPD长程智能体蒸馏",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "low",
+          "badge": "训练成本优化",
+          "summary": "TurnOPD通过减少全轨迹rollout改为回合级蒸馏，降低长程任务训练中的计算开销。对GPU集群需求有边际性缓解，但整体影响有限，属于算法层效率改进而非硬件层变革。",
+          "upside": "训练效率提升可降低单次实验所需算力，有助于中小团队以更低资源复现长程Agent训练",
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "轨迹数据效率",
+          "summary": "OPD框架依赖学生自身轨迹数据做策略匹配，TurnOPD将数据粒度从完整轨迹细化到回合级，对标注与采集效率有一定改善。但该论文未涉及数据集或标注体系的颠覆性变化。",
+          "upside": "回合级数据复用率提高，可减少重复采集成本",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "mid",
+          "badge": "Agent蒸馏增强",
+          "summary": "TurnOPD直接针对语言Agent后训练阶段的知识蒸馏效率问题，提出回合感知的OPD改进方案，对长程任务中师生模型对齐质量有显著提升。该研究为MLOps平台集成更高效的Agent训练流程提供了新方法论，推动推理服务API侧Agent能力边界扩展。",
+          "upside": "为基础大模型在长程任务场景的后训练对齐提供更高效框架，降低对齐成本",
+          "downside": "目前仍为学术探索阶段，工程化落地路径尚不明确",
+          "companies": [
+            {
+              "name": "OpenAI",
+              "role": "强教师模型提供方及Agent训练参考对象",
+              "type": "neutral",
+              "impact_label": "方法论参照",
+              "reason": "OPD通常依赖GPT-4等强模型作为teacher，TurnOPD的改进可提升师生蒸馏链路效率",
+              "specific": "长程任务（long-horizon）OPD训练效率在原论文中存在全轨迹rollout冗余问题，TurnOPD通过回合分割改善收敛速度",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "mid",
+          "badge": "Agent框架赋能",
+          "summary": "TurnOPD的回合感知蒸馏机制与AI Agent框架高度耦合，长程任务训练效率的提升将直接利好Agent框架的训练与评估工具链。该研究为Prompt工程与Agent评估提供了更细粒度的回合级监督信号设计思路。",
+          "upside": "Agent框架可集成回合级蒸馏作为轻量训练插件，降低长程任务开发门槛",
+          "downside": null,
+          "companies": [
+            {
+              "name": "LangChain",
+              "role": "AI Agent框架提供商",
+              "type": "positive",
+              "impact_label": "训练效率提升",
+              "reason": "TurnOPD的回合感知机制可与LangChain等Agent框架的多步执行结构天然对齐，推动框架侧集成更高效训练方案",
+              "specific": "长程Agent任务通常涉及10步以上交互，TurnOPD通过回合级切分减少无效梯度更新",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "长程任务潜力",
+          "summary": "研究成果若产业化，将对需要长程规划能力的企业自动化、代码Agent、具身智能等场景带来间接收益。当前仍处于arXiv预印本阶段，距离应用层落地尚有工程转化周期。",
+          "upside": "长程任务Agent能力增强后，企业效率自动化与编程Copilot等场景可获得更稳定的多步推理支持",
+          "downside": "学术成果转化时间窗口不确定，短期内对应用层影响极为有限",
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "6638b2ac668bc8b1",
+    "date": "2026-07-08",
+    "fetched_at": "2026-07-08T10:09:23.573440+00:00",
+    "article": {
+      "title": "From Graphs to Gradients: Physics-Inspired Structural Attribution for Cyber-Physical IoT Systems and Beyond",
+      "summary": "arXiv:2607.05563v1 Announce Type: new \nAbstract: Interpretable explanation methods in Artificial Intelligence aim to uncover the underlying causes and their effects, enabling a deeper understanding of why a system behaves in a certain way under different inputs. Unlike traditional explainability methods, which mainly highlight correlations between input and output variables, causal explanation foc",
+      "url": "https://arxiv.org/abs/2607.05563",
+      "source": "arXiv",
+      "published_at": "Wed, 08 Jul 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "物理启发IoT因果解释研究",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该研究属于算法可解释性理论层面，不涉及芯片、算力集群或存储互联的直接需求变化。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "IoT数据建模",
+          "summary": "研究聚焦于信息物理IoT系统的结构归因，依赖传感器时序数据与图结构数据的采集与处理。该方法对IoT数据的因果建模提出更高质量要求，间接推动边缘数据采集与标注精细化。",
+          "upside": "提升IoT场景下数据因果标注的价值与需求，推动数据质量管理工具演进",
+          "downside": null,
+          "companies": []
+        },
+        "model": {
+          "impact_level": "mid",
+          "badge": "可解释AI增强",
+          "summary": "该研究提出物理启发的结构归因方法，属于后训练可解释性与模型诊断范畴，可为MLOps平台中的模型行为分析模块提供新技术路线。其图梯度融合方法对GNN及时序感知基础模型的可解释性研究具有参考价值，推动XAI方向学术进展落地。",
+          "upside": "为AI模型可解释性基础研究提供新范式，尤其对图神经网络归因分析有推动作用",
+          "downside": "目前仍为arXiv预印本，工程落地路径尚不明确，实际产业影响周期较长",
+          "companies": [
+            {
+              "name": "arXiv/学术社区",
+              "role": "研究发布与传播平台",
+              "type": "neutral",
+              "impact_label": "研究传播",
+              "reason": "作为预印本平台承载该XAI新方法的首发传播，推动学界跟进",
+              "specific": "arXiv编号2607.05563v1，2026年7月发布，属于cs.AI/cs.LG交叉领域",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "mid",
+          "badge": "XAI工具新范式",
+          "summary": "物理启发的结构归因方法直接对应AI可解释性工具链（XAI Toolkits），可补充现有SHAP/LIME等相关性归因方法的因果解释短板。对面向IoT与工业场景的AI安全对齐与审计工具具有潜在集成价值。",
+          "upside": "为Prompt评估、模型审计及安全合规工具引入因果归因新能力，提升工业AI可信度",
+          "downside": "方法复杂度较高，工程化集成到现有工具链存在适配成本",
+          "companies": [
+            {
+              "name": "IBM Research",
+              "role": "AI可解释性工具（AI Explainability 360）开发方",
+              "type": "positive",
+              "impact_label": "XAI能力扩展",
+              "reason": "该研究的因果归因框架可为IBM AI Explainability 360等开源工具提供新算法模块参考",
+              "specific": "IBM AI Explainability 360已集成8+种归因算法，本研究提供图结构因果归因新方向",
+              "impact_depth": 1
+            },
+            {
+              "name": "Microsoft",
+              "role": "InterpretML及Azure AI安全工具提供方",
+              "type": "positive",
+              "impact_label": "工业XAI参考",
+              "reason": "研究方法可为微软面向工业IoT的Azure Digital Twins可解释性模块提供学术支撑",
+              "specific": "Azure IoT平台连接设备超10亿，因果可解释性需求在工业安全场景持续增长",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "app": {
+          "impact_level": "mid",
+          "badge": "工业IoT可信AI",
+          "summary": "研究直接面向信息物理IoT系统（CPS），对智能制造、工业安全监控、智慧城市等垂直场景的AI决策可解释性具有应用价值。因果归因能力有助于提升关键基础设施AI系统的监管合规性与可信部署。",
+          "upside": "推动工业IoT、能源、交通等高安全要求场景的可解释AI落地，满足AI监管合规需求",
+          "downside": "从学术方法到产品集成需经历较长验证周期，短期内对商业应用影响有限",
+          "companies": [
+            {
+              "name": "Siemens",
+              "role": "工业CPS与IoT系统集成商",
+              "type": "positive",
+              "impact_label": "工业AI可信度",
+              "reason": "西门子工业AI产品线（MindSphere/Xcelerator）可从该研究的CPS因果归因方法中获得可解释性增强思路",
+              "specific": "西门子工业IoT平台接入设备超100万台，可解释AI是其工业4.0合规部署的关键需求",
+              "impact_depth": 1
+            },
+            {
+              "name": "Bosch",
+              "role": "IoT传感器与边缘AI应用商",
+              "type": "positive",
+              "impact_label": "边缘XAI探索",
+              "reason": "博世在智能制造与汽车IoT场景大量部署AI决策系统，结构归因方法可提升其系统透明度",
+              "specific": "博世年研发投入约70亿欧元，其中AIoT可解释性为近年重点方向之一",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,7 +1,197 @@
 {
-  "updated_at": "2026-07-07T10:50:44.310983+00:00",
+  "updated_at": "2026-07-08T10:13:34.002717+00:00",
   "count": 30,
   "items": [
+    {
+      "article_id": "6d5d7f7ec402dcad",
+      "date": "2026-07-08",
+      "fetched_at": "2026-07-08T10:09:23.573521+00:00",
+      "article": {
+        "title": "TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training",
+        "summary": "arXiv:2607.05804v1 Announce Type: new \nAbstract: On-policy distillation (OPD) trains a student policy by matching a stronger teacher on the student's own trajectories, offering a promising framework for language agent training. However, its application to long-horizon agentic tasks remains insufficiently explored. We identify two key inefficiencies in vanilla agent OPD: (1) full-horizon rollouts o",
+        "url": "https://arxiv.org/abs/2607.05804",
+        "source": "arXiv",
+        "published_at": "Wed, 08 Jul 2026 00:00:00 -0400"
+      },
+      "analysis": {
+        "news_title": "TurnOPD长程智能体蒸馏",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "low",
+            "badge": "训练成本优化",
+            "summary": "TurnOPD通过减少全轨迹rollout改为回合级蒸馏，降低长程任务训练中的计算开销。对GPU集群需求有边际性缓解，但整体影响有限，属于算法层效率改进而非硬件层变革。",
+            "upside": "训练效率提升可降低单次实验所需算力，有助于中小团队以更低资源复现长程Agent训练",
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "轨迹数据效率",
+            "summary": "OPD框架依赖学生自身轨迹数据做策略匹配，TurnOPD将数据粒度从完整轨迹细化到回合级，对标注与采集效率有一定改善。但该论文未涉及数据集或标注体系的颠覆性变化。",
+            "upside": "回合级数据复用率提高，可减少重复采集成本",
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "mid",
+            "badge": "Agent蒸馏增强",
+            "summary": "TurnOPD直接针对语言Agent后训练阶段的知识蒸馏效率问题，提出回合感知的OPD改进方案，对长程任务中师生模型对齐质量有显著提升。该研究为MLOps平台集成更高效的Agent训练流程提供了新方法论，推动推理服务API侧Agent能力边界扩展。",
+            "upside": "为基础大模型在长程任务场景的后训练对齐提供更高效框架，降低对齐成本",
+            "downside": "目前仍为学术探索阶段，工程化落地路径尚不明确",
+            "companies": [
+              {
+                "name": "OpenAI",
+                "role": "强教师模型提供方及Agent训练参考对象",
+                "type": "neutral",
+                "impact_label": "方法论参照",
+                "reason": "OPD通常依赖GPT-4等强模型作为teacher，TurnOPD的改进可提升师生蒸馏链路效率",
+                "specific": "长程任务（long-horizon）OPD训练效率在原论文中存在全轨迹rollout冗余问题，TurnOPD通过回合分割改善收敛速度",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "Agent框架赋能",
+            "summary": "TurnOPD的回合感知蒸馏机制与AI Agent框架高度耦合，长程任务训练效率的提升将直接利好Agent框架的训练与评估工具链。该研究为Prompt工程与Agent评估提供了更细粒度的回合级监督信号设计思路。",
+            "upside": "Agent框架可集成回合级蒸馏作为轻量训练插件，降低长程任务开发门槛",
+            "downside": null,
+            "companies": [
+              {
+                "name": "LangChain",
+                "role": "AI Agent框架提供商",
+                "type": "positive",
+                "impact_label": "训练效率提升",
+                "reason": "TurnOPD的回合感知机制可与LangChain等Agent框架的多步执行结构天然对齐，推动框架侧集成更高效训练方案",
+                "specific": "长程Agent任务通常涉及10步以上交互，TurnOPD通过回合级切分减少无效梯度更新",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "长程任务潜力",
+            "summary": "研究成果若产业化，将对需要长程规划能力的企业自动化、代码Agent、具身智能等场景带来间接收益。当前仍处于arXiv预印本阶段，距离应用层落地尚有工程转化周期。",
+            "upside": "长程任务Agent能力增强后，企业效率自动化与编程Copilot等场景可获得更稳定的多步推理支持",
+            "downside": "学术成果转化时间窗口不确定，短期内对应用层影响极为有限",
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "6638b2ac668bc8b1",
+      "date": "2026-07-08",
+      "fetched_at": "2026-07-08T10:09:23.573440+00:00",
+      "article": {
+        "title": "From Graphs to Gradients: Physics-Inspired Structural Attribution for Cyber-Physical IoT Systems and Beyond",
+        "summary": "arXiv:2607.05563v1 Announce Type: new \nAbstract: Interpretable explanation methods in Artificial Intelligence aim to uncover the underlying causes and their effects, enabling a deeper understanding of why a system behaves in a certain way under different inputs. Unlike traditional explainability methods, which mainly highlight correlations between input and output variables, causal explanation foc",
+        "url": "https://arxiv.org/abs/2607.05563",
+        "source": "arXiv",
+        "published_at": "Wed, 08 Jul 2026 00:00:00 -0400"
+      },
+      "analysis": {
+        "news_title": "物理启发IoT因果解释研究",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该研究属于算法可解释性理论层面，不涉及芯片、算力集群或存储互联的直接需求变化。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "IoT数据建模",
+            "summary": "研究聚焦于信息物理IoT系统的结构归因，依赖传感器时序数据与图结构数据的采集与处理。该方法对IoT数据的因果建模提出更高质量要求，间接推动边缘数据采集与标注精细化。",
+            "upside": "提升IoT场景下数据因果标注的价值与需求，推动数据质量管理工具演进",
+            "downside": null,
+            "companies": []
+          },
+          "model": {
+            "impact_level": "mid",
+            "badge": "可解释AI增强",
+            "summary": "该研究提出物理启发的结构归因方法，属于后训练可解释性与模型诊断范畴，可为MLOps平台中的模型行为分析模块提供新技术路线。其图梯度融合方法对GNN及时序感知基础模型的可解释性研究具有参考价值，推动XAI方向学术进展落地。",
+            "upside": "为AI模型可解释性基础研究提供新范式，尤其对图神经网络归因分析有推动作用",
+            "downside": "目前仍为arXiv预印本，工程落地路径尚不明确，实际产业影响周期较长",
+            "companies": [
+              {
+                "name": "arXiv/学术社区",
+                "role": "研究发布与传播平台",
+                "type": "neutral",
+                "impact_label": "研究传播",
+                "reason": "作为预印本平台承载该XAI新方法的首发传播，推动学界跟进",
+                "specific": "arXiv编号2607.05563v1，2026年7月发布，属于cs.AI/cs.LG交叉领域",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "mid",
+            "badge": "XAI工具新范式",
+            "summary": "物理启发的结构归因方法直接对应AI可解释性工具链（XAI Toolkits），可补充现有SHAP/LIME等相关性归因方法的因果解释短板。对面向IoT与工业场景的AI安全对齐与审计工具具有潜在集成价值。",
+            "upside": "为Prompt评估、模型审计及安全合规工具引入因果归因新能力，提升工业AI可信度",
+            "downside": "方法复杂度较高，工程化集成到现有工具链存在适配成本",
+            "companies": [
+              {
+                "name": "IBM Research",
+                "role": "AI可解释性工具（AI Explainability 360）开发方",
+                "type": "positive",
+                "impact_label": "XAI能力扩展",
+                "reason": "该研究的因果归因框架可为IBM AI Explainability 360等开源工具提供新算法模块参考",
+                "specific": "IBM AI Explainability 360已集成8+种归因算法，本研究提供图结构因果归因新方向",
+                "impact_depth": 1
+              },
+              {
+                "name": "Microsoft",
+                "role": "InterpretML及Azure AI安全工具提供方",
+                "type": "positive",
+                "impact_label": "工业XAI参考",
+                "reason": "研究方法可为微软面向工业IoT的Azure Digital Twins可解释性模块提供学术支撑",
+                "specific": "Azure IoT平台连接设备超10亿，因果可解释性需求在工业安全场景持续增长",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "app": {
+            "impact_level": "mid",
+            "badge": "工业IoT可信AI",
+            "summary": "研究直接面向信息物理IoT系统（CPS），对智能制造、工业安全监控、智慧城市等垂直场景的AI决策可解释性具有应用价值。因果归因能力有助于提升关键基础设施AI系统的监管合规性与可信部署。",
+            "upside": "推动工业IoT、能源、交通等高安全要求场景的可解释AI落地，满足AI监管合规需求",
+            "downside": "从学术方法到产品集成需经历较长验证周期，短期内对商业应用影响有限",
+            "companies": [
+              {
+                "name": "Siemens",
+                "role": "工业CPS与IoT系统集成商",
+                "type": "positive",
+                "impact_label": "工业AI可信度",
+                "reason": "西门子工业AI产品线（MindSphere/Xcelerator）可从该研究的CPS因果归因方法中获得可解释性增强思路",
+                "specific": "西门子工业IoT平台接入设备超100万台，可解释AI是其工业4.0合规部署的关键需求",
+                "impact_depth": 1
+              },
+              {
+                "name": "Bosch",
+                "role": "IoT传感器与边缘AI应用商",
+                "type": "positive",
+                "impact_label": "边缘XAI探索",
+                "reason": "博世在智能制造与汽车IoT场景大量部署AI决策系统，结构归因方法可提升其系统透明度",
+                "specific": "博世年研发投入约70亿欧元，其中AIoT可解释性为近年重点方向之一",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
     {
       "article_id": "892898817e9a6285",
       "date": "2026-07-07",
@@ -2139,215 +2329,6 @@
             "badge": "场景延伸探索",
             "summary": "孤岛环境下的Agentic编程实践探索了AI辅助开发在极端离线/低资源场景的可行性，对企业效率自动化和开发者生产力应用有一定参考价值，但目前仅停留在个人案例层面，规模化应用影响有限。",
             "upside": "验证Agentic coding在非标准环境下的可行性，拓展AI开发工具的应用场景边界认知",
-            "downside": null,
-            "companies": []
-          }
-        }
-      }
-    },
-    {
-      "article_id": "c8024e73414fedd9",
-      "date": "2026-07-04",
-      "fetched_at": "2026-07-04T10:01:27.893735+00:00",
-      "article": {
-        "title": "The bottleneck might be the air in the room",
-        "summary": "HN score: 226, comments: 138",
-        "url": "https://blog.mikebowler.ca/2026/07/03/co2-and-decision-making/",
-        "source": "HackerNews",
-        "published_at": "2026-07-04T06:32:28+00:00"
-      },
-      "analysis": {
-        "news_title": "数据中心散热成瓶颈",
-        "category": "其他",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "high",
-            "badge": "热密度制约算力",
-            "summary": "高性能GPU集群功耗密度持续攀升，单机架功耗已突破100kW，传统风冷散热能力接近物理极限。散热瓶颈直接限制GPU部署密度，导致算力集群扩容受阻。液冷、浸没冷却等新型方案成为解锁下一代算力的关键前提。",
-            "upside": "液冷/浸没冷却技术商需求爆发，冷板式液冷渗透率有望快速提升",
-            "downside": "风冷架构下GPU满载运行受限，实际可用算力低于理论峰值，数据中心PUE恶化",
-            "companies": [
-              {
-                "name": "NVIDIA",
-                "role": "高功耗GPU芯片设计商",
-                "type": "negative",
-                "impact_label": "部署密度受限",
-                "reason": "H100/H200单卡TDP达700W+，GB200 NVL72机架功耗达120kW，传统风冷无法支撑满配部署",
-                "specific": "GB200 NVL72机架满载功耗约120kW，远超传统风冷10-30kW上限",
-                "impact_depth": 3
-              },
-              {
-                "name": "Vertiv",
-                "role": "数据中心热管理与液冷解决方案供应商",
-                "type": "positive",
-                "impact_label": "液冷需求爆发",
-                "reason": "散热瓶颈推动客户从风冷向液冷迁移，Vertiv液冷产品订单大幅增长",
-                "specific": "Vertiv 2024年液冷相关订单同比增长超200%，指引2025年AI散热营收占比持续提升",
-                "impact_depth": 3
-              },
-              {
-                "name": "超微电脑(Supermicro)",
-                "role": "高密度服务器与液冷机架集成商",
-                "type": "positive",
-                "impact_label": "液冷服务器放量",
-                "reason": "提供配套GB200的液冷机架服务器方案，散热瓶颈加速客户采购液冷整机",
-                "specific": "Supermicro宣布液冷服务器出货量占比目标2025年超过30%",
-                "impact_depth": 2
-              }
-            ]
-          },
-          "data": {
-            "impact_level": "mid",
-            "badge": "数据中心能效承压",
-            "summary": "散热瓶颈导致数据中心PUE上升，电力与冷却成本在数据运营总成本中占比提高。大规模数据标注和向量数据库集群的运营成本因此增加，间接压缩数据服务商利润空间。",
-            "upside": "促进数据中心向低温地区（北欧、加拿大）迁移，推动绿色能源数据中心建设",
-            "downside": "现有数据中心散热改造成本高，中小数据服务商运营成本上涨",
-            "companies": [
-              {
-                "name": "Equinix",
-                "role": "全球数据中心运营商",
-                "type": "negative",
-                "impact_label": "改造成本上升",
-                "reason": "存量数据中心风冷基础设施需大规模改造以支持AI高功耗机架，资本支出压力增大",
-                "specific": "Equinix预计2025年资本支出超30亿美元，其中散热升级改造为重要驱动项",
-                "impact_depth": 2
-              }
-            ]
-          },
-          "model": {
-            "impact_level": "mid",
-            "badge": "训练扩展受阻",
-            "summary": "散热瓶颈限制大模型训练集群的GPU堆叠规模，万卡以上集群的物理部署受到机房散热能力约束。训练效率和扩展速度低于理论算力上限，大模型迭代周期可能因此拉长。",
-            "upside": "倒逼模型算法层提升训练效率，推动MoE稀疏架构、梯度检查点等节能训练技术普及",
-            "downside": "超大规模预训练集群扩容放缓，前沿模型训练成本因散热溢价进一步上升",
-            "companies": [
-              {
-                "name": "OpenAI",
-                "role": "大模型预训练主要消费方",
-                "type": "negative",
-                "impact_label": "集群扩容受限",
-                "reason": "依赖微软Azure超大规模集群训练GPT系列，散热瓶颈限制单集群GPU密度和训练规模",
-                "specific": "OpenAI与微软合作的Stargate项目规划100GW级算力，散热工程被列为核心挑战之一",
-                "impact_depth": 2
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "low",
-            "badge": "推理部署间接受限",
-            "summary": "散热瓶颈对工具中间件层影响较间接，主要体现在推理API服务的硬件成本上升，推理服务供应商单位算力成本提高，可能传导至API定价。",
-            "upside": null,
-            "downside": "推理服务底层硬件成本上涨，可能小幅推高API调用单价",
-            "companies": []
-          },
-          "app": {
-            "impact_level": "low",
-            "badge": "算力成本传导",
-            "summary": "散热瓶颈属于基础设施层问题，对应用层影响路径较长，主要通过算力稀缺性和成本上涨间接传导。短期内对终端AI应用体验影响有限，但若瓶颈持续将压制AI服务规模化扩张速度。",
-            "upside": null,
-            "downside": "算力供给受限可能导致AI应用扩容速度低于需求增长，用户侧出现服务延迟或限速",
-            "companies": []
-          }
-        }
-      }
-    },
-    {
-      "article_id": "4be90592e05247f9",
-      "date": "2026-07-03",
-      "fetched_at": "2026-07-03T10:28:21.158878+00:00",
-      "article": {
-        "title": "Scaling Trends for Lie Detector Oversight in Preference Learning",
-        "summary": "arXiv:2607.01567v1 Announce Type: new \nAbstract: Deceptive behavior in LLMs is costly to monitor and prevent, motivating approaches such as Scalable Oversight via Lie Detectors (SOLiD) (Cundy & Gleave, 2025), which uses lie detectors to identify responses for review by high-cost labelers. In this paper, we scale SOLiD to larger models and evaluate it in more diverse and realistic preference-learni",
-        "url": "https://arxiv.org/abs/2607.01567",
-        "source": "arXiv",
-        "published_at": "Fri, 03 Jul 2026 00:00:00 -0400"
-      },
-      "analysis": {
-        "news_title": "LLM谎言检测扩展研究",
-        "category": "研究",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "low",
-            "badge": "算力需求微增",
-            "summary": "谎言检测器作为额外监督模块需要在推理阶段叠加运行，对大模型的评估实验会带来一定额外算力消耗。但该研究属于学术探索阶段，短期内对算力基础设施需求影响有限。",
-            "upside": "若SOLiD技术规模化落地，可能催生专用安全推理算力需求",
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "mid",
-            "badge": "标注效率提升",
-            "summary": "SOLiD的核心价值在于通过谎言检测器筛选高风险响应，减少人类高成本标注者的介入比例，从而降低RLHF/偏好学习中的数据标注成本。该研究在更多样化场景下验证了这一机制，为数据标注流程优化提供了方向。实验规模扩大意味着需要更多对齐标注数据集支撑评估。",
-            "upside": "降低人工偏好标注成本，提升标注资源分配效率",
-            "downside": "若检测器误判率高，可能导致标注数据质量下降",
-            "companies": [
-              {
-                "name": "Scale AI",
-                "role": "高质量人工偏好标注服务提供商",
-                "type": "neutral",
-                "impact_label": "需求结构变化",
-                "reason": "SOLiD技术若成熟，将减少对全量人工标注的依赖，转向更精准的抽样标注模式",
-                "specific": "SOLiD声称可在保持标注质量前提下显著减少高成本标注者介入比例，具体节省比例待论文完整数据披露",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "model": {
-            "impact_level": "high",
-            "badge": "对齐安全强化",
-            "summary": "该研究直接针对大模型后训练对齐阶段的欺骗性行为检测问题，通过可扩展监督机制（SOLiD）改进偏好学习流程，是RLHF/DPO对齐技术的重要补充。研究验证了该方法在更大规模模型和更真实偏好学习场景下的有效性，对基础模型的可信度与安全对齐能力具有直接促进意义。",
-            "upside": "为大模型提供更可扩展的欺骗行为监控手段，提升RLHF数据质量",
-            "downside": "若谎言检测器本身存在偏差，可能引入新的对齐错误",
-            "companies": [
-              {
-                "name": "Anthropic",
-                "role": "对齐研究前沿机构，Constitutional AI方法论探索者",
-                "type": "positive",
-                "impact_label": "对齐技术受益",
-                "reason": "SOLiD方法与Anthropic强调的可扩展监督研究方向高度契合，可能被整合进其对齐研究框架",
-                "specific": "Anthropic持续投入数亿美元于AI安全研究，SOLiD等可扩展监督方法直接对应其核心研究议题",
-                "impact_depth": 2
-              },
-              {
-                "name": "OpenAI",
-                "role": "大模型训练与RLHF技术领导者",
-                "type": "positive",
-                "impact_label": "后训练可优化",
-                "reason": "该研究提供的欺骗检测机制可辅助改进GPT系列模型的偏好学习数据筛选流程",
-                "specific": "OpenAI在GPT-4o等模型中持续使用大规模RLHF，SOLiD技术可降低其对齐标注成本",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "mid",
-            "badge": "安全工具新方向",
-            "summary": "SOLiD作为一种可扩展的谎言检测监督框架，属于AI安全对齐工具链的新兴分支，研究成果可能推动相关检测工具和评估基准的开发。该技术若开源，将直接丰富现有的安全对齐工具生态。",
-            "upside": "催生新型LLM欺骗检测工具和评估框架的开发",
-            "downside": null,
-            "companies": [
-              {
-                "name": "Gleave团队/ARC Evals",
-                "role": "SOLiD原始研究机构，AI评估工具开发者",
-                "type": "positive",
-                "impact_label": "技术影响力扩大",
-                "reason": "本论文是对Cundy & Gleave 2025年原始SOLiD工作的规模化验证，进一步巩固其在可扩展监督工具领域的学术地位",
-                "specific": "原始SOLiD论文(2025)发布后本研究快速跟进扩展实验，arXiv编号2607.01567显示发表于2026年7月",
-                "impact_depth": 3
-              }
-            ]
-          },
-          "app": {
-            "impact_level": "low",
-            "badge": "长期可信度提升",
-            "summary": "该研究属于基础对齐研究，短期内不直接影响应用层产品。但若SOLiD技术成熟并被主流模型采用，将从根本上降低AI助手和企业应用中模型输出欺骗性内容的风险，长期利好高可信度要求的垂直行业应用。",
-            "upside": "医疗、法律等高风险垂直行业将受益于更可靠的模型诚实性保证",
             "downside": null,
             "companies": []
           }
