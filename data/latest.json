@@ -1,7 +1,159 @@
 {
-  "updated_at": "2026-07-10T10:49:20.626592+00:00",
+  "updated_at": "2026-07-11T09:26:30.973541+00:00",
   "count": 30,
   "items": [
+    {
+      "article_id": "afb0ab65829f7d02",
+      "date": "2026-07-11",
+      "fetched_at": "2026-07-11T09:19:48.565576+00:00",
+      "article": {
+        "title": "Nigeria Machinery: A Low-Resource Industrial Dataset with a Domain-Grounded Reasoning Layer",
+        "summary": "arXiv:2607.07883v1 Announce Type: new \nAbstract: There is relatively little, public, and model-ready data on industrial machinery for African economies. This makes it hard to do quantitative analysis or to train language models on numeric tasks grounded in that setting. We release two things to help with part of this problem. The first is the Nigeria Machinery Usage and Failures Dataset: 89 machin",
+        "url": "https://arxiv.org/abs/2607.07883",
+        "source": "arXiv",
+        "published_at": "Sat, 11 Jul 2026 00:00:00 -0400"
+      },
+      "analysis": {
+        "news_title": "尼日利亚工业机械低资源数据集发布",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该数据集规模较小（89条机械样本），训练或推理所需算力极低，对算力层无实质性需求拉动。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "mid",
+            "badge": "低资源数据补全",
+            "summary": "该研究填补了非洲工业机械领域公开、模型可用数据的空白，提出了一个包含机械使用与故障记录的尼日利亚数据集，并附带领域推理层。这为低资源工业场景下的数据标注范式与合成数据策略提供了参考样本。数据集的开源发布也验证了小规模领域数据集对特定垂直任务的可用价值。",
+            "upside": "为非洲工业AI应用提供首个公开基准数据集，推动低资源语言/领域数据采集方法论发展",
+            "downside": "数据规模仅89条，覆盖范围极为有限，难以直接支撑大规模模型训练",
+            "companies": [
+              {
+                "name": "Hugging Face",
+                "role": "开源数据集托管与分发平台",
+                "type": "positive",
+                "impact_label": "数据集分发受益",
+                "reason": "学术开源数据集通常托管于Hugging Face Datasets，增加平台非英语工业领域数据覆盖度",
+                "specific": "数据集包含89条机械样本及配套推理层，arXiv编号2607.07883，预计上传至HF Hub",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "model": {
+            "impact_level": "mid",
+            "badge": "低资源领域微调",
+            "summary": "该数据集附带领域推理层（Domain-Grounded Reasoning Layer），为在非洲工业场景下微调或评估语言模型的数值推理能力提供了基准。这对探索小样本微调（Few-shot Fine-tuning）和领域适配的研究者具有直接参考价值。然而数据规模限制了其对主流基础模型训练的实质贡献。",
+            "upside": "为工业数值推理任务提供领域接地的评估基准，推动低资源场景下模型对齐研究",
+            "downside": "89条数据远不足以影响主流大模型预训练数据配比，影响范围局限于学术微调实验",
+            "companies": []
+          },
+          "tools": {
+            "impact_level": "low",
+            "badge": "评估工具参考",
+            "summary": "推理层的设计为Prompt评估和RAG知识库在工业垂直场景的构建提供了一个小规模参考案例，但体量不足以驱动工具层的系统性变化。",
+            "upside": "为工业RAG知识库的领域问答评估提供非洲语境下的真实案例",
+            "downside": null,
+            "companies": []
+          },
+          "app": {
+            "impact_level": "low",
+            "badge": "非洲工业AI萌芽",
+            "summary": "该数据集是面向尼日利亚等非洲经济体工业机械管理AI应用的早期基础设施建设，长期来看可支持预测性维护、故障诊断等垂直应用场景。但当前数据规模和覆盖范围尚不足以支撑实际部署级应用。",
+            "upside": "填补非洲工业AI应用数据空白，为预测性维护等场景奠定初步数据基础",
+            "downside": "仅89条样本，无法支撑生产级工业AI应用开发，商业化路径尚远",
+            "companies": []
+          }
+        }
+      }
+    },
+    {
+      "article_id": "cc7fc81ca4384c81",
+      "date": "2026-07-11",
+      "fetched_at": "2026-07-11T09:19:48.565559+00:00",
+      "article": {
+        "title": "VectorizationLLM: Smart Vectorization Based AI Assistant",
+        "summary": "arXiv:2607.07846v1 Announce Type: new \nAbstract: VectorizationLLM is a specialized Large Language Model based on Google open-weight LLMs. The model is designed to assist students to learn smart vectorization, time/wave vector analysis, piecewise functions, Fourier analysis, and differential equations in MATLAB. The course application is CTEC 247: Applied Computational Analysis II by the Department",
+        "url": "https://arxiv.org/abs/2607.07846",
+        "source": "arXiv",
+        "published_at": "Sat, 11 Jul 2026 00:00:00 -0400"
+      },
+      "analysis": {
+        "news_title": "VectorizationLLM教学助手",
+        "category": "研究",
+        "heat": "新兴",
+        "heat_bg": "#E1F5EE",
+        "heat_c": "#085041",
+        "layers": {
+          "compute": {
+            "impact_level": "none",
+            "badge": "无直接影响",
+            "summary": "该研究基于Google开源权重模型进行微调，未涉及新型算力基础设施需求，对GPU/NPU芯片及高性能计算集群无显著影响。",
+            "upside": null,
+            "downside": null,
+            "companies": []
+          },
+          "data": {
+            "impact_level": "low",
+            "badge": "垂域数据构建",
+            "summary": "该项目需要构建MATLAB数学计算领域的专业训练数据集，涵盖向量分析、傅里叶变换、微分方程等课程题目与解答对。数据规模有限，局限于单一课程CTEC 247的教学场景，对整体数据产业影响甚微。",
+            "upside": "验证了垂直教育场景下小规模专业数据微调路径的可行性",
+            "downside": "数据集规模极小，难以推广至通用数据产业",
+            "companies": []
+          },
+          "model": {
+            "impact_level": "low",
+            "badge": "开源模型微调",
+            "summary": "项目基于Google开源权重LLM（如Gemma系列）进行领域微调，属于典型的开源模型二次开发场景。验证了通过有限领域数据对通用LLM进行专业化改造的技术路径，但学术规模有限，对主流模型基础设施生态影响较小。",
+            "upside": "为Google开源模型生态贡献垂直教育领域应用案例，增强开源模型社区活跃度",
+            "downside": null,
+            "companies": [
+              {
+                "name": "Google",
+                "role": "基础开源模型提供方",
+                "type": "positive",
+                "impact_label": "开源生态受益",
+                "reason": "VectorizationLLM基于Google开源权重模型构建，是对Gemma等开源模型在教育场景落地的实践验证",
+                "specific": "基于Google open-weight LLMs，覆盖CTEC 247单门课程的垂直微调应用",
+                "impact_depth": 1
+              }
+            ]
+          },
+          "tools": {
+            "impact_level": "low",
+            "badge": "教育Agent探索",
+            "summary": "VectorizationLLM可视为面向MATLAB数学课程的专用AI辅助工具，探索了领域专属Prompt工程与评估框架在理工科教育中的应用。但当前仍处于学术论文阶段，工具化程度和可复用性有限。",
+            "upside": "为STEM教育AI工具链提供方法论参考，有助于推动教育领域专用Agent框架发展",
+            "downside": "功能局限于单一课程，缺乏通用性，难以形成规模化工具产品",
+            "companies": []
+          },
+          "app": {
+            "impact_level": "mid",
+            "badge": "教育垂直落地",
+            "summary": "该项目直接面向高校理工科学生，聚焦MATLAB计算分析课程辅助学习，是AI在教育垂直行业的具体落地实践。通过LLM辅助学生掌握向量化、傅里叶分析等复杂数学概念，探索了AI个性化辅导的新场景。若经验证有效，可为同类高校课程提供可复制的AI助教模板。",
+            "upside": "验证LLM在理工科专业课程辅助教学的可行性，有望推广至更多STEM课程；降低学生学习复杂数学工具的门槛",
+            "downside": "应用场景极度垂直，仅覆盖单门课程约数十至数百名学生，短期商业价值有限",
+            "companies": [
+              {
+                "name": "MathWorks",
+                "role": "MATLAB平台提供方",
+                "type": "positive",
+                "impact_label": "生态场景强化",
+                "reason": "VectorizationLLM以MATLAB为核心教学环境，AI辅助工具的引入有望提升MATLAB在高校教学中的使用黏性",
+                "specific": "覆盖CTEC 247课程中向量分析、分段函数、傅里叶分析、微分方程等5类MATLAB核心教学模块",
+                "impact_depth": 1
+              }
+            ]
+          }
+        }
+      }
+    },
     {
       "article_id": "ecc14f7f1c35d8da",
       "date": "2026-07-10",
@@ -2323,167 +2475,6 @@
             "impact_level": "none",
             "badge": "无影响",
             "summary": "该新闻未涉及任何AI应用层产品或垂直行业应用场景。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          }
-        }
-      }
-    },
-    {
-      "article_id": "687d6a8d4c778844",
-      "date": "2026-07-05",
-      "fetched_at": "2026-07-05T10:05:05.858581+00:00",
-      "article": {
-        "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
-        "summary": "HN score: 45, comments: 52",
-        "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/",
-        "source": "HackerNews",
-        "published_at": "2026-07-05T06:19:34+00:00"
-      },
-      "analysis": {
-        "news_title": "Claude辅助开发sqlite工具",
-        "category": "应用",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "此事件为个人开发者使用AI辅助编码的案例，不涉及算力基础设施层面的变化。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "sqlite-utils属于轻量级本地数据库工具库，与数据采集、标注或数据中心能源无直接关联。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "mid",
-            "badge": "AI编码验证",
-            "summary": "开发者使用Claude以约149.25美元API费用完成了sqlite-utils 4.0大版本的主体代码编写，是AI模型承担真实工程任务的具体案例。该事件验证了大模型在实际开源项目中的代码生成能力，对Claude的工程实用性形成正向背书。数据显示单次中型开源项目的模型调用成本已降至百美元量级。",
-            "upside": "证明大模型可低成本独立完成中等复杂度开源项目，提升Claude API商业吸引力",
-            "downside": "暴露模型调用成本仍需开发者精打细算，大规模推广仍有门槛",
-            "companies": [
-              {
-                "name": "Anthropic",
-                "role": "Claude模型提供商",
-                "type": "positive",
-                "impact_label": "API用量背书",
-                "reason": "Claude完成sqlite-utils 4.0主体编写，成为AI辅助开源开发的标志性案例，增强Claude工程编码口碑",
-                "specific": "开发者支付约149.25美元API费用完成一个Python开源库大版本迭代，HN获45分52条评论形成传播",
-                "impact_depth": 2
-              }
-            ]
-          },
-          "tools": {
-            "impact_level": "high",
-            "badge": "AI编码落地",
-            "summary": "此案例直接展示了AI Coding工具在真实开源项目中的端到端交付能力，sqlite-utils 4.0由Claude主导编写是AI辅助开发工具从'补全片段'迈向'主导模块'的里程碑信号。对Copilot类工具、AI SDK及Prompt工程方向具有示范效应，将加速开发者社区对AI Coding工具链的采纳。",
-            "upside": "证明AI可主导中型开源项目开发，推动Coding工具链需求增长",
-            "downside": "引发对开源贡献归属、代码审查责任及许可证合规的质疑",
-            "companies": [
-              {
-                "name": "Simon Willison(sqlite-utils作者)",
-                "role": "AI辅助开发实践者",
-                "type": "positive",
-                "impact_label": "AI提效示范",
-                "reason": "以极低成本借助Claude完成大版本迭代，为个人开发者使用AI工具链树立可量化参考案例",
-                "specific": "149.25美元API消耗完成4.0版本主体代码，项目在HN引发52条讨论",
-                "impact_depth": 3
-              },
-              {
-                "name": "GitHub Copilot(Microsoft)",
-                "role": "AI编码工具竞品",
-                "type": "neutral",
-                "impact_label": "竞品压力",
-                "reason": "案例中开发者选择直接调用Claude API而非Copilot，侧面反映原生API在复杂任务上的灵活性优势",
-                "specific": "开发者绕过Copilot等IDE插件，直接以API方式完成完整项目级编码任务",
-                "impact_depth": 1
-              }
-            ]
-          },
-          "app": {
-            "impact_level": "mid",
-            "badge": "开源生产力",
-            "summary": "sqlite-utils是广泛用于数据处理和本地数据库操作的Python工具库，4.0版本由AI主导开发后将继续服务数据工程师和开发者群体。此事件表明AI辅助开发正在渗透开源基础工具层，间接提升下游数据应用生态的迭代速度。",
-            "upside": "开源工具库迭代成本大幅降低，下游数据应用开发者受益",
-            "downside": "AI生成代码的质量与长期可维护性仍需社区验证",
-            "companies": [
-              {
-                "name": "Datasette(Simon Willison项目)",
-                "role": "sqlite-utils下游应用",
-                "type": "positive",
-                "impact_label": "生态受益",
-                "reason": "sqlite-utils是Datasette核心依赖，4.0版本升级将直接改善Datasette功能与性能",
-                "specific": "sqlite-utils在PyPI月下载量超过数十万次，4.0升级影响大量下游数据工具用户",
-                "impact_depth": 2
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "article_id": "cad2042da49d5bc4",
-      "date": "2026-07-05",
-      "fetched_at": "2026-07-05T10:05:05.617720+00:00",
-      "article": {
-        "title": "Record-breaking solo rower Kelsey Pfendler arrives in Hawaii",
-        "summary": "HN score: 49, comments: 5",
-        "url": "https://www.hawaiinewsnow.com/2026/07/04/record-breaking-solo-rower-kelsey-pfendler-arrives-hawaii/",
-        "source": "HackerNews",
-        "published_at": "2026-07-05T01:23:11+00:00"
-      },
-      "analysis": {
-        "news_title": "独划手抵达夏威夷",
-        "category": "其他",
-        "heat": "新兴",
-        "heat_bg": "#E1F5EE",
-        "heat_c": "#085041",
-        "layers": {
-          "compute": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该新闻与AI算力基础设施无任何关联，不涉及芯片、GPU、HBM或数据中心等领域。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "data": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该新闻为体育探险类内容，与数据采集、标注、向量数据库或数据中心能源无关。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "model": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该新闻不涉及任何大模型预训练、推理服务或MLOps平台相关内容。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "tools": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该新闻与AI Agent框架、RAG、Prompt工程或开发工具链完全无关。",
-            "upside": null,
-            "downside": null,
-            "companies": []
-          },
-          "app": {
-            "impact_level": "none",
-            "badge": "无影响",
-            "summary": "该新闻为人类体育极限挑战记录报道，与AI应用层各垂直行业均无关联。",
             "upside": null,
             "downside": null,
             "companies": []

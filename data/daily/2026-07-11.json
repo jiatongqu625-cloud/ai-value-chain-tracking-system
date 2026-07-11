@@ -1,0 +1,154 @@
+[
+  {
+    "article_id": "afb0ab65829f7d02",
+    "date": "2026-07-11",
+    "fetched_at": "2026-07-11T09:19:48.565576+00:00",
+    "article": {
+      "title": "Nigeria Machinery: A Low-Resource Industrial Dataset with a Domain-Grounded Reasoning Layer",
+      "summary": "arXiv:2607.07883v1 Announce Type: new \nAbstract: There is relatively little, public, and model-ready data on industrial machinery for African economies. This makes it hard to do quantitative analysis or to train language models on numeric tasks grounded in that setting. We release two things to help with part of this problem. The first is the Nigeria Machinery Usage and Failures Dataset: 89 machin",
+      "url": "https://arxiv.org/abs/2607.07883",
+      "source": "arXiv",
+      "published_at": "Sat, 11 Jul 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "尼日利亚工业机械低资源数据集发布",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该数据集规模较小（89条机械样本），训练或推理所需算力极低，对算力层无实质性需求拉动。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "mid",
+          "badge": "低资源数据补全",
+          "summary": "该研究填补了非洲工业机械领域公开、模型可用数据的空白，提出了一个包含机械使用与故障记录的尼日利亚数据集，并附带领域推理层。这为低资源工业场景下的数据标注范式与合成数据策略提供了参考样本。数据集的开源发布也验证了小规模领域数据集对特定垂直任务的可用价值。",
+          "upside": "为非洲工业AI应用提供首个公开基准数据集，推动低资源语言/领域数据采集方法论发展",
+          "downside": "数据规模仅89条，覆盖范围极为有限，难以直接支撑大规模模型训练",
+          "companies": [
+            {
+              "name": "Hugging Face",
+              "role": "开源数据集托管与分发平台",
+              "type": "positive",
+              "impact_label": "数据集分发受益",
+              "reason": "学术开源数据集通常托管于Hugging Face Datasets，增加平台非英语工业领域数据覆盖度",
+              "specific": "数据集包含89条机械样本及配套推理层，arXiv编号2607.07883，预计上传至HF Hub",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "model": {
+          "impact_level": "mid",
+          "badge": "低资源领域微调",
+          "summary": "该数据集附带领域推理层（Domain-Grounded Reasoning Layer），为在非洲工业场景下微调或评估语言模型的数值推理能力提供了基准。这对探索小样本微调（Few-shot Fine-tuning）和领域适配的研究者具有直接参考价值。然而数据规模限制了其对主流基础模型训练的实质贡献。",
+          "upside": "为工业数值推理任务提供领域接地的评估基准，推动低资源场景下模型对齐研究",
+          "downside": "89条数据远不足以影响主流大模型预训练数据配比，影响范围局限于学术微调实验",
+          "companies": []
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "评估工具参考",
+          "summary": "推理层的设计为Prompt评估和RAG知识库在工业垂直场景的构建提供了一个小规模参考案例，但体量不足以驱动工具层的系统性变化。",
+          "upside": "为工业RAG知识库的领域问答评估提供非洲语境下的真实案例",
+          "downside": null,
+          "companies": []
+        },
+        "app": {
+          "impact_level": "low",
+          "badge": "非洲工业AI萌芽",
+          "summary": "该数据集是面向尼日利亚等非洲经济体工业机械管理AI应用的早期基础设施建设，长期来看可支持预测性维护、故障诊断等垂直应用场景。但当前数据规模和覆盖范围尚不足以支撑实际部署级应用。",
+          "upside": "填补非洲工业AI应用数据空白，为预测性维护等场景奠定初步数据基础",
+          "downside": "仅89条样本，无法支撑生产级工业AI应用开发，商业化路径尚远",
+          "companies": []
+        }
+      }
+    }
+  },
+  {
+    "article_id": "cc7fc81ca4384c81",
+    "date": "2026-07-11",
+    "fetched_at": "2026-07-11T09:19:48.565559+00:00",
+    "article": {
+      "title": "VectorizationLLM: Smart Vectorization Based AI Assistant",
+      "summary": "arXiv:2607.07846v1 Announce Type: new \nAbstract: VectorizationLLM is a specialized Large Language Model based on Google open-weight LLMs. The model is designed to assist students to learn smart vectorization, time/wave vector analysis, piecewise functions, Fourier analysis, and differential equations in MATLAB. The course application is CTEC 247: Applied Computational Analysis II by the Department",
+      "url": "https://arxiv.org/abs/2607.07846",
+      "source": "arXiv",
+      "published_at": "Sat, 11 Jul 2026 00:00:00 -0400"
+    },
+    "analysis": {
+      "news_title": "VectorizationLLM教学助手",
+      "category": "研究",
+      "heat": "新兴",
+      "heat_bg": "#E1F5EE",
+      "heat_c": "#085041",
+      "layers": {
+        "compute": {
+          "impact_level": "none",
+          "badge": "无直接影响",
+          "summary": "该研究基于Google开源权重模型进行微调，未涉及新型算力基础设施需求，对GPU/NPU芯片及高性能计算集群无显著影响。",
+          "upside": null,
+          "downside": null,
+          "companies": []
+        },
+        "data": {
+          "impact_level": "low",
+          "badge": "垂域数据构建",
+          "summary": "该项目需要构建MATLAB数学计算领域的专业训练数据集，涵盖向量分析、傅里叶变换、微分方程等课程题目与解答对。数据规模有限，局限于单一课程CTEC 247的教学场景，对整体数据产业影响甚微。",
+          "upside": "验证了垂直教育场景下小规模专业数据微调路径的可行性",
+          "downside": "数据集规模极小，难以推广至通用数据产业",
+          "companies": []
+        },
+        "model": {
+          "impact_level": "low",
+          "badge": "开源模型微调",
+          "summary": "项目基于Google开源权重LLM（如Gemma系列）进行领域微调，属于典型的开源模型二次开发场景。验证了通过有限领域数据对通用LLM进行专业化改造的技术路径，但学术规模有限，对主流模型基础设施生态影响较小。",
+          "upside": "为Google开源模型生态贡献垂直教育领域应用案例，增强开源模型社区活跃度",
+          "downside": null,
+          "companies": [
+            {
+              "name": "Google",
+              "role": "基础开源模型提供方",
+              "type": "positive",
+              "impact_label": "开源生态受益",
+              "reason": "VectorizationLLM基于Google开源权重模型构建，是对Gemma等开源模型在教育场景落地的实践验证",
+              "specific": "基于Google open-weight LLMs，覆盖CTEC 247单门课程的垂直微调应用",
+              "impact_depth": 1
+            }
+          ]
+        },
+        "tools": {
+          "impact_level": "low",
+          "badge": "教育Agent探索",
+          "summary": "VectorizationLLM可视为面向MATLAB数学课程的专用AI辅助工具，探索了领域专属Prompt工程与评估框架在理工科教育中的应用。但当前仍处于学术论文阶段，工具化程度和可复用性有限。",
+          "upside": "为STEM教育AI工具链提供方法论参考，有助于推动教育领域专用Agent框架发展",
+          "downside": "功能局限于单一课程，缺乏通用性，难以形成规模化工具产品",
+          "companies": []
+        },
+        "app": {
+          "impact_level": "mid",
+          "badge": "教育垂直落地",
+          "summary": "该项目直接面向高校理工科学生，聚焦MATLAB计算分析课程辅助学习，是AI在教育垂直行业的具体落地实践。通过LLM辅助学生掌握向量化、傅里叶分析等复杂数学概念，探索了AI个性化辅导的新场景。若经验证有效，可为同类高校课程提供可复制的AI助教模板。",
+          "upside": "验证LLM在理工科专业课程辅助教学的可行性，有望推广至更多STEM课程；降低学生学习复杂数学工具的门槛",
+          "downside": "应用场景极度垂直，仅覆盖单门课程约数十至数百名学生，短期商业价值有限",
+          "companies": [
+            {
+              "name": "MathWorks",
+              "role": "MATLAB平台提供方",
+              "type": "positive",
+              "impact_label": "生态场景强化",
+              "reason": "VectorizationLLM以MATLAB为核心教学环境，AI辅助工具的引入有望提升MATLAB在高校教学中的使用黏性",
+              "specific": "覆盖CTEC 247课程中向量分析、分段函数、傅里叶分析、微分方程等5类MATLAB核心教学模块",
+              "impact_depth": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+]
